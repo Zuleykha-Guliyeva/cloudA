@@ -8,7 +8,7 @@ const styles = {
   navMenu: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center',
     '& ul': { display: 'flex', justifyContent: 'space-end' },
     [breakpoint(768)]: {

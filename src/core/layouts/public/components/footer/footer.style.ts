@@ -14,25 +14,7 @@ const styles = {
       padding: rem(16) + ' ' + rem(0),
     },
   },
-  marginToprights: {
-    marginTop: rem(132),
-    [breakpoint(768)]: {
-      marginTop: rem(49),
-    },
-  },
-  footer08: {
-    padding: 0,
-    overflow: 'hidden',
-    '& .footer-heading': {
-      fontSize: rem(18),
-      marginBottom: rem(30),
-      [breakpoint(768)]: {
-        '&.footer-heading-white': {
-          color: colors.light,
-        },
-      },
-    },
-  },
+
   footTitle: {
     fontFamily: fonts.font,
     fontWeight: '600',
@@ -67,55 +49,30 @@ const styles = {
   },
   footerSocial: {
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'end',
     '& li a': {
       marginRight: rem(22),
-      fontSize: rem(18),
     },
-  },
-  footHeading: {
-    fontFamily: fonts.fontBold,
-    fontSize: rem(20),
-    marginBottom: rem(42),
-    fontWeight: '700',
-    lineHeight: rem(22),
-  },
-  footerTxt: {
-    fontFamily: fonts.font,
-    fontSize: rem(16),
-    fontWeight: '400',
-    lineHeight: rem(24),
-    textAlign: 'left',
-  },
-  copyRight: {
-    fontFamily: fonts.font,
-    fontSize: rem(18),
-    lineHeight: rem(30),
-    fontWeight: '400',
-    [breakpoint(767.98)]: {
-      fontSize: rem(17),
+    '&:last-child': {
+      marginRight: rem(8),
     },
   },
   footMenuItem: {
     fontFamily: fonts.font,
     textDecoration: 'none',
     fontWeight: '400',
-    lineHeight: rem(20),
+    lineHeight: rem(10),
     fontSize: rem(16),
-    marginBottom: rem(18),
+    marginBottom: rem(22),
     color: colors.defaultTextColor,
+    '&:last-child': {
+      lineHeight: rem(20),
+    },
   },
   verticalLine: {
-    margin: rem(0) + ' ' + rem(10),
-  },
-  logoImg: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: rem(26),
-    '& img': {
-      display: 'block',
-      width: rem(148),
-      height: rem(40),
-    },
+    borderLeft: `${rem(1)} solid ${colors.footerVerticalLine}`,
+    paddingLeft: rem(45),
   },
 };
 
