@@ -6,6 +6,7 @@ const colors = {
   footBackground: '#F0F1F4',
   defaultTextColor: '#12475F',
   footerVerticalLine: 'rgba(18, 71, 95, 0.15)',
+  blueCounterBackground: 'linear-gradient(93.73deg, #1559A4 0.71%, #2D99DC 103.41%)',
   newsDate: '#608494',
 };
 
