@@ -5,6 +5,59 @@ import { createUseStyles } from 'react-jss';
 import partnersShadow from 'assets/images/statics/partners/partnersShadow.png';
 
 const styles = {
+  slide: {
+    height: rem(900),
+    '& img': {
+      width: '100%',
+    },
+  },
+  absoluteWave: {
+    position: 'absolute',
+    left: 0,
+    top: rem(650),
+  },
+  upcoming:{
+    position: 'absolute',
+    zIndex: '1',
+  },
+  upcomingBackground: {
+    height: rem(300),
+    padding: `${rem(52)}  ${rem(111)} ${rem(46)} ${rem(111)}`,
+    background: colors.light,
+  },
+  about: {
+    position: 'relative',
+    padding: `${rem(346)}  ${rem(0)} ${rem(300)} ${rem(0)}`,
+  },
+  aboutAbsoluteImgBck: {
+    position: 'absolute',
+    left: 0,
+    top: rem(100),
+    backgroundPosition: 'left',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+  },
+  aboutAbsoluteImg: {
+    position: 'absolute',
+    left: 0,
+    top: rem(140),
+  },
+  aboutTitle: {
+    fontFamily: fonts.font,
+    fontSize: rem(32),
+    fontWeight: '700',
+    lineHeight: rem(39),
+    color: colors.defaultTextColor,
+    marginBottom: rem(12),
+  },
+  aboutDesc: {
+    fontFamily: fonts.font,
+    fontSize: rem(16),
+    fontWeight: '400',
+    lineHeight: rem(26),
+    color: colors.defaultTextColor,
+    marginBottom: rem(22),
+  },
   clients: {
     background: colors.light,
     padding: `${rem(92)}  ${rem(0)}`,
@@ -103,8 +156,8 @@ const styles = {
     position: 'absolute',
     right: 0,
     backgroundImage: `url(${partnersShadow})`,
-    backgroundPosition: 'right' /* Center the image */,
-    backgroundRepeat: 'no-repeat' /* Do not repeat the image */,
+    backgroundPosition: 'right',
+    backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
   },
   partnersImg: {

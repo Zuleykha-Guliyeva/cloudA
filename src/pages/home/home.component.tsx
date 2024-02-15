@@ -8,6 +8,7 @@ import news1 from 'assets/images/statics/news/news1.png';
 import news2 from 'assets/images/statics/news/news2.png';
 import news3 from 'assets/images/statics/news/news3.png';
 import partnersImg from 'assets/images/statics/partners/partnersImg.png';
+import aboutImg from 'assets/images/statics/about/aboutImg.png';
 import partners1 from 'assets/images/statics/partners/partners1.png';
 import partners2 from 'assets/images/statics/partners/partners2.png';
 import partners3 from 'assets/images/statics/partners/partners3.png';
@@ -26,6 +27,7 @@ import {
 } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
+import AboutSubComponent from './components/about-sub.component';
 import { Link } from 'react-router-dom';
 import NewsCardCommponent from 'core/shared/news-card/news-card.component';
 import {
@@ -34,11 +36,101 @@ import {
   OurPrj,
   OurTeam,
 } from 'assets/images/icons/blue-counter';
+import aboutBck from 'assets/images/statics/about/aboutBck.png';
+import homeSlideBackground from 'assets/images/statics/homeSlideBackground.png';
+import wave1 from 'assets/images/statics/wave1.png';
+import { Button } from 'antd';
+
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const iMargin = 0;
   return (
     <>
+      <section className={classes.slide}>
+        <img src={homeSlideBackground} alt='' />
+        <img className={classes.absoluteWave} src={wave1} alt='' />
+      </section>
+
+      <section className={classes.upcoming}>
+        <div className='container'>
+          <div className={classes.upcomingBackground}>
+            <div className='row'>
+              <div className='col-6'>
+                <Button>Available products</Button>
+                <Button>Available products</Button>
+              </div>
+              <div className='col-6'></div>
+            </div>
+            <div className='row'>
+              <div className='col-md-4'></div>
+              <div className='col-md-4'></div>
+              <div className='col-md-4'></div>
+            </div>
+            <div className='row'>
+              <div className='col-12'>
+                <Link to='#'>More</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={classes.about}>
+        <div className='container'>
+          <div className='row align-center justify-between'>
+            <div className='col-md-3'>
+              <div className={classes.aboutAbsoluteImgBck}>
+                <img
+                  className={classes.aboutAbsoluteImgBck}
+                  src={aboutBck}
+                  alt=''
+                />
+                <img
+                  className={classes.aboutAbsoluteImg}
+                  src={aboutImg}
+                  alt=''
+                />
+              </div>
+            </div>
+            <div className='col-md-8'>
+              <div className='row'>
+                <div className='col-12 text-left'>
+                  <p className={classes.aboutTitle}>About us</p>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-12 text-left'>
+                  <p className={classes.aboutDesc}>
+                    "AzInTelecom" LLC provides high-quality public cloud
+                    services for small and medium-sized enterprises in a data
+                    center that meets international standards and certificates
+                    in two different geographical areas in Azerbaijan. From
+                    resource control and customization for corporate use to ease
+                    of application development and maintenance, public cloud
+                    services are provided over the Internet and resources are
+                    shared among multiple users or tenants.
+                  </p>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-3'>
+                  <AboutSubComponent />
+                </div>
+                <div className='col-md-3'>
+                  <AboutSubComponent />
+                </div>
+                <div className='col-md-3'>
+                  <AboutSubComponent />
+                </div>
+                <div className='col-md-3'>
+                  <AboutSubComponent />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={classes.clients}>
         <div className='container'>
           <div className='row'>
