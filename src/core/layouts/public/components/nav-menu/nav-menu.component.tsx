@@ -11,6 +11,7 @@ import { toggleNavMenu } from 'store/store.reducer';
 import { IState } from 'store/store';
 import classNames from 'classnames';
 import { CiSearch } from 'react-icons/ci';
+import ButtonComponent from 'core/shared/button/button.component';
 
 const NavMenuComponent = () => {
   const classes = useNavMenuStyles();
@@ -67,8 +68,8 @@ const NavMenuComponent = () => {
       <div className={classes.searchIcon}>
         <CiSearch />
       </div>
-      <div className={classes.calculatorBtn}>
-        <span>{translate('kalkulyator')}</span>
+      <div className='d-flex align-center'>
+        <ButtonComponent text={translate('kalkulyator')} className='calculatorBtn'/>
       </div>
       <div className={classes.mobileMenuIcon} onClick={mobileMenuOpen}>
         {navMenu ? <IoClose /> : <IoMenu />}

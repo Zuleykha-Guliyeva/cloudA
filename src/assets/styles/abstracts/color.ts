@@ -8,6 +8,8 @@ const colors = {
   footerVerticalLine: 'rgba(18, 71, 95, 0.15)',
   blueCounterBackground: 'linear-gradient(93.73deg, #1559A4 0.71%, #2D99DC 103.41%)',
   newsDate: '#608494',
+  ProductIconBck: 'linear-gradient(0deg, #F0F1F4, #F0F1F4),linear-gradient(0deg, #12475F, #12475F)',
+
 };
 
 export default colors;

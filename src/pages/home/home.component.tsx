@@ -7,8 +7,6 @@ import certificate6 from 'assets/images/statics/certificates/certificate6.png';
 import news1 from 'assets/images/statics/news/news1.png';
 import news2 from 'assets/images/statics/news/news2.png';
 import news3 from 'assets/images/statics/news/news3.png';
-import partnersImg from 'assets/images/statics/partners/partnersImg.png';
-import aboutImg from 'assets/images/statics/about/aboutImg.png';
 import partners1 from 'assets/images/statics/partners/partners1.png';
 import partners2 from 'assets/images/statics/partners/partners2.png';
 import partners3 from 'assets/images/statics/partners/partners3.png';
@@ -36,10 +34,11 @@ import {
   OurPrj,
   OurTeam,
 } from 'assets/images/icons/blue-counter';
-import aboutBck from 'assets/images/statics/about/aboutBck.png';
 import homeSlideBackground from 'assets/images/statics/homeSlideBackground.png';
 import wave1 from 'assets/images/statics/wave1.png';
 import { Button } from 'antd';
+import ButtonComponent from 'core/shared/button/button.component';
+import ProductCardComponent from 'core/shared/product-card/product-card.component';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -62,12 +61,18 @@ const HomeComponent = () => {
               <div className='col-6'></div>
             </div>
             <div className='row'>
-              <div className='col-md-4'></div>
-              <div className='col-md-4'></div>
-              <div className='col-md-4'></div>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
             </div>
-            <div className='row'>
-              <div className='col-12'>
+            <div className='row justify-center'>
+              <div className='col-12 text-center'>
                 <Link to='#'>More</Link>
               </div>
             </div>
@@ -78,20 +83,7 @@ const HomeComponent = () => {
       <section className={classes.about}>
         <div className='container'>
           <div className='row align-center justify-between'>
-            <div className='col-md-3'>
-              <div className={classes.aboutAbsoluteImgBck}>
-                <img
-                  className={classes.aboutAbsoluteImgBck}
-                  src={aboutBck}
-                  alt=''
-                />
-                <img
-                  className={classes.aboutAbsoluteImg}
-                  src={aboutImg}
-                  alt=''
-                />
-              </div>
-            </div>
+            <div className='col-md-4'></div>
             <div className='col-md-8'>
               <div className='row'>
                 <div className='col-12 text-left'>
@@ -126,6 +118,7 @@ const HomeComponent = () => {
                   <AboutSubComponent />
                 </div>
               </div>
+              <ButtonComponent text='Daha  çox' className='aboutBtn' />
             </div>
           </div>
         </div>
@@ -264,10 +257,9 @@ const HomeComponent = () => {
       </section>
 
       <section className={classes.partners}>
-        <img className={classes.partnersAbsoluteImg} src={partnersImg} alt='' />
         <div className='container'>
           <div className='row'>
-            <div className='col-md-7'>
+            <div className='col-md-7 text-left'>
               <div className='row'>
                 <div className='col-12 text-center'>
                   <p className={classes.partnersTitle}>Our tech partners</p>
@@ -353,23 +345,23 @@ const HomeComponent = () => {
               <p className={classes.certificatesTitle}>Certificates</p>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-md-2'>
+          <div className='row align-center pl-100 pr-100'>
+            <div className='col-md-2 text-center'>
               <img src={certificate1} alt='' />
             </div>
-            <div className='col-md-2'>
+            <div className='col-md-2 text-center'>
               <img src={certificate2} alt='' />
             </div>
-            <div className='col-md-2'>
+            <div className='col-md-2 text-center'>
               <img src={certificate3} alt='' />
             </div>
-            <div className='col-md-2'>
+            <div className='col-md-2 text-center'>
               <img src={certificate4} alt='' />
             </div>
-            <div className='col-md-2'>
+            <div className='col-md-2 text-center'>
               <img src={certificate5} alt='' />
             </div>
-            <div className='col-md-2'>
+            <div className='col-md-2 text-center'>
               <img src={certificate6} alt='' />
             </div>
           </div>

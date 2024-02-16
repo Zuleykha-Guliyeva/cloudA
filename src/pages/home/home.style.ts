@@ -3,6 +3,8 @@ import fonts from 'assets/styles/abstracts/fonts';
 import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 import partnersShadow from 'assets/images/statics/partners/partnersShadow.png';
+import partnersImg from 'assets/images/statics/partners/partnersImg.png';
+import aboutBck from 'assets/images/statics/about/aboutImg.png';
 
 const styles = {
   slide: {
@@ -14,11 +16,11 @@ const styles = {
   absoluteWave: {
     position: 'absolute',
     left: 0,
-    top: rem(650),
+    top: rem(550),
   },
-  upcoming:{
-    position: 'absolute',
-    zIndex: '1',
+  upcoming: {
+    position: 'relative',
+
   },
   upcomingBackground: {
     height: rem(300),
@@ -26,21 +28,11 @@ const styles = {
     background: colors.light,
   },
   about: {
-    position: 'relative',
-    padding: `${rem(346)}  ${rem(0)} ${rem(300)} ${rem(0)}`,
-  },
-  aboutAbsoluteImgBck: {
-    position: 'absolute',
-    left: 0,
-    top: rem(100),
-    backgroundPosition: 'left',
+    backgroundImage: `url(${aboutBck})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-  },
-  aboutAbsoluteImg: {
-    position: 'absolute',
-    left: 0,
-    top: rem(140),
+    backgroundPosition: 'left',
+    padding: `${rem(161)}  ${rem(0)} ${rem(163)} ${rem(0)}`,
+    marginTop: rem(388),
   },
   aboutTitle: {
     fontFamily: fonts.font,
@@ -136,6 +128,10 @@ const styles = {
     borderRight: `${rem(1)} solid ${colors.light}`,
   },
   partners: {
+    backgroundImage: `url(${partnersImg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right',
+    backgroundSize: 'contain',
     padding: `${rem(92)}  ${rem(0)} ${rem(62)} ${rem(0)}`,
     position: 'relative',
     display: 'flex',

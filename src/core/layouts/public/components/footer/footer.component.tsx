@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button, Input } from 'antd';
+import { Form, Input } from 'antd';
 import { UserTag, Call, Message, Location } from 'assets/images/icons/contact';
 import {
   Facebook,
@@ -27,13 +27,17 @@ const FooterComponent = () => {
             </div>
             <div className='row align-center justify-between'>
               <div className='col-md-6'>
-                <div className={classes.relative}>
+                <Form className={classes.relative}>
                   <Input
-                    className={classes.inputSubscribe}
                     placeholder='mail.cloud.az'
+                    type='email'
                   ></Input>
-                  <Button className={classes.btnSubscribe}>Subscribe</Button>
-                </div>
+                  <Input
+                    placeholder='mail.cloud.az'
+                    value='Subscribe'
+                    type='submit'
+                  ></Input>
+                </Form>
               </div>
               <div className='col-md-6'>
                 <ul className={classes.footerSocial}>
