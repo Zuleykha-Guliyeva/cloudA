@@ -5,34 +5,75 @@ import { createUseStyles } from 'react-jss';
 import partnersShadow from 'assets/images/statics/partners/partnersShadow.png';
 import partnersImg from 'assets/images/statics/partners/partnersImg.png';
 import aboutBck from 'assets/images/statics/about/aboutImg.png';
+import homeSlideBackground from 'assets/images/statics/homeSlideBackground.png';
 
 const styles = {
   slide: {
-    height: rem(900),
+    backgroundImage: `url(${homeSlideBackground})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    padding: `${rem(190)}  ${rem(0)} ${rem(400)} ${rem(0)}`,
     '& img': {
       width: '100%',
     },
+    '& p': {
+      fontFamily: fonts.font,
+      fontSize: rem(50),
+      fontWeight: '700',
+      lineHeight: rem(61),
+      color: colors.light,
+      paddingRight: rem(15),
+    },
+    '& button': {
+      height: rem(1)
+    }
   },
   absoluteWave: {
     position: 'absolute',
     left: 0,
-    top: rem(550),
+    top: rem(600),
   },
   upcoming: {
     position: 'relative',
-
+    '& a': {
+      display: 'inline-flex',
+      textDecoration: 'none',
+      color: colors.calcBtnBlue,
+      '& svg': {
+        marginLeft: rem(10),
+      },
+    },
   },
   upcomingBackground: {
-    height: rem(300),
+    borderRadius: rem(28),
     padding: `${rem(52)}  ${rem(111)} ${rem(46)} ${rem(111)}`,
     background: colors.light,
+  },
+  availableProduct: {
+    border: 'none',
+    borderRadius: rem(50),
+    backgroundColor: colors.availableBtn,
+    display: 'inline-flex',
+    alignItems: 'center',
+    marginRight: rem(26),
+    '& svg': {
+      marginRight: rem(8),
+    },
+  },
+  availableUpcoming: {
+    border: 'none',
+    borderRadius: rem(50),
+    display: 'inline-flex',
+    alignItems: 'center',
+    '& svg': {
+      marginRight: rem(8),
+    },
   },
   about: {
     backgroundImage: `url(${aboutBck})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
     padding: `${rem(161)}  ${rem(0)} ${rem(163)} ${rem(0)}`,
-    marginTop: rem(388),
   },
   aboutTitle: {
     fontFamily: fonts.font,

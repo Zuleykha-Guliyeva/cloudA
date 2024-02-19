@@ -9,6 +9,7 @@ const styles = {
     padding: rem(32),
     backgroundColor: colors.light,
     boxShadow: '0px 4px 16px 0px #12475F12',
+    borderRadius: rem(28),
   },
   iconProductCard: {
     display: 'inline-block',
@@ -37,6 +38,7 @@ const styles = {
     color: colors.defaultTextColor,
   },
   productPrice: {
+    display: 'inline-block',
     fontFamily: fonts.font,
     fontSize: rem(16),
     fontWeight: '700',

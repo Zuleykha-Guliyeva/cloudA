@@ -22,6 +22,7 @@ import {
   NewsRight,
   SlideUp,
   SlideDown,
+  BlueArrow
 } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
@@ -34,19 +35,29 @@ import {
   OurPrj,
   OurTeam,
 } from 'assets/images/icons/blue-counter';
-import homeSlideBackground from 'assets/images/statics/homeSlideBackground.png';
 import wave1 from 'assets/images/statics/wave1.png';
 import { Button } from 'antd';
 import ButtonComponent from 'core/shared/button/button.component';
 import ProductCardComponent from 'core/shared/product-card/product-card.component';
-
+import { Lightning, Rocket } from 'assets/images/icons/product';
+import slideImg from 'assets/images/statics/slideImg.png';
+import SlickComponent from 'core/shared/slick/slick.component';
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const iMargin = 0;
   return (
     <>
       <section className={classes.slide}>
-        <img src={homeSlideBackground} alt='' />
+        <div className='container'>
+          <div className='row justify-between'>
+            <div className='col-md-5'>
+              <SlickComponent/>
+            </div>
+            <div className='col-md-7'>
+              <img src={slideImg} alt='' />
+            </div>
+          </div>
+        </div>
         <img className={classes.absoluteWave} src={wave1} alt='' />
       </section>
 
@@ -54,26 +65,33 @@ const HomeComponent = () => {
         <div className='container'>
           <div className={classes.upcomingBackground}>
             <div className='row'>
-              <div className='col-6'>
-                <Button>Available products</Button>
-                <Button>Available products</Button>
-              </div>
-              <div className='col-6'></div>
-            </div>
-            <div className='row'>
-              <div className='col-md-4'>
-                <ProductCardComponent />
-              </div>
-              <div className='col-md-4'>
-                <ProductCardComponent />
-              </div>
-              <div className='col-md-4'>
-                <ProductCardComponent />
-              </div>
-            </div>
-            <div className='row justify-center'>
               <div className='col-12 text-center'>
-                <Link to='#'>More</Link>
+                <Button className={classes.availableProduct}>
+                  <Lightning />
+                  <span>Available products</span>
+                </Button>
+                <Button className={classes.availableUpcoming}>
+                  <Rocket />
+                  <span>Upcoming</span>
+                </Button>
+              </div>
+            </div>
+            <div className='row py-27'>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
+              <div className='col-md-4'>
+                <ProductCardComponent />
+              </div>
+            </div>
+            <div className='row justify-center align-center mt-27'>
+              <div className='col-12 text-center'>
+                <Link to='#'>
+                  More <BlueArrow />
+                </Link>
               </div>
             </div>
           </div>

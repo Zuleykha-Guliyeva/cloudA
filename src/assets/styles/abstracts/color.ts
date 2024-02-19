@@ -9,7 +9,8 @@ const colors = {
   blueCounterBackground: 'linear-gradient(93.73deg, #1559A4 0.71%, #2D99DC 103.41%)',
   newsDate: '#608494',
   ProductIconBck: 'linear-gradient(0deg, #F0F1F4, #F0F1F4),linear-gradient(0deg, #12475F, #12475F)',
-
+  availableBtn: '#EAF5FC',
+  homeSliderDots: '#2D99DC',
 };
 
 export default colors;
