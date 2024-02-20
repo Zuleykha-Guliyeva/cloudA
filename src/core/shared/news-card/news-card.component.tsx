@@ -1,6 +1,5 @@
 import { useNewsCardStyles } from "./news-card.style";
-
-const NewsCardCommponent = ({img}) => {
+const NewsCardComponent = ({img}) => {
     const classes = useNewsCardStyles();
     return (
       <div className={classes.newsCard}>
@@ -19,4 +18,4 @@ const NewsCardCommponent = ({img}) => {
     );
 }
 
-export default NewsCardCommponent;
+export default NewsCardComponent;

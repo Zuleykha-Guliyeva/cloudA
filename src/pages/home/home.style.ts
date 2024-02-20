@@ -4,7 +4,6 @@ import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 import partnersShadow from 'assets/images/statics/partners/partnersShadow.png';
 import partnersImg from 'assets/images/statics/partners/partnersImg.png';
-import aboutBck from 'assets/images/statics/about/aboutImg.png';
 import homeSlideBackground from 'assets/images/statics/homeSlideBackground.png';
 
 const styles = {
@@ -25,8 +24,8 @@ const styles = {
       paddingRight: rem(15),
     },
     '& button': {
-      height: rem(1)
-    }
+      height: rem(1),
+    },
   },
   absoluteWave: {
     position: 'absolute',
@@ -69,31 +68,19 @@ const styles = {
       marginRight: rem(8),
     },
   },
-  about: {
-    backgroundImage: `url(${aboutBck})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left',
-    padding: `${rem(161)}  ${rem(0)} ${rem(163)} ${rem(0)}`,
-  },
-  aboutTitle: {
-    fontFamily: fonts.font,
-    fontSize: rem(32),
-    fontWeight: '700',
-    lineHeight: rem(39),
-    color: colors.defaultTextColor,
-    marginBottom: rem(12),
-  },
-  aboutDesc: {
-    fontFamily: fonts.font,
-    fontSize: rem(16),
-    fontWeight: '400',
-    lineHeight: rem(26),
-    color: colors.defaultTextColor,
-    marginBottom: rem(22),
-  },
+  aboutSec: {},
   clients: {
     background: colors.light,
     padding: `${rem(92)}  ${rem(0)}`,
+  },
+  aboutIconDesc: {
+    fontFamily: fonts.font,
+    fontSize: rem(18),
+    fontWeight: '700',
+    lineHeight: rem(10),
+    color: colors.defaultTextColor,
+    marginBottom: rem(10),
+    marginLeft: rem(10),
   },
   clientsTitle: {
     fontFamily: fonts.font,
@@ -227,7 +214,7 @@ const styles = {
     color: colors.defaultTextColor,
   },
   news: {
-    padding: `${rem(78)}  ${rem(0)} ${rem(92)} ${rem(0)}`,
+    padding: `${rem(78)}  ${rem(0)} ${rem(60)} ${rem(0)}`,
     background: colors.light,
   },
   newsSecTitle: {

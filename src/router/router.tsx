@@ -6,6 +6,7 @@ import AboutComponent from "../pages/about/about.component";
 import ProductsComponent from "../pages/products/products.component";
 import ContactComponent from "../pages/contact/contact.component";
 import ProductDetailComponent from "pages/product-detail/product-detail.component";
+import NewsComponent from "pages/news/news.component";
 const router = createBrowserRouter(
   [
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter(
         },
         {
           path: Routes.news,
-          element: <ProductsComponent />,
+          element: <NewsComponent />,
         },
         {
           path: `${Routes.newsdetail}/:id`,

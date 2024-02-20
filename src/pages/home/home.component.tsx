@@ -22,13 +22,12 @@ import {
   NewsRight,
   SlideUp,
   SlideDown,
-  BlueArrow
+  BlueArrow,
 } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
-import AboutSubComponent from './components/about-sub.component';
 import { Link } from 'react-router-dom';
-import NewsCardCommponent from 'core/shared/news-card/news-card.component';
+import NewsCardComponent from 'core/shared/news-card/news-card.component';
 import {
   Government,
   OurCustom,
@@ -37,11 +36,15 @@ import {
 } from 'assets/images/icons/blue-counter';
 import wave1 from 'assets/images/statics/wave1.png';
 import { Button } from 'antd';
-import ButtonComponent from 'core/shared/button/button.component';
 import ProductCardComponent from 'core/shared/product-card/product-card.component';
 import { Lightning, Rocket } from 'assets/images/icons/product';
 import slideImg from 'assets/images/statics/slideImg.png';
 import SlickComponent from 'core/shared/slick/slick.component';
+import AboutContentComponent from 'core/shared/about-content/about-content.component';
+import AboutSubComponent from 'core/shared/about-content/component/about-sub.component';
+import ButtonComponent from 'core/shared/button/button.component';
+import { AboutIcon1 } from 'assets/images/icons/about';
+
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const iMargin = 0;
@@ -51,7 +54,7 @@ const HomeComponent = () => {
         <div className='container'>
           <div className='row justify-between'>
             <div className='col-md-5'>
-              <SlickComponent/>
+              <SlickComponent />
             </div>
             <div className='col-md-7'>
               <img src={slideImg} alt='' />
@@ -98,48 +101,64 @@ const HomeComponent = () => {
         </div>
       </section>
 
-      <section className={classes.about}>
-        <div className='container'>
-          <div className='row align-center justify-between'>
-            <div className='col-md-4'></div>
-            <div className='col-md-8'>
-              <div className='row'>
-                <div className='col-12 text-left'>
-                  <p className={classes.aboutTitle}>About us</p>
+      <section className={classes.aboutSec}>
+        <AboutContentComponent className='homePageAbout'>
+          <div className='row'>
+            <div className='col-md-3'>
+              <AboutSubComponent className='aboutSubComponent'>
+                <div className='row'>
+                  <div className='col-2'>
+                    <AboutIcon1 />
+                  </div>
+                  <div className='col-9'>
+                    <p className={classes.aboutIconDesc}>Special</p>
+                    <p className={classes.aboutIconDesc}>Support</p>
+                  </div>
                 </div>
-              </div>
-              <div className='row'>
-                <div className='col-12 text-left'>
-                  <p className={classes.aboutDesc}>
-                    "AzInTelecom" LLC provides high-quality public cloud
-                    services for small and medium-sized enterprises in a data
-                    center that meets international standards and certificates
-                    in two different geographical areas in Azerbaijan. From
-                    resource control and customization for corporate use to ease
-                    of application development and maintenance, public cloud
-                    services are provided over the Internet and resources are
-                    shared among multiple users or tenants.
-                  </p>
+              </AboutSubComponent>
+            </div>
+            <div className='col-md-3'>
+              <AboutSubComponent className='aboutSubComponent'>
+                <div className='row'>
+                  <div className='col-2'>
+                    <AboutIcon1 />
+                  </div>
+                  <div className='col-9'>
+                    <p className={classes.aboutIconDesc}>Special</p>
+                    <p className={classes.aboutIconDesc}>Support</p>
+                  </div>
                 </div>
-              </div>
-              <div className='row'>
-                <div className='col-md-3'>
-                  <AboutSubComponent />
+              </AboutSubComponent>
+            </div>
+            <div className='col-md-3'>
+              <AboutSubComponent className='aboutSubComponent'>
+                <div className='row'>
+                  <div className='col-2'>
+                    <AboutIcon1 />
+                  </div>
+                  <div className='col-9'>
+                    <p className={classes.aboutIconDesc}>Special</p>
+                    <p className={classes.aboutIconDesc}>Support</p>
+                  </div>
                 </div>
-                <div className='col-md-3'>
-                  <AboutSubComponent />
+              </AboutSubComponent>
+            </div>
+            <div className='col-md-3'>
+              <AboutSubComponent className='aboutSubComponent'>
+                <div className='row'>
+                  <div className='col-2'>
+                    <AboutIcon1 />
+                  </div>
+                  <div className='col-9'>
+                    <p className={classes.aboutIconDesc}>Special</p>
+                    <p className={classes.aboutIconDesc}>Support</p>
+                  </div>
                 </div>
-                <div className='col-md-3'>
-                  <AboutSubComponent />
-                </div>
-                <div className='col-md-3'>
-                  <AboutSubComponent />
-                </div>
-              </div>
-              <ButtonComponent text='Daha  çox' className='aboutBtn' />
+              </AboutSubComponent>
             </div>
           </div>
-        </div>
+          <ButtonComponent text='Daha  çox' className='aboutBtn' />
+        </AboutContentComponent>
       </section>
 
       <section className={classes.clients}>
@@ -344,13 +363,13 @@ const HomeComponent = () => {
           </div>
           <div className='row'>
             <div className='col-md-4'>
-              <NewsCardCommponent img={news1} />
+              <NewsCardComponent img={news1} />
             </div>
             <div className='col-md-4'>
-              <NewsCardCommponent img={news2} />
+              <NewsCardComponent img={news2} />
             </div>
             <div className='col-md-4'>
-              <NewsCardCommponent img={news3} />
+              <NewsCardComponent img={news3} />
             </div>
           </div>
         </div>

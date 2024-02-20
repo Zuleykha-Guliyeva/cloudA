@@ -7,7 +7,8 @@ const styles = {
   newsCard: {
     padding: rem(10),
     borderRadius: rem(21),
-    background: '#F5F9FC',
+    marginBottom: rem(32),
+    background: colors.bodyColor,
     '& img': {
       width: '100%',
       borderRadius: rem(21),
