@@ -7,6 +7,7 @@ const styles = {
   newsCard: {
     padding: rem(10),
     borderRadius: rem(21),
+    border: `${rem(1)} solid ${colors.cardBorder}`,
     marginBottom: rem(32),
     background: colors.bodyColor,
     '& img': {

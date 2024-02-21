@@ -30,7 +30,7 @@ const styles = {
   absoluteWave: {
     position: 'absolute',
     left: 0,
-    top: rem(600),
+    top: rem(650),
   },
   upcoming: {
     position: 'relative',

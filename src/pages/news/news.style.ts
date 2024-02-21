@@ -5,8 +5,7 @@ import { createUseStyles } from 'react-jss';
 
 const styles = {
   newsSec: {
-    background: colors.light,
-    padding: `${rem(230)} ${rem(0)} ${rem(200)} ${rem(0)}`,
+    padding: `${rem(230)} ${rem(0)} ${rem(136)} ${rem(0)}`,
     '& Form': {
       position: 'relative',
     },
@@ -40,7 +39,7 @@ const styles = {
     '& .ant-pagination-item-active': {
       background: colors.calcBtnBlue,
       borderColor: colors.calcBtnBlue,
-      '& li a': { color: colors.light },
+      '& a': { color: colors.light },
     },
   },
 };

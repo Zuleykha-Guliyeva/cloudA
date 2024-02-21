@@ -1,5 +1,5 @@
 import { useProductCardStykes } from "./product-card.style";
-import setting from 'assets/images/icons/product/cpu-setting.png';
+import setting from 'assets/images/icons/products/cpu-setting.png';
 
 const ProductCardComponent = () => {
     const classes = useProductCardStykes();

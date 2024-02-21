@@ -10,6 +10,7 @@ const styles = {
     backgroundColor: colors.light,
     boxShadow: '0px 4px 16px 0px #12475F12',
     borderRadius: rem(28),
+    marginBottom: rem(32),
   },
   iconProductCard: {
     display: 'inline-block',

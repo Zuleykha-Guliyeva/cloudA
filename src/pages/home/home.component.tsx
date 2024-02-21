@@ -67,34 +67,36 @@ const HomeComponent = () => {
       <section className={classes.upcoming}>
         <div className='container'>
           <div className={classes.upcomingBackground}>
-            <div className='row'>
-              <div className='col-12 text-center'>
-                <Button className={classes.availableProduct}>
-                  <Lightning />
-                  <span>Available products</span>
-                </Button>
-                <Button className={classes.availableUpcoming}>
-                  <Rocket />
-                  <span>Upcoming</span>
-                </Button>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-12 text-center'>
+                  <Button className={classes.availableProduct}>
+                    <Lightning />
+                    <span>Available products</span>
+                  </Button>
+                  <Button className={classes.availableUpcoming}>
+                    <Rocket />
+                    <span>Upcoming</span>
+                  </Button>
+                </div>
               </div>
-            </div>
-            <div className='row py-27'>
-              <div className='col-md-4'>
-                <ProductCardComponent />
+              <div className='row py-27'>
+                <div className='col-md-4'>
+                  <ProductCardComponent />
+                </div>
+                <div className='col-md-4'>
+                  <ProductCardComponent />
+                </div>
+                <div className='col-md-4'>
+                  <ProductCardComponent />
+                </div>
               </div>
-              <div className='col-md-4'>
-                <ProductCardComponent />
-              </div>
-              <div className='col-md-4'>
-                <ProductCardComponent />
-              </div>
-            </div>
-            <div className='row justify-center align-center mt-27'>
-              <div className='col-12 text-center'>
-                <Link to='#'>
-                  More <BlueArrow />
-                </Link>
+              <div className='row justify-center align-center mt-27'>
+                <div className='col-12 text-center'>
+                  <Link to='#'>
+                    More <BlueArrow />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

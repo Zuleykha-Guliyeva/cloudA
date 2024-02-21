@@ -5,4 +5,12 @@ export const az = {
   news_title: 'News and blog',
   contact_title: 'Contact',
   kalkulyator: 'Kalkulyator',
+  //Form
+  input_required: 'input_required',
+  submit: 'Göndər',
+  name: 'Ad',
+  surname: 'Soyad',
+  email: 'E-mail',
+  phone: 'Mobil nömrə',
+  content: 'Mətn',
 };
