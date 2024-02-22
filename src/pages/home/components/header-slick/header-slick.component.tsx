@@ -1,8 +1,8 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useSlickComponent } from './slick.style';
-const SlickComponent = () => {
+import { useSlickComponent } from './header-slick.style';
+const HeaderSlickComponent = () => {
     const classes = useSlickComponent();
   const settings = {
     autoplay: false,
@@ -29,4 +29,4 @@ const SlickComponent = () => {
   );
 };
 
-export default SlickComponent;
+export default HeaderSlickComponent;

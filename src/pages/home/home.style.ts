@@ -11,7 +11,7 @@ const styles = {
     backgroundImage: `url(${homeSlideBackground})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    padding: `${rem(190)}  ${rem(0)} ${rem(400)} ${rem(0)}`,
+    padding: `${rem(190)}  ${rem(0)} ${rem(410)} ${rem(0)}`,
     '& img': {
       width: '100%',
     },
@@ -28,12 +28,14 @@ const styles = {
     },
   },
   absoluteWave: {
+    maxWidth: '100%',
     position: 'absolute',
     left: 0,
-    top: rem(650),
+    top: rem(570),
   },
   upcoming: {
     position: 'relative',
+    top: rem(-120),
     '& a': {
       display: 'inline-flex',
       textDecoration: 'none',
@@ -174,7 +176,6 @@ const styles = {
     marginBottom: rem(29),
   },
   partnersLogoBox: {
-    padding: rem(15),
   },
   partnersAbsoluteImg: {
     position: 'absolute',
@@ -188,20 +189,6 @@ const styles = {
     position: 'absolute',
     right: rem(30),
     top: rem(30),
-  },
-  partnersLogoBackground: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: colors.light,
-    borderRadius: rem(28),
-    padding: `${rem(45)}  ${rem(37)}`,
-    height: rem(130),
-    marginBottom: rem(30),
-    '& img': {
-      width: '100%',
-      height: 'auto',
-    },
   },
   certificates: {
     padding: `${rem(62)}  ${rem(112)}`,

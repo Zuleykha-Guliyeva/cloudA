@@ -9,7 +9,7 @@ const styles = {
     backgroundImage: `url(${aboutBck})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
-    padding: `${rem(161)}  ${rem(0)} ${rem(163)} ${rem(0)}`,
+    padding: `${rem(41)}  ${rem(0)} ${rem(163)} ${rem(0)}`,
   },
   aboutTitle: {
     fontFamily: fonts.font,

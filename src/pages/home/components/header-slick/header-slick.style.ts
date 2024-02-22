@@ -6,7 +6,6 @@ const styles = {
   slider: {},
   customDots: {
     display: 'flex!important',
-    justifyContent: 'center!important',
     listStyle: 'none',
     padding: 0,
     marginTop: rem(115),

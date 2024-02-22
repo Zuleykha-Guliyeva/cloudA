@@ -7,23 +7,13 @@ import certificate6 from 'assets/images/statics/certificates/certificate6.png';
 import news1 from 'assets/images/statics/news/news1.png';
 import news2 from 'assets/images/statics/news/news2.png';
 import news3 from 'assets/images/statics/news/news3.png';
-import partners1 from 'assets/images/statics/partners/partners1.png';
-import partners2 from 'assets/images/statics/partners/partners2.png';
-import partners3 from 'assets/images/statics/partners/partners3.png';
-import partners4 from 'assets/images/statics/partners/partners4.png';
 import azercell from 'assets/images/statics/clients/azercell.png';
 import aztv from 'assets/images/statics/clients/aztv.png';
 import ehokumet from 'assets/images/statics/clients/ehokumet.png';
 import gencler from 'assets/images/statics/clients/gencler.png';
 import mida from 'assets/images/statics/clients/mida.png';
 import seher from 'assets/images/statics/clients/seher.png';
-import {
-  NewsLeft,
-  NewsRight,
-  SlideUp,
-  SlideDown,
-  BlueArrow,
-} from 'assets/images/icons/arrows';
+import { NewsLeft, NewsRight, BlueArrow } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
 import { Link } from 'react-router-dom';
@@ -39,11 +29,12 @@ import { Button } from 'antd';
 import ProductCardComponent from 'core/shared/product-card/product-card.component';
 import { Lightning, Rocket } from 'assets/images/icons/product';
 import slideImg from 'assets/images/statics/slideImg.png';
-import SlickComponent from 'core/shared/slick/slick.component';
+import HeaderSlickComponent from 'pages/home/components/header-slick/header-slick.component';
 import AboutContentComponent from 'core/shared/about-content/about-content.component';
 import AboutSubComponent from 'core/shared/about-content/component/about-sub.component';
 import ButtonComponent from 'core/shared/button/button.component';
 import { AboutIcon1 } from 'assets/images/icons/about';
+import PartnersSlickComponent from './components/partners-slick/partners-slick.component';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -54,7 +45,7 @@ const HomeComponent = () => {
         <div className='container'>
           <div className='row justify-between'>
             <div className='col-md-5'>
-              <SlickComponent />
+              <HeaderSlickComponent />
             </div>
             <div className='col-md-7'>
               <img src={slideImg} alt='' />
@@ -306,37 +297,8 @@ const HomeComponent = () => {
               </div>
               <div className={classes.partnersLogoBox}>
                 <div className='row align-center'>
-                  <div className='col-1 p-0'>
-                    <div className='mb-22'>
-                      <SlideUp />
-                    </div>
-                    <div>
-                      <SlideDown />
-                    </div>
-                  </div>
-                  <div className='col-11'>
-                    <div className='row'>
-                      <div className='col-md-6'>
-                        <div className={classes.partnersLogoBackground}>
-                          <img src={partners1} alt='' />
-                        </div>
-                      </div>
-                      <div className='col-md-6'>
-                        <div className={classes.partnersLogoBackground}>
-                          <img src={partners2} alt='' />
-                        </div>
-                      </div>
-                      <div className='col-md-6'>
-                        <div className={classes.partnersLogoBackground}>
-                          <img src={partners3} alt='' />
-                        </div>
-                      </div>
-                      <div className='col-md-6'>
-                        <div className={classes.partnersLogoBackground}>
-                          <img src={partners4} alt='' />
-                        </div>
-                      </div>
-                    </div>
+                  <div className='col-12'>
+                    <PartnersSlickComponent></PartnersSlickComponent>
                   </div>
                 </div>
               </div>
