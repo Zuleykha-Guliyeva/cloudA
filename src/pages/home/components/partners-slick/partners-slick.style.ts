@@ -3,35 +3,37 @@ import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
-  slider: {},
+  partnersSlider: {
+    paddingLeft: rem(49),
+    display: 'relative',
+    '& .slick-prev': {
+      left: '0',
+      transform: 'translate(0, -50%)',
+      top: '28%',
+    },
+    '& .slick-next': {
+      left: '0',
+      transform: 'translate(0, -50%)',
+      display: 'none',
+    },
+    '& .slick-prev::before': {
+      display: 'none',
+    },
+    '& .slick-next::before': {
+      display: 'none',
+    },
+  },
   sliderItem: {
     textAlign: 'center',
   },
-  customDots: {
-    display: 'flex!important',
-    listStyle: 'none',
-    padding: 0,
-    marginTop: rem(115),
-    '& button': {
-      width: rem(60),
-      marginRight: rem(26),
-      background: colors.homeSliderDots,
-      border: 'none',
-      color: 'transparent',
-      cursor: 'pointer',
-      '&:hover, &.slick-active': {
-        backgroundColor: `${colors.light} !important`,
-      },
-    },
-  },
   partnersSlideItem: {
-    position: 'relative!important',
     textAlign: 'center',
     display: 'flex!important',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     height: '100%',
+
     '& $partnersLogoBackground': {
       width: '48%',
       display: 'flex',
@@ -56,12 +58,21 @@ const styles = {
     },
   },
   customArrowUp: {
-    '& slick-prev': {
-      display: 'absolute!important',
-      top: '150px!important',
+    '& svg': {
+      position: 'absolute',
+      left: '0',
+      right: 'auto',
+      transform: 'translate(0, -50%)',
     },
   },
-  customArrowDown: {},
+  customArrowDown: {
+    '& svg': {
+      position: 'absolute',
+      left: '0',
+      right: 'auto',
+      transform: 'translate(0, -50%)',
+    },
+  },
 };
 
 export const usePartnersSlickComponent = createUseStyles(styles);

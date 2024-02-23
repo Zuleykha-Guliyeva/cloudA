@@ -42,5 +42,21 @@ const styles = {
       '& a': { color: colors.light },
     },
   },
+  searchForDate: {
+    background: colors.light,
+    borderRadius: rem(28),
+    marginTop: rem(12),
+  },
+  inputDateGroup: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: rem(26),
+
+  },
+  fromDate: {
+    display: 'inline-block',
+    marginRight: rem(22),
+  },
+  toDate: {},
 };
 export const useNewsStyles = createUseStyles(styles);

@@ -23,6 +23,30 @@ const NewsComponent = () => {
               ></Input>
               <img src={searchBlue} alt='' />
             </Form>
+            <Form className={classes.searchForDate}>
+              <div className={classes.inputDateGroup}>
+                <Input
+                  className={classes.fromDate}
+                  placeholder='What news are you looking for?'
+                  type='text'
+                ></Input>
+                <Input
+                  className={classes.toDate}
+                  placeholder='What news are you looking for?'
+                  type='text'
+                ></Input>
+              </div>
+              <div className={classes.inputDateGroup}>
+                <Input
+                  placeholder='What news are you looking for?'
+                  type='reset'
+                ></Input>
+                <Input
+                  placeholder='What news are you looking for?'
+                  type='submit'
+                ></Input>
+              </div>
+            </Form>
           </div>
         </div>
         <div className='row'>

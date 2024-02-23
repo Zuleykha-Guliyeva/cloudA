@@ -23,4 +23,4 @@ const styles = {
   },
 };
 
-export const useSlickComponent = createUseStyles(styles);
+export const useHeaderSlickComponent = createUseStyles(styles);

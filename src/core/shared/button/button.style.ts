@@ -5,6 +5,7 @@ import { createUseStyles } from "react-jss"
 
 const styles = {
   aboutBtn: {
+    textDecoration: 'none',
     fontFamily: fonts.font,
     fontSize: rem(18),
     fontWeight: '700',
@@ -13,18 +14,22 @@ const styles = {
     backgroundColor: colors.calcBtnBlue,
     border: 'none',
     borderRadius: rem(41),
+    display: 'inline-block',
+    textAlign: 'center',
     padding: `${rem(16)}  ${rem(56)}`,
     marginTop: rem(48),
   },
   calculatorBtn: {
+    textDecoration: 'none',
     fontFamily: fonts.font,
     fontSize: rem(18),
     fontWeight: '700',
     lineHeight: rem(22),
+    backgroundColor: colors.light,
     color: colors.calcBtnBlue,
-    border: 'none',
     borderRadius: rem(41),
-    padding: `${rem(16)}  ${rem(56)}`,
+    border: `${rem(1)} solid ${colors.calcBtnBlue}`,
+    padding: `${rem(16)}  ${rem(49)}`,
   },
 };
 export const useButtonStyles = createUseStyles(styles);

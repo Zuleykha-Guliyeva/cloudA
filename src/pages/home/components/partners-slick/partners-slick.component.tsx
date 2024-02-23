@@ -17,16 +17,14 @@ const PartnersSlickComponent = () => {
     speed: 1500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: true,
     vertical: true,
     verticalSwiping: true,
     prevArrow: <div className={classes.customArrowUp}> <SlideUp /> </div>, 
     nextArrow: <div className={classes.customArrowDown}> <SlideDown /> </div>,
-    dotsClass: classes.customDots,
   };
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className={classes.partnersSlider}>
       <div className={classes.partnersSlideItem}>
         <div className={classes.partnersLogoBackground}>
           <img src={partners1} alt='' />

@@ -4,20 +4,16 @@ import certificate3 from 'assets/images/statics/certificates/certificate3.png';
 import certificate4 from 'assets/images/statics/certificates/certificate4.png';
 import certificate5 from 'assets/images/statics/certificates/certificate5.png';
 import certificate6 from 'assets/images/statics/certificates/certificate6.png';
-import news1 from 'assets/images/statics/news/news1.png';
-import news2 from 'assets/images/statics/news/news2.png';
-import news3 from 'assets/images/statics/news/news3.png';
 import azercell from 'assets/images/statics/clients/azercell.png';
 import aztv from 'assets/images/statics/clients/aztv.png';
 import ehokumet from 'assets/images/statics/clients/ehokumet.png';
 import gencler from 'assets/images/statics/clients/gencler.png';
 import mida from 'assets/images/statics/clients/mida.png';
 import seher from 'assets/images/statics/clients/seher.png';
-import { NewsLeft, NewsRight, BlueArrow } from 'assets/images/icons/arrows';
+import { BlueArrow } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
 import { Link } from 'react-router-dom';
-import NewsCardComponent from 'core/shared/news-card/news-card.component';
 import {
   Government,
   OurCustom,
@@ -35,6 +31,8 @@ import AboutSubComponent from 'core/shared/about-content/component/about-sub.com
 import ButtonComponent from 'core/shared/button/button.component';
 import { AboutIcon1 } from 'assets/images/icons/about';
 import PartnersSlickComponent from './components/partners-slick/partners-slick.component';
+import NewsSlickComponent from './components/news-slick/news-slick.component';
+import { Routes } from 'router/routes';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -84,7 +82,7 @@ const HomeComponent = () => {
               </div>
               <div className='row justify-center align-center mt-27'>
                 <div className='col-12 text-center'>
-                  <Link to='#'>
+                  <Link to={Routes.products}>
                     More <BlueArrow />
                   </Link>
                 </div>
@@ -150,7 +148,7 @@ const HomeComponent = () => {
               </AboutSubComponent>
             </div>
           </div>
-          <ButtonComponent text='Daha  çox' className='aboutBtn' />
+          <ButtonComponent text='Daha  çox' className='aboutBtn'/>
         </AboutContentComponent>
       </section>
 
@@ -314,28 +312,12 @@ const HomeComponent = () => {
               <p className={classes.newsSecTitle}>News and blog</p>
             </div>
             <div className='col-6 text-right'>
-              <Link to='#' className='pr-22'>
-                <NewsLeft />
-              </Link>
-              <Link to='#'>
-                <NewsRight />
-              </Link>
-              <Link to='#' className={classes.newsMore}>
+              <Link to={Routes.news} className={classes.newsMore}>
                 More
               </Link>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-md-4'>
-              <NewsCardComponent img={news1} />
-            </div>
-            <div className='col-md-4'>
-              <NewsCardComponent img={news2} />
-            </div>
-            <div className='col-md-4'>
-              <NewsCardComponent img={news3} />
-            </div>
-          </div>
+          <NewsSlickComponent />
         </div>
       </section>
 
