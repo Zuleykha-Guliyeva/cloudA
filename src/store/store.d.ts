@@ -1,10 +1,11 @@
 import {ILang} from '../assets/lang/lang';
 
 export interface IState {
-    loader: boolean;
-    navMenu: boolean;
-    languages: ILanguages[];
-    locale: any;
+  loader: boolean;
+  navMenu: boolean;
+  dateSearchBtn: boolean;
+  languages: ILanguages[];
+  locale: any;
 }
 
 

@@ -71,13 +71,13 @@ const HomeComponent = () => {
               </div>
               <div className='row py-27'>
                 <div className='col-md-4'>
-                  <ProductCardComponent />
+                  <ProductCardComponent title='Platform service' />
                 </div>
                 <div className='col-md-4'>
-                  <ProductCardComponent />
+                  <ProductCardComponent title='Networking service' />
                 </div>
                 <div className='col-md-4'>
-                  <ProductCardComponent />
+                  <ProductCardComponent title='Software service' />
                 </div>
               </div>
               <div className='row justify-center align-center mt-27'>
@@ -148,7 +148,11 @@ const HomeComponent = () => {
               </AboutSubComponent>
             </div>
           </div>
-          <ButtonComponent text='Daha  çox' className='aboutBtn'/>
+          <ButtonComponent
+            text='Daha  çox'
+            className='aboutBtn'
+            url={Routes.about}
+          />
         </AboutContentComponent>
       </section>
 

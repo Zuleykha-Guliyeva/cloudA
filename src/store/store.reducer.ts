@@ -7,6 +7,7 @@ import {ILang} from '../assets/lang/lang';
 const initialState: IState = {
     loader: false,
     navMenu: false,
+    dateSearchBtn: false,
     languages: [
         {
             id: 1,
@@ -33,10 +34,13 @@ export const rootSlice = createSlice({
             };
             state.locale = lang[action.payload];
             localStorage.setItem(`${environment.applicationName}-locale`, action.payload);
+        },
+        toggleDateSearchBtn: (state: IState) => {
+            state.dateSearchBtn = !state.dateSearchBtn;
         }
     },
 });
 
-export const {setLoader, toggleNavMenu, setLocale} = rootSlice.actions;
+export const {setLoader, toggleNavMenu, toggleDateSearchBtn, setLocale} = rootSlice.actions;
 
 export default rootSlice.reducer;
