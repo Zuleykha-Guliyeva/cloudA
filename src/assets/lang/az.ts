@@ -13,4 +13,6 @@ export const az = {
   email: 'E-mail',
   phone: 'Mobil nömrə',
   content: 'Mətn',
+  //Contact
+  location: '74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan',
 };

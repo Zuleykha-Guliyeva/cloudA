@@ -19,6 +19,11 @@ const styles = {
     '& .slick-next::before': {
       display: 'none',
     },
+    '& .slick-next:hover svg': {
+      stroke: '#000!important',
+      fill: '#000!important',
+      color: '#000!important',
+    },
   },
   newsSlideItems: {
     display: 'flex!important',

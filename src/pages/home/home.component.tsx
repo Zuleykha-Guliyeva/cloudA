@@ -33,10 +33,23 @@ import { AboutIcon1 } from 'assets/images/icons/about';
 import PartnersSlickComponent from './components/partners-slick/partners-slick.component';
 import NewsSlickComponent from './components/news-slick/news-slick.component';
 import { Routes } from 'router/routes';
+import { useState } from 'react';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const iMargin = 0;
+  const products = [
+    { id: 1, title: 'Network as a Service', category: 'product' },
+    { id: 2, title: 'Platform as a Service', category: 'upcoming' },
+    { id: 3, title: 'Software as a Service', category: 'product' },
+  ];
+  const [selectedCategory, setSelectedCategory] = useState();
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
   return (
     <>
       <section className={classes.slide}>
@@ -59,26 +72,32 @@ const HomeComponent = () => {
             <div className='container'>
               <div className='row'>
                 <div className='col-12 text-center'>
-                  <Button className={classes.availableProduct}>
+                  <Button
+                    className={classes.availableProduct}
+                    onClick={() => {
+                      handleCategoryClick('product');
+                    }}
+                  >
                     <Lightning />
                     <span>Available products</span>
                   </Button>
-                  <Button className={classes.availableUpcoming}>
+                  <Button
+                    className={classes.availableUpcoming}
+                    onClick={() => {
+                      handleCategoryClick('upcoming');
+                    }}
+                  >
                     <Rocket />
                     <span>Upcoming</span>
                   </Button>
                 </div>
               </div>
               <div className='row py-27'>
-                <div className='col-md-4'>
-                  <ProductCardComponent title='Platform service' />
-                </div>
-                <div className='col-md-4'>
-                  <ProductCardComponent title='Networking service' />
-                </div>
-                <div className='col-md-4'>
-                  <ProductCardComponent title='Software service' />
-                </div>
+                {filteredProducts.map((product) => (
+                  <div key={product.id} className='col-md-4 mb-32'>
+                    <ProductCardComponent title={product.title} />
+                  </div>
+                ))}
               </div>
               <div className='row justify-center align-center mt-27'>
                 <div className='col-12 text-center'>

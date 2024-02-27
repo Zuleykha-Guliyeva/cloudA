@@ -7,4 +7,5 @@ export enum Routes {
   products = '/products',
   productdetail = '/products/detail',
   contact = '/contact',
+  search = '/search',
 }

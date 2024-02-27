@@ -55,7 +55,7 @@ export const NewsLeft = () => {
       width='59'
       height='15'
       viewBox='0 0 59 15'
-      fill='none'
+      fill='#000'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
@@ -161,3 +161,33 @@ export const BlueArrow = () => {
     </svg>
   );
 };
+
+export const SearchResultLeftArrow = () => {
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M11.8061 15.1479L16.7725 10.1816L11.8061 5.21522'
+        stroke='#2BAAE2'
+        stroke-width='1.5'
+        stroke-miterlimit='10'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+      <path
+        d='M2.8633 10.1816L16.6333 10.1816'
+        stroke='#2BAAE2'
+        stroke-width='1.5'
+        stroke-miterlimit='10'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+    </svg>
+  );
+};
+

@@ -7,6 +7,7 @@ import ProductsComponent from "../pages/products/products.component";
 import ContactComponent from "../pages/contact/contact.component";
 import ProductDetailComponent from "pages/product-detail/product-detail.component";
 import NewsComponent from "pages/news/news.component";
+import SearchResultComponent from "pages/search-result/search-result.component";
 const router = createBrowserRouter(
   [
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter(
         {
           path: Routes.contact,
           element: <ContactComponent />,
+        },
+        {
+          path: Routes.search,
+          element: <SearchResultComponent />,
         },
       ],
     },

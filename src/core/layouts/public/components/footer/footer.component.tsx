@@ -9,10 +9,11 @@ import {
   Youtube,
 } from 'assets/images/icons/sosial';
 import { useFooterStyles } from './footer.style';
+import useLocalization from 'assets/lang';
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
-
+  const tarnslate = useLocalization();
   return (
     <div className={classes.footer}>
       <div className='container'>
@@ -28,10 +29,7 @@ const FooterComponent = () => {
             <div className='row align-center justify-between'>
               <div className='col-md-6'>
                 <Form className={classes.relative}>
-                  <Input
-                    placeholder='mail.cloud.az'
-                    type='email'
-                  ></Input>
+                  <Input placeholder='mail.cloud.az' type='email'></Input>
                   <Input
                     placeholder='mail.cloud.az'
                     value='Subscribe'
@@ -132,7 +130,7 @@ const FooterComponent = () => {
                   >
                     <Location />
                     <span className='pl-16'>
-                      74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan
+                      {tarnslate('location')}
                     </span>
                   </NavLink>
                 </li>

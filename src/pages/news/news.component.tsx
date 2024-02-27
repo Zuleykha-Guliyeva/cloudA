@@ -7,6 +7,7 @@ import newsImg1 from 'assets/images/statics/news/news1.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDateSearchBtn } from 'store/store.reducer';
 import { IState } from 'store/store';
+import { Routes } from 'router/routes';
 
 const NewsComponent = () => {
   const classes = useNewsStyles();
@@ -25,7 +26,7 @@ const NewsComponent = () => {
           </div>
           <div className='col-md-7'>
             <div className={classes.relativeBox}>
-              <Form className={classes.searchForm}>
+              <Form action={Routes.search} className={classes.searchForm}>
                 <SearchIcon />
                 <Input
                   placeholder='What news are you looking for?'
