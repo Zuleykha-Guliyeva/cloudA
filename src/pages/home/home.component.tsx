@@ -183,23 +183,35 @@ const HomeComponent = () => {
             </div>
           </div>
           <div className='row'>
-            <div className='col-md-2'>
-              <img src={azercell} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={azercell} alt='' />
+              </div>
             </div>
-            <div className='col-md-2'>
-              <img src={aztv} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={aztv} alt='' />
+              </div>
             </div>
-            <div className='col-md-2'>
-              <img src={ehokumet} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={ehokumet} alt='' />
+              </div>
             </div>
-            <div className='col-md-2'>
-              <img src={gencler} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={gencler} alt='' />
+              </div>
             </div>
-            <div className='col-md-2'>
-              <img src={mida} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={mida} alt='' />
+              </div>
             </div>
-            <div className='col-md-2'>
-              <img src={seher} alt='' />
+            <div className='col-md-2 p-0'>
+              <div className={classes.clientsImg}>
+                <img src={seher} alt='' />
+              </div>
             </div>
           </div>
         </div>
@@ -276,28 +288,28 @@ const HomeComponent = () => {
         <div className='container'>
           <div className='row justify-between'>
             <div className='col-md-3 p-0 text-center'>
-              <div className={classes.borderRigt}>
+              <div className={classes.lineRight}>
                 <OurTeam />
                 <p className={classes.blueCounterTitle}>Our team</p>
                 <span className={classes.blueCounterCount}>+420</span>
               </div>
             </div>
             <div className='col-md-3 p-0 text-center'>
-              <div className={classes.borderRigt}>
+              <div className={classes.lineRight}>
                 <OurPrj />
                 <p className={classes.blueCounterTitle}>Our projects</p>
                 <span className={classes.blueCounterCount}>+130</span>
               </div>
             </div>
             <div className='col-md-3 p-0 text-center'>
-              <div className={classes.borderRigt}>
+              <div className={classes.lineRight}>
                 <OurCustom />
                 <p className={classes.blueCounterTitle}>Private customers</p>
                 <span className={classes.blueCounterCount}>91</span>
               </div>
             </div>
             <div className='col-md-3 p-0 text-center'>
-              <div>
+              <div className={classes.lineRight}>
                 <Government />
                 <p className={classes.blueCounterTitle}>Government customers</p>
                 <span className={classes.blueCounterCount}>70</span>

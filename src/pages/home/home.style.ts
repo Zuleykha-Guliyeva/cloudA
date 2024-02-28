@@ -71,10 +71,6 @@ const styles = {
     },
   },
   aboutSec: {},
-  clients: {
-    background: colors.light,
-    padding: `${rem(92)}  ${rem(0)}`,
-  },
   aboutIconDesc: {
     fontFamily: fonts.font,
     fontSize: rem(18),
@@ -84,12 +80,32 @@ const styles = {
     marginBottom: rem(10),
     marginLeft: rem(10),
   },
+  clients: {
+    background: colors.light,
+    padding: `${rem(92)}  ${rem(0)}`,
+    '& .container .row .col-md-2:last-child $clientsImg::after': {
+      content: 'none',
+    },
+  },
   clientsTitle: {
     fontFamily: fonts.font,
     fontSize: rem(32),
     fontWeight: '700',
     lineHeight: rem(39),
     color: colors.defaultTextColor,
+  },
+  clientsImg: {
+    textAlign: 'center',
+    position: 'relative',
+    '&::after': {
+      content: '""',
+      borderRight: `${rem(1)} solid ${colors.clientsBorderRight}`,
+      position: 'absolute',
+      top: rem(3),
+      bottom: rem(3),
+      right: 0,
+      height: 'calc(100%-6)',
+    },
   },
   trustUs: {
     padding: `${rem(92)}  ${rem(0)}`,
@@ -137,6 +153,9 @@ const styles = {
   blueCounter: {
     background: colors.blueCounterBackground,
     padding: `${rem(74)}  ${rem(0)} ${rem(92)} ${rem(0)}`,
+    '& .container .row .col-md-3:last-child $lineRight::after': {
+      content: 'none',
+    },
   },
   blueCounterTitle: {
     fontFamily: fonts.fontLight,
@@ -154,8 +173,17 @@ const styles = {
     lineHeight: rem(61),
     color: colors.light,
   },
-  borderRigt: {
-    borderRight: `${rem(1)} solid ${colors.light}`,
+  lineRight: {
+    position: 'relative',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: rem(30),
+      bottom: rem(30),
+      right: 0,
+      height: 'calc(100%-60)',
+      borderRight: `${rem(1)} solid ${colors.light}`,
+    },
   },
   partners: {
     backgroundImage: `url(${partnersImg})`,
@@ -175,8 +203,7 @@ const styles = {
     color: colors.defaultTextColor,
     marginBottom: rem(29),
   },
-  partnersLogoBox: {
-  },
+  partnersLogoBox: {},
   partnersAbsoluteImg: {
     position: 'absolute',
     right: 0,

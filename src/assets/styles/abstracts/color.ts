@@ -15,6 +15,7 @@ const colors = {
   homeSliderDots: '#2D99DC',
   cardBorder: '#D5E0E8',
   searchResultBorder: '#B7B7B7',
+  clientsBorderRight: '#D1D1D1',
 };
 
 
