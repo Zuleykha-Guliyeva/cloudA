@@ -115,56 +115,64 @@ const HomeComponent = () => {
         <AboutContentComponent className='homePageAbout'>
           <div className='row'>
             <div className='col-md-3'>
-              <AboutSubComponent className='aboutSubComponent'>
-                <div className='row'>
-                  <div className='col-2'>
-                    <AboutIcon1 />
+              <div className={classes.aboutItemBorder}>
+                <AboutSubComponent className='aboutSubComponent'>
+                  <div className='row'>
+                    <div className='col-2'>
+                      <AboutIcon1 />
+                    </div>
+                    <div className='col-9'>
+                      <p className={classes.aboutIconDesc}>Special</p>
+                      <p className={classes.aboutIconDesc}>Support</p>
+                    </div>
                   </div>
-                  <div className='col-9'>
-                    <p className={classes.aboutIconDesc}>Special</p>
-                    <p className={classes.aboutIconDesc}>Support</p>
-                  </div>
-                </div>
-              </AboutSubComponent>
+                </AboutSubComponent>
+              </div>
             </div>
             <div className='col-md-3'>
-              <AboutSubComponent className='aboutSubComponent'>
-                <div className='row'>
-                  <div className='col-2'>
-                    <AboutIcon1 />
+              <div className={classes.aboutItemBorder}>
+                <AboutSubComponent className='aboutSubComponent'>
+                  <div className='row'>
+                    <div className='col-2'>
+                      <AboutIcon1 />
+                    </div>
+                    <div className='col-9'>
+                      <p className={classes.aboutIconDesc}>Special</p>
+                      <p className={classes.aboutIconDesc}>Support</p>
+                    </div>
                   </div>
-                  <div className='col-9'>
-                    <p className={classes.aboutIconDesc}>Special</p>
-                    <p className={classes.aboutIconDesc}>Support</p>
-                  </div>
-                </div>
-              </AboutSubComponent>
+                </AboutSubComponent>
+              </div>
             </div>
             <div className='col-md-3'>
-              <AboutSubComponent className='aboutSubComponent'>
-                <div className='row'>
-                  <div className='col-2'>
-                    <AboutIcon1 />
+              <div className={classes.aboutItemBorder}>
+                <AboutSubComponent className='aboutSubComponent'>
+                  <div className='row'>
+                    <div className='col-2'>
+                      <AboutIcon1 />
+                    </div>
+                    <div className='col-9'>
+                      <p className={classes.aboutIconDesc}>Special</p>
+                      <p className={classes.aboutIconDesc}>Support</p>
+                    </div>
                   </div>
-                  <div className='col-9'>
-                    <p className={classes.aboutIconDesc}>Special</p>
-                    <p className={classes.aboutIconDesc}>Support</p>
-                  </div>
-                </div>
-              </AboutSubComponent>
+                </AboutSubComponent>
+              </div>
             </div>
             <div className='col-md-3'>
-              <AboutSubComponent className='aboutSubComponent'>
-                <div className='row'>
-                  <div className='col-2'>
-                    <AboutIcon1 />
+              <div className={classes.aboutItemBorder}>
+                <AboutSubComponent className='aboutSubComponent'>
+                  <div className='row'>
+                    <div className='col-2'>
+                      <AboutIcon1 />
+                    </div>
+                    <div className='col-9'>
+                      <p className={classes.aboutIconDesc}>Special</p>
+                      <p className={classes.aboutIconDesc}>Support</p>
+                    </div>
                   </div>
-                  <div className='col-9'>
-                    <p className={classes.aboutIconDesc}>Special</p>
-                    <p className={classes.aboutIconDesc}>Support</p>
-                  </div>
-                </div>
-              </AboutSubComponent>
+                </AboutSubComponent>
+              </div>
             </div>
           </div>
           <ButtonComponent

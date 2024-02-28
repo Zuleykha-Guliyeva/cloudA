@@ -3,11 +3,11 @@ import { useNewsStyles } from './news.style';
 import searchBlue from 'assets/images/icons/news/search-blue-icon.svg';
 import { SearchIcon } from 'assets/images/icons/news/search';
 import NewsCardComponent from 'core/shared/news-card/news-card.component';
-import newsImg1 from 'assets/images/statics/news/news1.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDateSearchBtn } from 'store/store.reducer';
 import { IState } from 'store/store';
 import { Routes } from 'router/routes';
+import { useNews } from './actions/news.query';
 
 const NewsComponent = () => {
   const classes = useNewsStyles();
@@ -15,6 +15,9 @@ const NewsComponent = () => {
   const clickDateSearch = () => {
     dispatch(toggleDateSearchBtn());
   };
+  const {data} = useNews();
+  console.log(data);
+  
   const dateSearchForm = useSelector((state: IState) => state.dateSearchBtn);
 
   return (
@@ -36,56 +39,30 @@ const NewsComponent = () => {
               </Form>
               <Form
                 className={
-                  dateSearchForm ? classes.searchForDate : classes.searchDateNone
+                  dateSearchForm
+                    ? classes.searchForDate
+                    : classes.searchDateNone
                 }
               >
                 <div className={classes.inputDateGroup}>
-                  <Input
-                    className={classes.fromDate}
-                    placeholder='What news are you looking for?'
-                    type='date'
-                  ></Input>
-                  <Input
-                    className={classes.toDate}
-                    placeholder='What news are you looking for?'
-                    type='date'
-                  ></Input>
+                  <Input className={classes.fromDate} type='date'></Input>
+                  <Input className={classes.toDate} type='date'></Input>
                 </div>
                 <div className={classes.inputSubmitGroup}>
-                  <Input
-                    placeholder='What news are you looking for?'
-                    type='reset'
-                    value='Filteri sıfırla'
-                  ></Input>
-                  <Input
-                    placeholder='What news are you looking for?'
-                    type='submit'
-                    value='Axtar'
-                  ></Input>
+                  <Input type='reset' value='Filteri sıfırla'></Input>
+                  <Input type='submit' value='Axtar'></Input>
                 </div>
               </Form>
             </div>
           </div>
         </div>
         <div className='row'>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
-          <div className='col-md-4'>
-            <NewsCardComponent img={newsImg1}></NewsCardComponent>
-          </div>
+          {data &&
+            data.map((blog) => (
+              <div className='col-md-4'>
+                <NewsCardComponent img={blog.urlToImage} title={blog.title} description={blog.description}></NewsCardComponent>
+              </div>
+            ))}
         </div>
         <div className='row'>
           <div className='col-12 text-center'>

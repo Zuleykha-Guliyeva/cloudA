@@ -12,6 +12,7 @@ const styles = {
     background: colors.bodyColor,
     '& img': {
       width: '100%',
+      height: rem(246),
       borderRadius: rem(21),
       marginBottom: rem(20),
     },

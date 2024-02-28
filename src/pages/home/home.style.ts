@@ -70,7 +70,22 @@ const styles = {
       marginRight: rem(8),
     },
   },
-  aboutSec: {},
+  aboutSec: {
+    '& .row .col-md-3:last-child $aboutItemBorder::after': {
+      content: 'none',
+    },
+  },
+  aboutItemBorder: {
+    position: 'relative',
+    '&::after': {
+      content: '""',
+      borderRight: `${rem(1)} solid ${colors.calcBtnBlue}`,
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      height: '100%',
+    },
+  },
   aboutIconDesc: {
     fontFamily: fonts.font,
     fontSize: rem(18),

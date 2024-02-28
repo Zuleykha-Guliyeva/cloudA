@@ -31,7 +31,6 @@ const FooterComponent = () => {
                 <Form className={classes.relative}>
                   <Input placeholder='mail.cloud.az' type='email'></Input>
                   <Input
-                    placeholder='mail.cloud.az'
                     value='Subscribe'
                     type='submit'
                   ></Input>
