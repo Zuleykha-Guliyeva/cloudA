@@ -5,56 +5,39 @@ import { NewsLeft, NewsRight } from 'assets/images/icons/arrows';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useNewsSlickComponent } from './news-slick.style';
-
-import news1 from 'assets/images/statics/news/news1.png';
-import news2 from 'assets/images/statics/news/news2.png';
-import news3 from 'assets/images/statics/news/news3.png';
-
+import { useNews } from 'pages/news/actions/news.query';
 const NewsSlickComponent = () => {
   const classes = useNewsSlickComponent();
+  const { data } = useNews();
   const settings = {
     autoplay: false,
     infinite: true,
     speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: true,
     prevArrow: (
-      <div className={classes.customArrowPrev}>
+      <div>
         <NewsLeft />
       </div>
     ),
     nextArrow: (
-      <div className={classes.customArrowNext}>
+      <div>
         <NewsRight />
       </div>
     ),
   };
   return (
     <Slider {...settings} className={classes.newsSlider}>
-      <div className={classes.newsSlideItems}>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news1} />
-        </div>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news2} />
-        </div>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news3} />
-        </div>
-      </div>
-
-      <div className={classes.newsSlideItems}>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news1} />
-        </div>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news2} />
-        </div>
-        <div className={classes.newsSlideItem}>
-          <NewsCardComponent img={news3} />
-        </div>
-      </div>
+      {data &&
+        data.map((blog) => (
+          <NewsCardComponent
+            img={blog.urlToImage}
+            title={blog.title}
+            description={blog.description}
+            date={blog.date}
+          />
+        ))}
     </Slider>
   );
 };

@@ -1,17 +1,18 @@
-import { useProductCardStykes } from "./product-card.style";
-import setting from 'assets/images/icons/products/cpu-setting.png';
+import { useProductCardStyles } from './product-card.style';
 
-const ProductCardComponent = ({title}) => {
-    const classes = useProductCardStykes();
-    return (
-      <div className={classes.productCard}>
-        <div className={classes.iconProductCard}>
-          <img src={setting} alt='' />
-        </div>
-        <p className={classes.productCardTitle}>IAS</p>
-        <p className={classes.productCardDesc}>{title}</p>
-        <span className={classes.productPrice}>235 AZN</span>
+const ProductCardComponent = ({ icon, title, description, price, id }) => {
+  const classes = useProductCardStyles();
+
+  return (
+    <div key={id} className={classes.productCard}>
+      <div className={classes.iconProductCard}>
+        <img src={icon} alt='' />
       </div>
-    );
-}
+      <p className={classes.productCardTitle}>{title}</p>
+      <p className={classes.productCardDesc}>{description}</p>
+      <span className={classes.productPrice}>{price}</span>
+    </div>
+  );
+};
+
 export default ProductCardComponent;

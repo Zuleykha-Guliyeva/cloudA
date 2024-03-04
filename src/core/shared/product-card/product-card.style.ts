@@ -50,5 +50,8 @@ const styles = {
     borderRadius: rem(12),
     color: colors.defaultTextColor,
   },
+  productCardSlider: {
+    
+  }
 };
-export const useProductCardStykes = createUseStyles(styles);
+export const useProductCardStyles = createUseStyles(styles);

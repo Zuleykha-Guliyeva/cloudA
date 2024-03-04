@@ -60,7 +60,7 @@ const NewsComponent = () => {
           {data &&
             data.map((blog) => (
               <div className='col-md-4'>
-                <NewsCardComponent img={blog.urlToImage} title={blog.title} description={blog.description}></NewsCardComponent>
+                <NewsCardComponent img={blog.urlToImage} title={blog.title} description={blog.description} date={blog.date}></NewsCardComponent>
               </div>
             ))}
         </div>

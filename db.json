@@ -2,108 +2,35 @@
   "products": [
     {
       "id": 1,
-      "title": "Daşınmaz Əmlak Krediti",
-      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
-      "img": "assets/images/statics/vector.svg",
-      "credit_title": "Kredit total Id duis id turpis mi quisque. Nulla.",
-      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht  Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam.",
-      "credit_information": [
-        {
-          "credit_infor_title": "Kreditin məbləği  (AZN)",
-          "credit_infor_description": "Min. 5 000 - max. 500 000",
-          "credit_infor_icon": "assets/images/statics/credit_icon_1"
-        },
-        {
-          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
-          "credit_infor_description": "Min. 15",
-          "credit_infor_icon": "assets/images/statics/credit_icon_2"
-        },
-        {
-          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
-          "credit_infor_description": "Min. 10",
-          "credit_infor_icon": "assets/images/statics/credit_icon_3"
-        },
-        {
-          "credit_infor_title": "Kreditin müddəti  (ay)",
-          "credit_infor_description": "Min. 6 - max. 120",
-          "credit_infor_icon": "assets/images/statics/credit_icon_4"
-        },
-        {
-          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
-          "credit_infor_description": "Min. 1",
-          "credit_infor_icon": "assets/images/statics/credit_icon_5"
-        }
-      ]
+      "title": "IAS",
+      "description": "Infrastructure as a Service",
+      "category": "availableProduct",
+      "icon": "src/assets/images/icons/products/cpu-setting.png",
+      "price": "235 AZN"
     },
     {
       "id": 2,
-      "title": "Lorem Ipsum",
-      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
-      "img": "assets/images/statics/product.svg",
-      "credit_title": "Id duis id turpis mi quisque. Nulla.",
-      "credit_description": "Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ",
-      "credit_information": [
-        {
-          "credit_infor_title": "Kreditin məbləği  (AZN)",
-          "credit_infor_description": "Min. 5 000 - max. 500 000",
-          "credit_infor_icon": "assets/images/statics/credit_icon_1"
-        },
-        {
-          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
-          "credit_infor_description": "Min. 15",
-          "credit_infor_icon": "assets/images/statics/credit_icon_2"
-        },
-        {
-          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
-          "credit_infor_description": "Min. 10",
-          "credit_infor_icon": "assets/images/statics/credit_icon_3"
-        },
-        {
-          "credit_infor_title": "Kreditin müddəti  (ay)",
-          "credit_infor_description": "Min. 6 - max. 120",
-          "credit_infor_icon": "assets/images/statics/credit_icon_4"
-        },
-        {
-          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
-          "credit_infor_description": "Min. 1",
-          "credit_infor_icon": "assets/images/statics/credit_icon_5"
-        }
-      ]
+      "title": "PaaS",
+      "description": "Platform as a Service",
+      "category": "upcoming",
+      "icon": "src/assets/images/icons/products/external-drive.png",
+      "price": "144 AZN"
     },
     {
       "id": 3,
-      "title": "Product kredit ",
-      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
-      "img": "assets/images/statics/product.svg",
-      "credit_title": "Id duis id turpis mi quisque. Nulla.556",
-      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique. Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
-      "credit_information": [
-        {
-          "credit_infor_title": "Kreditin məbləği  (AZN)",
-          "credit_infor_description": "Min. 5 000 - max. 500 000",
-          "credit_infor_icon": "assets/images/statics/credit_icon_1"
-        },
-        {
-          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
-          "credit_infor_description": "Min. 15",
-          "credit_infor_icon": "assets/images/statics/credit_icon_2"
-        },
-        {
-          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
-          "credit_infor_description": "Min. 10",
-          "credit_infor_icon": "assets/images/statics/credit_icon_3"
-        },
-        {
-          "credit_infor_title": "Kreditin müddəti  (ay)",
-          "credit_infor_description": "Min. 6 - max. 120",
-          "credit_infor_icon": "assets/images/statics/credit_icon_4"
-        },
-        {
-          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
-          "credit_infor_description": "Min. 1",
-          "credit_infor_icon": "assets/images/statics/credit_icon_5"
-        }
-      ]
+      "title": "SaaS",
+      "description": "Software as a Service",
+      "category": "availableProduct",
+      "icon": "src/assets/images/icons/products/folder.png",
+      "price": "167 AZN"
+    },
+    {
+      "id": 4,
+      "title": "IAS",
+      "description": "Archive as a Service",
+      "category": "upcoming",
+      "icon": "src/assets/images/icons/products/global.png",
+      "price": "99 AZN"
     }
   ],
   "news": [
@@ -113,7 +40,8 @@
       "title": "Google chief says the company got it wrong after Gemini gave 'completely unacceptable' responses and sparked a bitter backlash",
       "description": "Sundar Pichai said the system showed bias. Mateusz Wlodarczyk/Getty Images Google CEO Sundar Pichai says the company got it wrong as controversy swirls over its Gemini AI. Pichai made the comments in a memo sent to staff and obtained by Business Insider. Goog…",
       "url": "https://biztoc.com/x/9f91efea0418b5e0",
-      "urlToImage": "https://c.biztoc.com/p/9f91efea0418b5e0/s.webp"
+      "urlToImage": "https://c.biztoc.com/p/9f91efea0418b5e0/s.webp",
+      "date": "29.02.2024"
     },
     {
       "id": 2,
@@ -121,7 +49,8 @@
       "title": "‘There will never be another car like this.’ Elon Musk says ‘radically’ different Tesla Roadster will ship in 2025",
       "description": "Entrepreneur and businessman Elon Musk was stirring up excitement on his X platform early Wednesday, promising Tesla’s TSLA, Roadster electric sports car will finally ship next year, with “production design complete and unveil” at the end of 2024. The Tesla C…",
       "url": "https://biztoc.com/x/2ab56e72e0d90cb1",
-      "urlToImage": "https://c.biztoc.com/p/2ab56e72e0d90cb1/s.webp"
+      "urlToImage": "https://c.biztoc.com/p/2ab56e72e0d90cb1/s.webp",
+      "date": "28.02.2024"
     },
     {
       "id": 3,
@@ -129,7 +58,8 @@
       "title": "1 Unstoppable Multibagger Up 950% in the Last Decade That Is Secretly Powering the \"Magnificent Seven\"",
       "description": "Consisting of Microsoft, Apple, Nvidia, Amazon, Alphabet, Meta Platforms, and Tesla, the \"Magnificent Seven\" may be the most important stocks of this generation. After collectively rising 107% in 2023 -- and another 14% so far in 2024 -- each of these busines…",
       "url": "https://biztoc.com/x/d08f3eee50bd9d46",
-      "urlToImage": "https://c.biztoc.com/p/d08f3eee50bd9d46/s.webp"
+      "urlToImage": "https://c.biztoc.com/p/d08f3eee50bd9d46/s.webp",
+      "date": "27.02.2024"
     },
     {
       "id": 4,
@@ -137,7 +67,8 @@
       "title": "Elon Musk: Tesla's SpaceX Roadster Finally Launches Next Year",
       "description": "Musk claims the next Tesla Roadster is a 'SpaceX collab' able to hit 60 mph in less than one second.\nTesla and SpaceX CEO Elon Musk has taken to X, the social media platform he owns, to share a few updates on the status of the second-generation Tesla Roadster…",
       "url": "https://me.pcmag.com/en/news/22341/elon-musk-teslas-spacex-roadster-finally-launches-next-year",
-      "urlToImage": "https://sm.pcmag.com/t/pcmag_me/news/e/elon-musk-/elon-musk-teslas-spacex-roadster-finally-launches-next-year_f1kd.1200.jpg"
+      "urlToImage": "https://sm.pcmag.com/t/pcmag_me/news/e/elon-musk-/elon-musk-teslas-spacex-roadster-finally-launches-next-year_f1kd.1200.jpg",
+      "date": "26.02.2024"
     },
     {
       "id": 5,
@@ -145,7 +76,8 @@
       "title": "It turns out, the U.S. is one of the least concentrated stock markets in the world",
       "description": "For all the talk about the Magnificent Seven and the ultra-reliance of just a handful of companies to drive stock-market returns, it turns out the U.S. is in fact one of the least concentrated markets in the world.",
       "url": "https://www.marketwatch.com/story/it-turns-out-the-u-s-is-one-of-the-least-concentrated-stock-markets-in-the-world-647b60d1",
-      "urlToImage": "https://images.mktw.net/im-49852698/social"
+      "urlToImage": "https://images.mktw.net/im-49852698/social",
+      "date": "26.02.2024"
     }
   ]
 }

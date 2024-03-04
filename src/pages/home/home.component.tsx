@@ -19,10 +19,9 @@ import {
   OurCustom,
   OurPrj,
   OurTeam,
-} from 'assets/images/icons/blue-counter';
+} from 'assets/images/icons/blueCounter';
 import wave1 from 'assets/images/statics/wave1.png';
 import { Button } from 'antd';
-import ProductCardComponent from 'core/shared/product-card/product-card.component';
 import { Lightning, Rocket } from 'assets/images/icons/product';
 import slideImg from 'assets/images/statics/slideImg.png';
 import HeaderSlickComponent from 'pages/home/components/header-slick/header-slick.component';
@@ -34,22 +33,15 @@ import PartnersSlickComponent from './components/partners-slick/partners-slick.c
 import NewsSlickComponent from './components/news-slick/news-slick.component';
 import { Routes } from 'router/routes';
 import { useState } from 'react';
+import ProductsListComponent from 'core/shared/products-list/products-list.component';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const iMargin = 0;
-  const products = [
-    { id: 1, title: 'Network as a Service', category: 'product' },
-    { id: 2, title: 'Platform as a Service', category: 'upcoming' },
-    { id: 3, title: 'Software as a Service', category: 'product' },
-  ];
   const [selectedCategory, setSelectedCategory] = useState();
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
-  const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory)
-    : products;
   return (
     <>
       <section className={classes.slide}>
@@ -75,7 +67,7 @@ const HomeComponent = () => {
                   <Button
                     className={classes.availableProduct}
                     onClick={() => {
-                      handleCategoryClick('product');
+                      handleCategoryClick('availableProduct');
                     }}
                   >
                     <Lightning />
@@ -92,14 +84,8 @@ const HomeComponent = () => {
                   </Button>
                 </div>
               </div>
-              <div className='row py-27'>
-                {filteredProducts.map((product) => (
-                  <div key={product.id} className='col-md-4 mb-32'>
-                    <ProductCardComponent title={product.title} />
-                  </div>
-                ))}
-              </div>
-              <div className='row justify-center align-center mt-27'>
+              <ProductsListComponent selectedCategory={selectedCategory} />
+              <div className='row justify-center align-center mt-23'>
                 <div className='col-12 text-center'>
                   <Link to={Routes.products}>
                     More <BlueArrow />

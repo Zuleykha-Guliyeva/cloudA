@@ -60,8 +60,8 @@ export const NewsLeft = () => {
     >
       <path
         opacity='0.2'
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M6.65685 14.7071L0.292892 8.34315C-0.0976302 7.95263 -0.0976302 7.31946 0.292892 6.92894L6.65685 0.564976C7.04738 0.174451 7.68054 0.174451 8.07107 0.564975C8.46159 0.9555 8.46159 1.58867 8.07107 1.97919L3.41421 6.63604L59 6.63604L59 8.63604L3.41421 8.63604L8.07107 13.2929C8.46159 13.6834 8.46159 14.3166 8.07107 14.7071C7.68054 15.0976 7.04738 15.0976 6.65685 14.7071Z'
         fill='#185E7C'
       />
@@ -80,8 +80,8 @@ export const NewsRight = () => {
     >
       <path
         opacity='0.2'
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M52.3431 0.564857L58.7071 6.92882C59.0976 7.31934 59.0976 7.95251 58.7071 8.34303L52.3431 14.707C51.9526 15.0975 51.3195 15.0975 50.9289 14.707C50.5384 14.3165 50.5384 13.6833 50.9289 13.2928L55.5858 8.63592L1.4624e-06 8.63593L1.11271e-06 6.63593L55.5858 6.63592L50.9289 1.97907C50.5384 1.58855 50.5384 0.955381 50.9289 0.564857C51.3195 0.174333 51.9526 0.174332 52.3431 0.564857Z'
         fill='#185E7C'
       />
@@ -100,8 +100,8 @@ export const SlideUp = () => {
     >
       <path
         opacity='0.2'
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M0.292891 6.65685L6.65685 0.292892C7.04738 -0.0976299 7.68054 -0.0976299 8.07107 0.292892L14.435 6.65685C14.8256 7.04738 14.8256 7.68054 14.435 8.07107C14.0445 8.46159 13.4113 8.46159 13.0208 8.07107L8.36396 3.41421L8.36396 59L6.36396 59L6.36396 3.41421L1.7071 8.07107C1.31658 8.46159 0.683415 8.46159 0.292891 8.07107C-0.0976333 7.68054 -0.0976334 7.04738 0.292891 6.65685Z'
         fill='#185E7C'
       />
@@ -120,8 +120,8 @@ export const SlideDown = () => {
     >
       <path
         opacity='0.2'
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M14.4347 52.3431L8.07069 58.7071C7.68017 59.0976 7.047 59.0976 6.65648 58.7071L0.292517 52.3431C-0.098008 51.9526 -0.0980081 51.3195 0.292517 50.9289C0.683042 50.5384 1.31621 50.5384 1.70673 50.9289L6.36359 55.5858L6.36358 1.0968e-06L8.36358 8.34533e-07L8.36359 55.5858L13.0204 50.9289C13.411 50.5384 14.0441 50.5384 14.4347 50.9289C14.8252 51.3195 14.8252 51.9526 14.4347 52.3431Z'
         fill='#185E7C'
       />
@@ -138,7 +138,7 @@ export const BlueArrow = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <g clip-path='url(#clip0_819_2500)'>
+      <g clipPath='url(#clip0_819_2500)'>
         <path
           d='M2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12Z'
           fill='#2BAAE2'
@@ -174,18 +174,18 @@ export const SearchResultLeftArrow = () => {
       <path
         d='M11.8061 15.1479L16.7725 10.1816L11.8061 5.21522'
         stroke='#2BAAE2'
-        stroke-width='1.5'
-        stroke-miterlimit='10'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='1.5'
+        strokeMiterlimit='10'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
       <path
         d='M2.8633 10.1816L16.6333 10.1816'
         stroke='#2BAAE2'
-        stroke-width='1.5'
-        stroke-miterlimit='10'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='1.5'
+        strokeMiterlimit='10'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );

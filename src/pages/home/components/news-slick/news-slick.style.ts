@@ -19,22 +19,7 @@ const styles = {
     '& .slick-next::before': {
       display: 'none',
     },
-    '& .slick-next:hover svg': {
-      stroke: '#000!important',
-      fill: '#000!important',
-      color: '#000!important',
-    },
   },
-  newsSlideItems: {
-    display: 'flex!important',
-    justifyContent: 'space-between!important',
-    flexDrection: 'row',
-  },
-  newsSlideItem: {
-    width: '32%',
-  },
-  customArrowPrev: {},
-  customArrowNext: {},
 };
 
 export const useNewsSlickComponent = createUseStyles(styles);
