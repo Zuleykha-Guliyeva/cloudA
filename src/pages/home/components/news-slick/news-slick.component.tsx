@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useNewsSlickComponent } from './news-slick.style';
 import { useNews } from 'pages/news/actions/news.query';
+import { generateGuid } from 'core/helpers/generate-guid';
 const NewsSlickComponent = () => {
   const classes = useNewsSlickComponent();
   const { data } = useNews();
@@ -31,12 +32,14 @@ const NewsSlickComponent = () => {
     <Slider {...settings} className={classes.newsSlider}>
       {data &&
         data.map((blog) => (
-          <NewsCardComponent
-            img={blog.urlToImage}
-            title={blog.title}
-            description={blog.description}
-            date={blog.date}
-          />
+          <div key={generateGuid()}>
+            <NewsCardComponent
+              img={blog.urlToImage}
+              title={blog.title}
+              description={blog.description}
+              date={blog.date}
+            />
+          </div>
         ))}
     </Slider>
   );

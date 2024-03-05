@@ -1,15 +1,3 @@
-import certificate1 from 'assets/images/statics/certificates/certificate1.png';
-import certificate2 from 'assets/images/statics/certificates/certificate2.png';
-import certificate3 from 'assets/images/statics/certificates/certificate3.png';
-import certificate4 from 'assets/images/statics/certificates/certificate4.png';
-import certificate5 from 'assets/images/statics/certificates/certificate5.png';
-import certificate6 from 'assets/images/statics/certificates/certificate6.png';
-import azercell from 'assets/images/statics/clients/azercell.png';
-import aztv from 'assets/images/statics/clients/aztv.png';
-import ehokumet from 'assets/images/statics/clients/ehokumet.png';
-import gencler from 'assets/images/statics/clients/gencler.png';
-import mida from 'assets/images/statics/clients/mida.png';
-import seher from 'assets/images/statics/clients/seher.png';
 import { BlueArrow } from 'assets/images/icons/arrows';
 import { Mission, Goals, Vision, Values } from 'assets/images/icons/trust';
 import { useHomeStyles } from './home.style';
@@ -34,6 +22,8 @@ import NewsSlickComponent from './components/news-slick/news-slick.component';
 import { Routes } from 'router/routes';
 import { useState } from 'react';
 import ProductsListComponent from 'core/shared/products-list/products-list.component';
+import { useCertificates, useClients, usePartners } from './actions/home.query';
+import { generateGuid } from 'core/helpers/generate-guid';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -42,6 +32,9 @@ const HomeComponent = () => {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
+  const {data:clients} = useClients();
+  const {data:partners} = usePartners();
+  const {data:certificates} = useCertificates();
   return (
     <>
       <section className={classes.slide}>
@@ -65,7 +58,11 @@ const HomeComponent = () => {
               <div className='row'>
                 <div className='col-12 text-center'>
                   <Button
-                    className={classes.availableProduct}
+                    className={`${classes.availableProduct} ${
+                      selectedCategory === 'availableProduct'
+                        ? classes.selectedCategory
+                        : ''
+                    }`}
                     onClick={() => {
                       handleCategoryClick('availableProduct');
                     }}
@@ -74,7 +71,11 @@ const HomeComponent = () => {
                     <span>Available products</span>
                   </Button>
                   <Button
-                    className={classes.availableUpcoming}
+                    className={`${classes.availableUpcoming} ${
+                      selectedCategory === 'upcoming'
+                        ? classes.selectedCategory
+                        : ''
+                    }`}
                     onClick={() => {
                       handleCategoryClick('upcoming');
                     }}
@@ -177,36 +178,16 @@ const HomeComponent = () => {
             </div>
           </div>
           <div className='row'>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={azercell} alt='' />
-              </div>
-            </div>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={aztv} alt='' />
-              </div>
-            </div>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={ehokumet} alt='' />
-              </div>
-            </div>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={gencler} alt='' />
-              </div>
-            </div>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={mida} alt='' />
-              </div>
-            </div>
-            <div className='col-md-2 p-0'>
-              <div className={classes.clientsImg}>
-                <img src={seher} alt='' />
-              </div>
-            </div>
+            {clients &&
+              clients.map((client) => (
+                <div className='col-md-2 p-0' key={generateGuid()}>
+                  <div className={classes.clientsImg}>
+                    <Link to='https://www.google.com/?hl=az'>
+                      <img src={client.icon} alt='' />
+                    </Link>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -323,11 +304,9 @@ const HomeComponent = () => {
                 </div>
               </div>
               <div className={classes.partnersLogoBox}>
-                <div className='row align-center'>
-                  <div className='col-12'>
-                    <PartnersSlickComponent></PartnersSlickComponent>
-                  </div>
-                </div>
+                <PartnersSlickComponent
+                  partners={partners}
+                ></PartnersSlickComponent>
               </div>
             </div>
           </div>
@@ -358,24 +337,12 @@ const HomeComponent = () => {
             </div>
           </div>
           <div className='row align-center pl-100 pr-100'>
-            <div className='col-md-2 text-center'>
-              <img src={certificate1} alt='' />
-            </div>
-            <div className='col-md-2 text-center'>
-              <img src={certificate2} alt='' />
-            </div>
-            <div className='col-md-2 text-center'>
-              <img src={certificate3} alt='' />
-            </div>
-            <div className='col-md-2 text-center'>
-              <img src={certificate4} alt='' />
-            </div>
-            <div className='col-md-2 text-center'>
-              <img src={certificate5} alt='' />
-            </div>
-            <div className='col-md-2 text-center'>
-              <img src={certificate6} alt='' />
-            </div>
+            {certificates &&
+              certificates.map((certificate) => (
+                <div className='col-md-2 text-center'>
+                  <img src={certificate?.icon} alt='' />
+                </div>
+              ))}
           </div>
         </div>
       </section>

@@ -9,11 +9,12 @@ const styles = {
     '& .slick-prev': {
       left: '0',
       transform: 'translate(0, -50%)',
-      top: '28%',
+      top: '25%',
     },
     '& .slick-next': {
       left: '0',
       transform: 'translate(0, -50%)',
+      top: rem(175),
       display: 'none',
     },
     '& .slick-prev::before': {
@@ -30,12 +31,12 @@ const styles = {
     textAlign: 'center',
     display: 'flex!important',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
 
     '& $partnersLogoBackground': {
-      width: '48%',
+      width: '47%',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -43,7 +44,7 @@ const styles = {
       borderRadius: rem(28),
       padding: `${rem(45)}  ${rem(37)}`,
       height: rem(130),
-      marginBottom: rem(30),
+      marginBottom: rem(32),
     },
     '& img': {
       width: '100%',

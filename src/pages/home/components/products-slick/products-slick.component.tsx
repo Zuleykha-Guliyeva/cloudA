@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useProductsSlickComponent } from './products-slick.style';
 import ProductCardComponent from 'core/shared/product-card/product-card.component';
+import { generateGuid } from 'core/helpers/generate-guid';
 
 const ProductsSlickComponent = ({ products }) => {
   const classes = useProductsSlickComponent();  
@@ -17,10 +18,9 @@ const ProductsSlickComponent = ({ products }) => {
     <Slider {...settings}>
       {products &&
         products.map((product) => (
-          <div className={classes.productsSlider}>
+          <div className={classes.productsSlider} key={generateGuid()}>
             <div className={classes.productsSlideItem}>
               <ProductCardComponent
-                key={product.id}
                 title={product.title}
                 description={product.description}
                 icon={product.icon}

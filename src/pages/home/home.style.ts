@@ -53,7 +53,6 @@ const styles = {
   availableProduct: {
     border: 'none',
     borderRadius: rem(50),
-    backgroundColor: colors.availableBtn,
     display: 'inline-flex',
     alignItems: 'center',
     marginRight: rem(26),
@@ -69,6 +68,9 @@ const styles = {
     '& svg': {
       marginRight: rem(8),
     },
+  },
+  selectedCategory: {
+    backgroundColor: colors.availableBtn,
   },
   aboutSec: {
     '& .row .col-md-3:last-child $aboutItemBorder::after': {
@@ -234,6 +236,10 @@ const styles = {
   },
   certificates: {
     padding: `${rem(62)}  ${rem(112)}`,
+    '& img':{transition: 'transform .6s'},
+    '& img:hover': {
+      transform: 'scale(1.3)',
+    },
   },
   certificatesTitle: {
     fontFamily: fonts.font,

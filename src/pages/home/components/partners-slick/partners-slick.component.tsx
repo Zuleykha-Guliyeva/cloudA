@@ -2,13 +2,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { usePartnersSlickComponent } from './partners-slick.style';
-import partners1 from 'assets/images/statics/partners/partners1.png';
-import partners2 from 'assets/images/statics/partners/partners2.png';
-import partners3 from 'assets/images/statics/partners/partners3.png';
-import partners4 from 'assets/images/statics/partners/partners4.png';
-
 import { SlideUp, SlideDown } from 'assets/images/icons/arrows';
-const PartnersSlickComponent = () => {
+import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
+const PartnersSlickComponent = ({ partners }) => {
   const classes = usePartnersSlickComponent();
   const settings = {
     autoplay: false,
@@ -19,28 +16,49 @@ const PartnersSlickComponent = () => {
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
-    prevArrow: <div className={classes.customArrowUp}> <SlideUp /> </div>, 
-    nextArrow: <div className={classes.customArrowDown}> <SlideDown /> </div>,
+    prevArrow: (
+      <div className={classes.customArrowUp}>
+        {' '}
+        <SlideUp />{' '}
+      </div>
+    ),
+    nextArrow: (
+      <div className={classes.customArrowDown}>
+        <SlideDown />
+      </div>
+    ),
   };
+
+  const  slisers = useMemo(()=>{
+    return partners?.map((partner, index: number) => {
+      if (partners.length - index > 3) {
+        return (
+          <div className={classes.partnersSlideItem} key={index}>
+            <div className={classes.partnersLogoBackground}>
+              <Link to='https://www.google.com/?hl=az'>
+                <img
+                  src={index === 0 ? partners[index]?.icon : partners[index + 1]?.icon}
+                  alt=''
+                />
+              </Link>
+            </div>
+            <div className={classes.partnersLogoBackground}>
+              <Link to='https://www.google.com/?hl=az'>
+                <img
+                  src={index === 0 ? partners[index + 1]?.icon : partners[index + 3]?.icon }
+                  alt=''
+                />
+              </Link>
+            </div>
+          </div>
+        );
+      }
+    });
+  }, [partners])
 
   return (
     <Slider {...settings} className={classes.partnersSlider}>
-      <div className={classes.partnersSlideItem}>
-        <div className={classes.partnersLogoBackground}>
-          <img src={partners1} alt='' />
-        </div>
-        <div className={classes.partnersLogoBackground}>
-          <img src={partners2} alt='' />
-        </div>
-      </div>
-      <div className={classes.partnersSlideItem}>
-        <div className={classes.partnersLogoBackground}>
-          <img src={partners3} alt='' />
-        </div>
-        <div className={classes.partnersLogoBackground}>
-          <img src={partners4} alt='' />
-        </div>
-      </div>
+      {partners && slisers}
     </Slider>
   );
 };

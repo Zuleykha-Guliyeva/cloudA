@@ -19,6 +19,9 @@ const styles = {
     '& .slick-next::before': {
       display: 'none',
     },
+    '& .slick-slide': {
+      padding: '0 16px',
+    },
   },
 };
 

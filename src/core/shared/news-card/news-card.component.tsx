@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useNewsCardStyles } from './news-card.style';
 
 const truncateText = (text, maxLength) => {
@@ -13,12 +14,14 @@ const NewsCardComponent = ({ img, title, description, date }) => {
 
   return (
     <div className={classes.newsCard}>
-      <img src={img} alt='' />
-      <div className={classes.cardBody}>
-        <p className={classes.blogTitle}>{truncatedTitle}</p>
-        <p className={classes.blogDescription}>{truncatedDescription}</p>
-        <span className={classes.newsDate}>{date}</span>
-      </div>
+      <Link to='#'>
+        <img src={img} alt='' />
+        <div className={classes.cardBody}>
+          <p className={classes.blogTitle}>{truncatedTitle}</p>
+          <p className={classes.blogDescription}>{truncatedDescription}</p>
+          <span className={classes.newsDate}>{date}</span>
+        </div>
+      </Link>
     </div>
   );
 };

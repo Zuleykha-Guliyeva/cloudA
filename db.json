@@ -40,7 +40,7 @@
       "title": "Google chief says the company got it wrong after Gemini gave 'completely unacceptable' responses and sparked a bitter backlash",
       "description": "Sundar Pichai said the system showed bias. Mateusz Wlodarczyk/Getty Images Google CEO Sundar Pichai says the company got it wrong as controversy swirls over its Gemini AI. Pichai made the comments in a memo sent to staff and obtained by Business Insider. Goog…",
       "url": "https://biztoc.com/x/9f91efea0418b5e0",
-      "urlToImage": "https://c.biztoc.com/p/9f91efea0418b5e0/s.webp",
+      "urlToImage": "src/assets/images/statics/news/news1.png",
       "date": "29.02.2024"
     },
     {
@@ -49,7 +49,7 @@
       "title": "‘There will never be another car like this.’ Elon Musk says ‘radically’ different Tesla Roadster will ship in 2025",
       "description": "Entrepreneur and businessman Elon Musk was stirring up excitement on his X platform early Wednesday, promising Tesla’s TSLA, Roadster electric sports car will finally ship next year, with “production design complete and unveil” at the end of 2024. The Tesla C…",
       "url": "https://biztoc.com/x/2ab56e72e0d90cb1",
-      "urlToImage": "https://c.biztoc.com/p/2ab56e72e0d90cb1/s.webp",
+      "urlToImage": "src/assets/images/statics/news/news2.png",
       "date": "28.02.2024"
     },
     {
@@ -58,7 +58,7 @@
       "title": "1 Unstoppable Multibagger Up 950% in the Last Decade That Is Secretly Powering the \"Magnificent Seven\"",
       "description": "Consisting of Microsoft, Apple, Nvidia, Amazon, Alphabet, Meta Platforms, and Tesla, the \"Magnificent Seven\" may be the most important stocks of this generation. After collectively rising 107% in 2023 -- and another 14% so far in 2024 -- each of these busines…",
       "url": "https://biztoc.com/x/d08f3eee50bd9d46",
-      "urlToImage": "https://c.biztoc.com/p/d08f3eee50bd9d46/s.webp",
+      "urlToImage": "src/assets/images/statics/news/news3.png",
       "date": "27.02.2024"
     },
     {
@@ -67,7 +67,7 @@
       "title": "Elon Musk: Tesla's SpaceX Roadster Finally Launches Next Year",
       "description": "Musk claims the next Tesla Roadster is a 'SpaceX collab' able to hit 60 mph in less than one second.\nTesla and SpaceX CEO Elon Musk has taken to X, the social media platform he owns, to share a few updates on the status of the second-generation Tesla Roadster…",
       "url": "https://me.pcmag.com/en/news/22341/elon-musk-teslas-spacex-roadster-finally-launches-next-year",
-      "urlToImage": "https://sm.pcmag.com/t/pcmag_me/news/e/elon-musk-/elon-musk-teslas-spacex-roadster-finally-launches-next-year_f1kd.1200.jpg",
+      "urlToImage": "src/assets/images/statics/news/news1.png",
       "date": "26.02.2024"
     },
     {
@@ -76,8 +76,134 @@
       "title": "It turns out, the U.S. is one of the least concentrated stock markets in the world",
       "description": "For all the talk about the Magnificent Seven and the ultra-reliance of just a handful of companies to drive stock-market returns, it turns out the U.S. is in fact one of the least concentrated markets in the world.",
       "url": "https://www.marketwatch.com/story/it-turns-out-the-u-s-is-one-of-the-least-concentrated-stock-markets-in-the-world-647b60d1",
-      "urlToImage": "https://images.mktw.net/im-49852698/social",
+      "urlToImage": "src/assets/images/statics/news/news2.png",
       "date": "26.02.2024"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Azercell",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/azercell.png"
+    },
+    {
+      "id": 2,
+      "name": "Aztv",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/aztv.png"
+    },
+    {
+      "id": 3,
+      "name": "Ehokumet",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/ehokumet.png"
+    },
+    {
+      "id": 4,
+      "name": "Gencler ve Idman",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/gencler.png"
+    },
+    {
+      "id": 5,
+      "name": "MIDA",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/mida.png"
+    },
+    {
+      "id": 6,
+      "name": "Temiz sheher",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/clients/seher.png"
+    }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "name": "parner1",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partners1.png"
+    },
+    {
+      "id": 2,
+      "name": "parner2",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partners2.png"
+    },
+    {
+      "id": 3,
+      "name": "parner3",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partners3.png"
+    },
+    {
+      "id": 4,
+      "name": "parner4",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partners4.png"
+    },
+    {
+      "id": 5,
+      "name": "parner5",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partner5.png"
+    },
+    {
+      "id": 6,
+      "name": "parner6",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partner6.png"
+    },
+    {
+      "id": 7,
+      "name": "parner6",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partner7.png"
+    },
+    {
+      "id": 8,
+      "name": "parner6",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/partners/partner8.png"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "name": "certificate1",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate1.png"
+    },
+    {
+      "id": 2,
+      "name": "certificate2",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate2.png"
+    },
+    {
+      "id": 3,
+      "name": "certificate3",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate3.png"
+    },
+    {
+      "id": 4,
+      "name": "certificate4",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate4.png"
+    },
+    {
+      "id": 5,
+      "name": "certificate5",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate5.png"
+    },
+    {
+      "id": 6,
+      "name": "certificate6",
+      "url": "https://google.az",
+      "icon": "src/assets/images/statics/certificates/certificate6.png"
     }
   ]
 }

@@ -10,12 +10,19 @@ const styles = {
     border: `${rem(1)} solid ${colors.cardBorder}`,
     marginBottom: rem(32),
     background: colors.bodyColor,
+    '&:hover': {
+      background: colors.light,
+      border: 'none',
+      boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+      '& span':{color: colors.calcBtnBlue},
+    },
     '& img': {
       width: '100%',
       height: rem(246),
       borderRadius: rem(21),
       marginBottom: rem(20),
     },
+    '& a': {textDecoration: 'none'}
   },
   cardBody: {
     padding: rem(12),
