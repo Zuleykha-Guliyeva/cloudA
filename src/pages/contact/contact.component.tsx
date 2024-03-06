@@ -14,11 +14,13 @@ import { Button, Form, Input } from 'antd';
 import useLocalization from 'assets/lang';
 import { useMemo } from 'react';
 import { IFormValues } from './contact';
-// import { useContact } from './actions/contact.query';
-
+import { useContact } from './actions/contact.query';
 const ContactComponent = () => {
   const classes = useContactStyles();
   const translate = useLocalization();
+  const {data} = useContact();
+  console.log(data);
+  
   const initialValues: IFormValues = {
     name: '',
     surname: '',
@@ -76,27 +78,27 @@ const ContactComponent = () => {
                   <li>
                     <span className={`${classes.contactItem}`}>
                       <UserTag />
-                      <span className='pl-16'>157</span>
+                      <span className='pl-16'>
+                        {data && data[0]?.callCenter}
+                      </span>
                     </span>
                   </li>
                   <li>
                     <span className={`${classes.contactItem}`}>
                       <Call />
-                      <span className='pl-16'>(414) 687 - 5892</span>
+                      <span className='pl-16'>{data && data[0]?.phone}</span>
                     </span>
                   </li>
                   <li>
                     <span className={`${classes.contactItem}`}>
                       <Message />
-                      <span className='pl-16'>info@azincloud.az</span>
+                      <span className='pl-16'>{data && data[0]?.email}</span>
                     </span>
                   </li>
                   <li>
                     <span className={`${classes.contactItem}`}>
                       <Location />
-                      <span className='pl-16'>
-                        74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan
-                      </span>
+                      <span className='pl-16'>{data && data[0]?.location}</span>
                     </span>
                   </li>
                 </ul>
@@ -105,50 +107,50 @@ const ContactComponent = () => {
               <ul className={classes.contactSocial}>
                 <li className='ftco-animate'>
                   <NavLink
-                    to='#'
+                    to={data && data[0]?.facebook}
                     data-toggle='tooltip'
                     data-placement='top'
-                    title='Twitter'
+                    title='Facebook'
                   >
                     <Facebook />
                   </NavLink>
                 </li>
                 <li className='ftco-animate'>
                   <NavLink
-                    to='#'
+                    to={data && data[0]?.instagram}
                     data-toggle='tooltip'
                     data-placement='top'
-                    title='Facebook'
+                    title='Instagram'
                   >
                     <Instagram />
                   </NavLink>
                 </li>
                 <li className='ftco-animate'>
                   <NavLink
-                    to='#'
+                    to={data && data[0]?.telegram}
                     data-toggle='tooltip'
                     data-placement='top'
-                    title='Instagram'
+                    title='Telegram'
                   >
                     <Tweet />
                   </NavLink>
                 </li>
                 <li className='ftco-animate'>
                   <NavLink
-                    to='#'
+                    to={data && data[0]?.linkedin}
                     data-toggle='tooltip'
                     data-placement='top'
-                    title='Instagram'
+                    title='Linkedin'
                   >
                     <Linkin />
                   </NavLink>
                 </li>
                 <li className='ftco-animate'>
                   <NavLink
-                    to='#'
+                    to={data && data[0]?.youtube}
                     data-toggle='tooltip'
                     data-placement='top'
-                    title='Instagram'
+                    title='Youtube'
                   >
                     <Youtube />
                   </NavLink>

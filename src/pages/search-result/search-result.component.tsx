@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useSearchResultStyles } from './search-result.style';
 import searchIcon from 'assets/images/icons/search/search-icon.png';
 import SearchResultItemComponent from './components/search-result-item.component';
 const SearchResultComponent = () => {
   const classes = useSearchResultStyles();
+  const location = useLocation();
+  const searchResults = location.state?.searchResults;
+  console.log(searchResults);
+  
   return (
     <section className={classes.searchResultPage}>
       <div className='container'>
@@ -23,10 +27,10 @@ const SearchResultComponent = () => {
             </div>
           </div>
           <div className='row'>
-            <SearchResultItemComponent />
-            <SearchResultItemComponent />
-            <SearchResultItemComponent />
-            <SearchResultItemComponent />
+            {searchResults &&
+              searchResults.map((searchResult) => (
+                <SearchResultItemComponent searchResult={searchResult} />
+              ))}
           </div>
         </div>
       </div>

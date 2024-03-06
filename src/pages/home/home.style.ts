@@ -11,7 +11,7 @@ const styles = {
     backgroundImage: `url(${homeSlideBackground})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    padding: `${rem(190)}  ${rem(0)} ${rem(410)} ${rem(0)}`,
+    padding: `${rem(190)}  ${rem(0)} ${rem(230)} ${rem(0)}`,
     '& img': {
       width: '100%',
     },
@@ -31,11 +31,11 @@ const styles = {
     maxWidth: '100%',
     position: 'absolute',
     left: 0,
-    top: rem(570),
+    top: rem(530),
   },
   upcoming: {
     position: 'relative',
-    top: rem(-120),
+    top: rem(-70),
     '& a': {
       display: 'inline-flex',
       textDecoration: 'none',

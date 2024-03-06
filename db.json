@@ -205,5 +205,18 @@
       "url": "https://google.az",
       "icon": "src/assets/images/statics/certificates/certificate6.png"
     }
+  ],
+  "contact": [
+    {
+      "callCenter": "157",
+      "phone": "(414) 687 - 5892",
+      "email": "info@azincloud.az",
+      "location": "74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan",
+      "facebook": "https://www.facebook.com/login/",
+      "instagram": "https://www.instagram.com/accounts/login/",
+      "telegram": "https://web.telegram.org/k/",
+      "linkedin": "https://www.linkedin.com/checkpoint/lg/login-submit",
+      "youtube": "https://www.youtube.com/"
+    }
   ]
 }

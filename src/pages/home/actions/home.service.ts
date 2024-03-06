@@ -15,4 +15,4 @@ export const getCertificatesService = () => {
   return axiosInstance.get(API.certificates).then((res) => {
     return res.data;
   })
-}
+};

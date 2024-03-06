@@ -21,7 +21,11 @@ const ProductsComponent = () => {
             <div className='row'>
               <div className='col-12 text-right'>
                 <Button
-                  className={classes.availableProduct}
+                  className={`${classes.availableProduct} ${
+                    selectedCategory === 'availableProduct'
+                      ? classes.selectedCategory
+                      : ''
+                  }`}
                   onClick={() => {
                     handleCategoryClick('availableProduct');
                   }}
@@ -30,7 +34,9 @@ const ProductsComponent = () => {
                   <span>Available products</span>
                 </Button>
                 <Button
-                  className={classes.availableUpcoming}
+                  className={`${classes.availableUpcoming} ${
+                    selectedCategory === 'upcoming' ? classes.selectedCategory : ''
+                  }`}
                   onClick={() => {
                     handleCategoryClick('upcoming');
                   }}

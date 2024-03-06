@@ -4,4 +4,5 @@ export const API = {
   clients: 'clients',
   partners: 'partners',
   certificates: 'certificates',
+  contact: 'contact',
 };

@@ -8,17 +8,28 @@ import { toggleDateSearchBtn } from 'store/store.reducer';
 import { IState } from 'store/store';
 import { Routes } from 'router/routes';
 import { useNews } from './actions/news.query';
+import { useNavigate } from 'react-router-dom';
 
 const NewsComponent = () => {
   const classes = useNewsStyles();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const clickDateSearch = () => {
     dispatch(toggleDateSearchBtn());
   };
-  const {data} = useNews();
-  console.log(data);
-  
+  const { data } = useNews();
+  const totalItems = data ? data.length : 0;
+  const itemsPerPage = 9;
   const dateSearchForm = useSelector((state: IState) => state.dateSearchBtn);
+
+  const onFinish = (values) => {
+    console.log(values.searchValue);
+    const searchNews = values.searchValue
+      ? data?.filter((news) => news?.title === values.searchValue)
+      : [];
+    console.log(searchNews);
+    navigate(Routes.search, { state: { resultNews: searchNews } });
+  };
 
   return (
     <div className={classes.newsSec}>
@@ -29,13 +40,15 @@ const NewsComponent = () => {
           </div>
           <div className='col-md-7'>
             <div className={classes.relativeBox}>
-              <Form action={Routes.search} className={classes.searchForm}>
-                <SearchIcon />
-                <Input
-                  placeholder='What news are you looking for?'
-                  type='text'
-                ></Input>
-                <img src={searchBlue} alt='' onClick={clickDateSearch} />
+              <Form onFinish={onFinish} className={classes.searchForm}>
+                <Form.Item name='searchValue'>
+                  <SearchIcon />
+                  <Input
+                    placeholder='What news are you looking for?'
+                    type='text'
+                  ></Input>
+                  <img src={searchBlue} alt='' onClick={clickDateSearch} />
+                </Form.Item>
               </Form>
               <Form
                 className={
@@ -60,14 +73,19 @@ const NewsComponent = () => {
           {data &&
             data.map((blog) => (
               <div className='col-md-4'>
-                <NewsCardComponent img={blog.urlToImage} title={blog.title} description={blog.description} date={blog.date}></NewsCardComponent>
+                <NewsCardComponent
+                  img={blog.urlToImage}
+                  title={blog.title}
+                  description={blog.description}
+                  date={blog.date}
+                ></NewsCardComponent>
               </div>
             ))}
         </div>
         <div className='row'>
           <div className='col-12 text-center'>
             <div className={classes.pagination}>
-              <Pagination defaultCurrent={1} total={50} />
+              <Pagination total={totalItems} pageSize={itemsPerPage} />
             </div>
           </div>
         </div>

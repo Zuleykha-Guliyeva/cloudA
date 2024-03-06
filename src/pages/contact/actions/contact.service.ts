@@ -3,6 +3,6 @@ import axiosInstance from 'core/configs/axios.config';
 
 export const getContactService = () => {
   return axiosInstance(API.contact).then((res) => {
-    return res.data.record;
+    return res.data;
   });
 };

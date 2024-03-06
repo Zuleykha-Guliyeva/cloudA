@@ -17,7 +17,6 @@ const styles = {
   availableProduct: {
     border: 'none',
     borderRadius: rem(50),
-    backgroundColor: colors.availableBtn,
     display: 'inline-flex',
     alignItems: 'center',
     marginRight: rem(26),
@@ -39,6 +38,9 @@ const styles = {
     '& span': {
       color: colors.defaultTextColor,
     },
+  },
+  selectedCategory: {
+    backgroundColor: colors.availableBtn,
   },
 };
 

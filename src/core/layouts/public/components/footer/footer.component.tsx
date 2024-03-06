@@ -10,10 +10,12 @@ import {
 } from 'assets/images/icons/sosial';
 import { useFooterStyles } from './footer.style';
 import useLocalization from 'assets/lang';
+import { useContact } from 'pages/contact/actions/contact.query';
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
   const tarnslate = useLocalization();
+  const {data} = useContact();
   return (
     <div className={classes.footer}>
       <div className='container'>
@@ -30,60 +32,57 @@ const FooterComponent = () => {
               <div className='col-md-6'>
                 <Form className={classes.relative}>
                   <Input placeholder='mail.cloud.az' type='email'></Input>
-                  <Input
-                    value='Subscribe'
-                    type='submit'
-                  ></Input>
+                  <Input value='Subscribe' type='submit'></Input>
                 </Form>
               </div>
               <div className='col-md-6'>
                 <ul className={classes.footerSocial}>
                   <li className='ftco-animate'>
                     <NavLink
-                      to='#'
+                      to={data && data[0]?.facebook}
                       data-toggle='tooltip'
                       data-placement='top'
-                      title='Twitter'
+                      title='Facebook'
                     >
                       <Facebook />
                     </NavLink>
                   </li>
                   <li className='ftco-animate'>
                     <NavLink
-                      to='#'
+                      to={data && data[0]?.instagram}
                       data-toggle='tooltip'
                       data-placement='top'
-                      title='Facebook'
+                      title='Instagram'
                     >
                       <Instagram />
                     </NavLink>
                   </li>
                   <li className='ftco-animate'>
                     <NavLink
-                      to='#'
+                      to={data && data[0]?.telegram}
                       data-toggle='tooltip'
                       data-placement='top'
-                      title='Instagram'
+                      title='Telegram'
                     >
                       <Tweet />
                     </NavLink>
                   </li>
                   <li className='ftco-animate'>
                     <NavLink
-                      to='#'
+                      to={data && data[0]?.linkedin}
                       data-toggle='tooltip'
                       data-placement='top'
-                      title='Instagram'
+                      title='Linkedin'
                     >
                       <Linkin />
                     </NavLink>
                   </li>
                   <li className='ftco-animate'>
                     <NavLink
-                      to='#'
+                      to={data && data[0]?.youtube}
                       data-toggle='tooltip'
                       data-placement='top'
-                      title='Instagram'
+                      title='Youtube'
                     >
                       <Youtube />
                     </NavLink>
@@ -128,9 +127,7 @@ const FooterComponent = () => {
                     className={`${classes.footMenuItem} d-flex align-center`}
                   >
                     <Location />
-                    <span className='pl-16'>
-                      {tarnslate('location')}
-                    </span>
+                    <span className='pl-16'>{tarnslate('location')}</span>
                   </NavLink>
                 </li>
               </ul>

@@ -17,4 +17,5 @@ export const useCertificates = () => {
   return useQuery('certificates', () => {
     return getCertificatesService();
   });
-}
+};
+
