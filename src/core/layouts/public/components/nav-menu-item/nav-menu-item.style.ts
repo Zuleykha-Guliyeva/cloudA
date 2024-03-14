@@ -1,6 +1,7 @@
 import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
@@ -14,15 +15,17 @@ const styles = {
     fontWeight: '500',
     lineHeight: rem(20),
     color: colors.light,
-    '&:hover': {
+    '&:hover': {},
+    [breakpoint(769)]: {
+      color: colors.calcBtnBlue,
+      fontSize: rem(20),
     },
   },
   link: {
     textDecoration: 'none',
   },
   active: {
-    '& $itemText': {
-    },
+    '& $itemText': {},
   },
 };
 

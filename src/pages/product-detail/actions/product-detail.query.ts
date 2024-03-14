@@ -1,10 +1,10 @@
-import { useQuery } from "react-query";
-import ProductsModel from "pages/products/models/products.model";
-import { getProductDetailService } from "./product-detail.service";
+import { useQuery } from 'react-query';
+import ProductsModel from 'pages/products/models/products.model';
+import { getProductDetailService } from './product-detail.service';
 
 export const useProductDetail = (product_id: number) => {
   return useQuery<ProductsModel, Error>(
-    ["products", product_id],
+    ['products', product_id],
     () => {
       return getProductDetailService(product_id);
     },

@@ -6,6 +6,7 @@ import { createUseStyles } from 'react-jss';
 const styles = {
   newsSec: {
     padding: `${rem(230)} ${rem(0)} ${rem(136)} ${rem(0)}`,
+    '& Form .form-item': { marginBottom: '0!important' },
     '& Form Input[type="text"]': {
       borderRadius: rem(41),
       paddingLeft: rem(62),
@@ -46,6 +47,7 @@ const styles = {
     '& Form img': {
       position: 'absolute',
       right: 0,
+      top: 0,
     },
     '& Form svg': {
       position: 'absolute',
@@ -55,10 +57,14 @@ const styles = {
       zIndex: 1,
     },
   },
-  relativeBox: { position: 'relative' },
+  relativeBox: {
+    position: 'relative',
+    display: 'flex-block',
+    alignItems: 'center',
+  },
   searchForm: {
     position: 'relative',
-    '& img':{
+    '& img': {
       cursor: 'pointer',
     },
   },

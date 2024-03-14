@@ -24,9 +24,15 @@ const styles = {
         top: rem(70),
         right: '-100%',
         transition: '0.3s ease-in-out',
+        [breakpoint(769)]: {
+          paddingTop: rem(30),
+        },
       },
       '& ul li': {
         marginBottom: rem(10),
+        [breakpoint(769)]: {
+          paddingBottom: rem(20),
+        },
       },
     },
   },
@@ -40,6 +46,7 @@ const styles = {
   },
 
   mobileMenuIcon: {
+    color: colors.light,
     display: 'none',
     [breakpoint(768)]: {
       display: 'block',

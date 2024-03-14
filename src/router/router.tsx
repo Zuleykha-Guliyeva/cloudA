@@ -8,6 +8,7 @@ import ContactComponent from "../pages/contact/contact.component";
 import ProductDetailComponent from "pages/product-detail/product-detail.component";
 import NewsComponent from "pages/news/news.component";
 import SearchResultComponent from "pages/search-result/search-result.component";
+import NewsSingleComponent from "pages/news-single/news-single.component";
 const router = createBrowserRouter(
   [
     {
@@ -32,7 +33,7 @@ const router = createBrowserRouter(
         },
         {
           path: `${Routes.newsdetail}/:id`,
-          element: <ProductDetailComponent />,
+          element: <NewsSingleComponent />,
         },
         {
           path: Routes.products,

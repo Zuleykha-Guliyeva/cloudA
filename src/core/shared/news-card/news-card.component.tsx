@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useNewsCardStyles } from './news-card.style';
+import { Routes } from 'router/routes';
 
 const truncateText = (text, maxLength) => {
   if (text.length > maxLength) {
@@ -7,14 +8,14 @@ const truncateText = (text, maxLength) => {
   }
   return text;
 };
-const NewsCardComponent = ({ img, title, description, date }) => {
+const NewsCardComponent = ({ id, img, title, description, date }) => {
   const classes = useNewsCardStyles();
   const truncatedTitle = truncateText(title, 60);
   const truncatedDescription = truncateText(description, 80);
 
   return (
     <div className={classes.newsCard}>
-      <Link to='#'>
+      <Link to={`${Routes.newsdetail}/${id}`}>
         <img src={img} alt='' />
         <div className={classes.cardBody}>
           <p className={classes.blogTitle}>{truncatedTitle}</p>

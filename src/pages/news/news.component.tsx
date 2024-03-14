@@ -22,34 +22,44 @@ const NewsComponent = () => {
   const itemsPerPage = 9;
   const dateSearchForm = useSelector((state: IState) => state.dateSearchBtn);
 
-  const onFinish = (values) => {
-    console.log(values.searchValue);
-    const searchNews = values.searchValue
-      ? data?.filter((news) => news?.title === values.searchValue)
-      : [];
-    console.log(searchNews);
-    navigate(Routes.search, { state: { resultNews: searchNews } });
-  };
+  const initialValues = { searchValue: ' ' };
+
+ const onFinish = (values) => {
+   const searchNews = values.searchValue;
+   if (searchNews && data) {
+     const searchResult = data?.filter((news) =>
+       news?.title?.toLowerCase().includes(searchNews.toLowerCase())
+     );
+     navigate(Routes.search, { state: { resultNews: searchResult } });
+   }
+ };
+
+
 
   return (
     <div className={classes.newsSec}>
       <div className='container'>
         <div className='row align-center mb-63'>
-          <div className='col-md-5'>
+          <div className='col-md-6'>
             <p className={classes.blogsTitle}>News and blog</p>
           </div>
-          <div className='col-md-7'>
+          <div className='col-md-6'>
             <div className={classes.relativeBox}>
-              <Form onFinish={onFinish} className={classes.searchForm}>
+              <Form
+                initialValues={initialValues}
+                onFinish={onFinish}
+                className={classes.searchForm}
+              >
+                <SearchIcon />
                 <Form.Item name='searchValue'>
-                  <SearchIcon />
                   <Input
                     placeholder='What news are you looking for?'
                     type='text'
-                  ></Input>
-                  <img src={searchBlue} alt='' onClick={clickDateSearch} />
+                  />
                 </Form.Item>
+                <img src={searchBlue} alt='' onClick={clickDateSearch} />
               </Form>
+
               <Form
                 className={
                   dateSearchForm
@@ -71,9 +81,10 @@ const NewsComponent = () => {
         </div>
         <div className='row'>
           {data &&
-            data.map((blog) => (
-              <div className='col-md-4'>
+            data.map((blog, index) => (
+              <div className='col-md-4' key={index}>
                 <NewsCardComponent
+                  id={blog.id}
                   img={blog.urlToImage}
                   title={blog.title}
                   description={blog.description}

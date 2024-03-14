@@ -44,6 +44,7 @@ const styles = {
     paddingBottom: rem(24),
     marginBottom: rem(24),
     borderBottom: `${rem(1)} solid ${colors.searchResultBorder}`,
+    width: '100%',
   },
   newsResultTitle: {
     fontFamily: fonts.font,
@@ -60,6 +61,21 @@ const styles = {
     lineHeight: rem(19),
     color: colors.defaultTextColor,
     marginTop: rem(8),
+  },
+  noResult: {
+    textAlign: 'center',
+    height: '100%',
+    padding: `${rem(130)} ${rem(0)} ${rem(0)} ${rem(0)}`,
+    '& img': {
+      marginBottom: rem(40),
+    },
+    '& p': {
+      fontFamily: fonts.font,
+      fontSize: rem(22),
+      fontWeight: '500',
+      lineHeight: rem(27),
+      color: colors.defaultTextColor,
+    },
   },
 };
 

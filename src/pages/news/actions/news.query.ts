@@ -1,8 +1,9 @@
-import { useQuery } from "react-query"
-import { getNewsService } from "./news.service"
+import { useQuery } from 'react-query';
+import { getNewsService } from './news.service';
+import { API } from 'core/configs/api.config';
 
 export const useNews = () => {
-    return useQuery("news", () => {
-        return getNewsService();
-    })
-}
+  return useQuery(API.news, () => {
+    return getNewsService();
+  });
+};

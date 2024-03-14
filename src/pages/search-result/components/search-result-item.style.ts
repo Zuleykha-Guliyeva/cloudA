@@ -41,6 +41,7 @@ const styles = {
     lineHeight: rem(19),
   },
   searchResultRow: {
+    minWidth: '100%',
     paddingBottom: rem(24),
     marginBottom: rem(24),
     borderBottom: `${rem(1)} solid ${colors.searchResultBorder}`,
