@@ -19,17 +19,17 @@ const styles = {
     padding: `${rem(16)}  ${rem(56)}`,
     marginTop: rem(48),
   },
-  calculatorBtn: {
+  girisBtn: {
     textDecoration: 'none',
     fontFamily: fonts.font,
     fontSize: rem(18),
-    fontWeight: '700',
+    fontWeight: '900',
     lineHeight: rem(22),
     backgroundColor: colors.light,
     color: colors.calcBtnBlue,
     borderRadius: rem(41),
     border: `${rem(1)} solid ${colors.calcBtnBlue}`,
-    padding: `${rem(16)}  ${rem(49)}`,
+    padding: `${rem(16)}  ${rem(77)}`,
   },
 };
 export const useButtonStyles = createUseStyles(styles);

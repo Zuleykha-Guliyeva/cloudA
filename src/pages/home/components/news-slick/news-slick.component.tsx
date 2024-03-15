@@ -34,6 +34,7 @@ const NewsSlickComponent = () => {
         data.map((blog) => (
           <div key={generateGuid()}>
             <NewsCardComponent
+              id = {blog.id}
               img={blog.urlToImage}
               title={blog.title}
               description={blog.description}

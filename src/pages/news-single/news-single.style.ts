@@ -13,6 +13,7 @@ const styles = {
   backIcon: {
     display: 'flex',
     alignItems: 'center',
+    cursor: 'pointer',
   },
   backSpan: {
     fontFamily: fonts.font,

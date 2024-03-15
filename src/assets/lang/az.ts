@@ -4,7 +4,7 @@ export const az = {
   product_title: 'Products and services',
   news_title: 'News and blog',
   contact_title: 'Contact',
-  kalkulyator: 'Kalkulyator',
+  giris: 'Giriş',
   //Form
   input_required: 'input_required',
   submit: 'Göndər',
