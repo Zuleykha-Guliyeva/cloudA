@@ -13,6 +13,15 @@ export const az = {
   email: 'E-mail',
   phone: 'Mobil nömrə',
   content: 'Mətn',
+  password: 'Password',
+  signin: 'Sign in',
+  continue: 'continue',
+  country: 'Ölkə',
+  city: 'Şəhər',
+  address: 'Qeydiyyatda olduğunuz ünvan',
+  liveAddress: 'Hal-hazırda yaşadığınız ünvan',
+  company: 'Şirkət adı',
+  repeatPassword: 'Repeat password',
   //Contact
   location: '74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan',
 };

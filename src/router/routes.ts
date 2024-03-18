@@ -8,4 +8,6 @@ export enum Routes {
   productdetail = '/products/detail',
   contact = '/contact',
   search = '/search',
+  signin = '/sign-in',
+  signup = '/sign-up',
 }

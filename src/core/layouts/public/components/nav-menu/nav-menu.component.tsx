@@ -69,7 +69,7 @@ const NavMenuComponent = () => {
         <CiSearch />
       </div>
       <div className='d-flex align-center'>
-        <ButtonComponent url='' text={translate('giris')} className='girisBtn'/>
+        <ButtonComponent url={Routes.signin} text={translate('giris')} className='girisBtn'/>
       </div>
       <div className={classes.mobileMenuIcon} onClick={mobileMenuOpen}>
         {navMenu ? <IoClose /> : <IoMenu />}

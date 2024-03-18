@@ -9,6 +9,8 @@ import ProductDetailComponent from "pages/product-detail/product-detail.componen
 import NewsComponent from "pages/news/news.component";
 import SearchResultComponent from "pages/search-result/search-result.component";
 import NewsSingleComponent from "pages/news-single/news-single.component";
+import SignInComponent from "pages/sign-in/sign-in.component";
+import SignUPComponent from "pages/sign-up/sign-up.component";
 const router = createBrowserRouter(
   [
     {
@@ -50,6 +52,14 @@ const router = createBrowserRouter(
         {
           path: Routes.search,
           element: <SearchResultComponent />,
+        },
+        {
+          path: Routes.signin,
+          element: <SignInComponent />,
+        },
+        {
+          path: Routes.signup,
+          element: <SignUPComponent />,
         },
       ],
     },
