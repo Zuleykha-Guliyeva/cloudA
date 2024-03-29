@@ -9,6 +9,7 @@ import { IState } from 'store/store';
 import { Routes } from 'router/routes';
 import { useNews } from './actions/news.query';
 import { useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
 
 const NewsComponent = () => {
   const classes = useNewsStyles();
@@ -24,15 +25,17 @@ const NewsComponent = () => {
 
   const initialValues = { searchValue: ' ' };
 
- const onFinish = (values) => {
+ const onFinish = useCallback((values) => {
    const searchNews = values.searchValue;
+   console.log(searchNews.toLocaleLowerCase());
    if (searchNews && data) {
      const searchResult = data?.filter((news) =>
-       news?.title?.toLowerCase().includes(searchNews.toLowerCase())
+       news?.title?.toLocaleLowerCase().includes(searchNews.toLocaleLowerCase())
      );
+        console.log(searchResult);
      navigate(Routes.search, { state: { resultNews: searchResult } });
    }
- };
+ },[data]);
 
 
 

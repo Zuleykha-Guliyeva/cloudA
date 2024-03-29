@@ -31,5 +31,8 @@ const styles = {
     border: `${rem(1)} solid ${colors.calcBtnBlue}`,
     padding: `${rem(16)}  ${rem(77)}`,
   },
+  textStyle: {
+    color: colors.light,
+  }
 };
 export const useButtonStyles = createUseStyles(styles);

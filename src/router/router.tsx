@@ -11,6 +11,7 @@ import SearchResultComponent from "pages/search-result/search-result.component";
 import NewsSingleComponent from "pages/news-single/news-single.component";
 import SignInComponent from "pages/sign-in/sign-in.component";
 import SignUPComponent from "pages/sign-up/sign-up.component";
+import PersonalComponent from "pages/personal/personal.component";
 const router = createBrowserRouter(
   [
     {
@@ -61,6 +62,10 @@ const router = createBrowserRouter(
           path: Routes.signup,
           element: <SignUPComponent />,
         },
+        {
+          path: Routes.personal,
+          element: <PersonalComponent/>,
+        }
       ],
     },
   ],

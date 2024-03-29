@@ -24,4 +24,7 @@ export const az = {
   repeatPassword: 'Repeat password',
   //Contact
   location: '74, Alibey Huseynzade, AZ1009, Baku, Azerbaijan',
+  //SignUp
+  loading: 'loading',
+  error: 'error',
 };

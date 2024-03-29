@@ -10,7 +10,6 @@ const styles = {
     borderRadius: rem(28),
     marginTop: rem(100),
     marginBottom: rem(161),
-    padding: `${rem(115)} ${rem(340)} ${rem(68)} ${rem(340)}`,
     '& .row .col-6 a': {
       color: colors.light,
       textDecoration: 'none',
@@ -30,6 +29,9 @@ const styles = {
       backgroundColor: colors.calcBtnBlue,
     },
   },
+  signUpPagePadding: {
+    padding: `${rem(115)} ${rem(340)} ${rem(68)} ${rem(340)}`,
+  },
   tabMenuSignUp: {
     borderBottom: `${rem(1)} solid ${colors.light}`,
     paddingBottom: rem(26),
@@ -46,9 +48,15 @@ const styles = {
     right: '-9%',
   },
   backIcon: {
-    display: 'flex',
+    display: 'inline-flex',
+    position: 'absolute',
     alignItems: 'center',
     cursor: 'pointer',
+    paddingTop: rem(44),
+    paddingLeft: rem(44),
+    zIndex: '999',
+    '& span': { color: colors.light },
+    '& img': { width: rem(36)}
   },
   backSpan: {
     fontFamily: fonts.font,

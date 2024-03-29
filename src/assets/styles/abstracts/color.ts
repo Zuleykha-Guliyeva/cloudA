@@ -1,6 +1,7 @@
 const colors = {
   bodyColor: '#F5F9FC',
   light: '#fff',
+  emailAddInput: '#F3F6F7',
   calcBtnBlue: '#2BAAE2',
   headerbackground: 'linear-gradient(91.58deg, #1559A4 0.74%, #2D99DC 107.2%)',
   footBackground: '#F0F1F4',
@@ -16,7 +17,7 @@ const colors = {
   cardBorder: '#D5E0E8',
   searchResultBorder: '#B7B7B7',
   clientsBorderRight: '#D1D1D1',
+  errorMsg: '#FF6F6F',
 };
-
 
 export default colors;

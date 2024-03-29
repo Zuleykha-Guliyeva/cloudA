@@ -78,7 +78,8 @@
       "url": "https://www.marketwatch.com/story/it-turns-out-the-u-s-is-one-of-the-least-concentrated-stock-markets-in-the-world-647b60d1",
       "urlToImage": "src/assets/images/statics/news/news2.png",
       "date": "26.02.2024"
-    },{
+    },
+    {
       "id": 6,
       "author": "Steve Goldstein",
       "title": "It turns out, the U.S. is one of the least concentrated stock markets in the world",
@@ -86,7 +87,8 @@
       "url": "https://www.marketwatch.com/story/it-turns-out-the-u-s-is-one-of-the-least-concentrated-stock-markets-in-the-world-647b60d1",
       "urlToImage": "src/assets/images/statics/news/news2.png",
       "date": "26.02.2024"
-    },{
+    },
+    {
       "id": 7,
       "author": "Steve Goldstein",
       "title": "It turns out, the U.S. is one of the least concentrated stock markets in the world",
@@ -233,6 +235,164 @@
       "telegram": "https://web.telegram.org/k/",
       "linkedin": "https://www.linkedin.com/checkpoint/lg/login-submit",
       "youtube": "https://www.youtube.com/"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Sema",
+      "surname": "Quliyeva",
+      "country": "Azerbaycan",
+      "city": "Baki",
+      "address": "jkashjkdshkjbhjk",
+      "liveAddress": "oiueueoiueoi",
+      "company": "azincloud",
+      "mobile": "0504545668",
+      "email": "example@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Sevda",
+      "surname": "Eliyeva",
+      "country": "Azerbaycan",
+      "city": "Baki",
+      "address": "jkashjkdshkjbhjk",
+      "liveAddress": "oiueueoiueoi",
+      "company": "azincloud",
+      "mobile": "022504545668",
+      "email": "examp@gmail.com",
+      "password": "123"
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "0202333564",
+      "email": "jk@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "Gunel",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "02023566664",
+      "email": "jkj@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "name": "Gunel",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "0202356693334",
+      "email": "jjjl@gmail.com",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "7856561115552",
+      "email": "kkll@gmail.com",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "name": "Gunel",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "78565620303",
+      "email": "jll@gmail.com",
+      "password": "12345",
+      "id": 7
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "7118225336562",
+      "email": "ooll@gmail.com",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "7856562",
+      "email": "jkjkljjl@gmail.com",
+      "password": "12345",
+      "id": 9
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "78565620022222221",
+      "email": "jkjkljjoooooooooppl@gmail.com",
+      "password": "12345",
+      "id": 10
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "78565624344343434",
+      "email": "jkjk36ljjl@gmail.com",
+      "password": "12345",
+      "id": 11
+    },
+    {
+      "name": "Bird",
+      "surname": "Ramse",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "baki",
+      "liveAddress": "bakixanov",
+      "company": "azin",
+      "phone": "785656214",
+      "email": "bird@gmail.com",
+      "password": "123",
+      "id": 12
     }
   ]
 }

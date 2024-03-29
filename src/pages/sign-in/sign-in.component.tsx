@@ -1,16 +1,19 @@
 import { Button, Form, Input } from 'antd';
 import { useSignInStyles } from './sign-in.style';
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import useLocalization from 'assets/lang';
 import { ISignInFormValues } from './sign-in';
 import { Link } from 'react-router-dom';
 import signBack1 from 'assets/images/statics/sign-in/sign-back1.png';
 import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
+import eyeIcon from 'assets/images/statics/eye.svg';
 import { Routes } from 'router/routes';
+import { useSignIn } from './actions/sign-in.mutation';
 
 const SignInComponent = () => {
   const classes = useSignInStyles();
   const translate = useLocalization();
+  const {mutate} = useSignIn();
   const initialValues: ISignInFormValues = {
     email: '',
     password: '',
@@ -32,8 +35,13 @@ const SignInComponent = () => {
     }),
     [translate]
   );
-  const onSubmit = () => {};
-
+  const onSubmit = useCallback((values:ISignInFormValues) => {
+    mutate(values);
+  }, [mutate]);
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className='container pt-150'>
       <div className={classes.signInPage}>
@@ -62,6 +70,10 @@ const SignInComponent = () => {
         >
           <div className='row'>
             <div className='col-lg-12'>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
               <Form.Item rules={rules.email} name='email'>
                 <Input placeholder={translate('email')} />
               </Form.Item>
@@ -70,13 +82,33 @@ const SignInComponent = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <Form.Item rules={rules.password} name='password'>
-                <Input placeholder={translate('password')} />
+                <Input.Password
+                  className={classes.passwordInput}
+                  placeholder={translate('password')}
+                  iconRender={(visible) =>
+                    visible ? (
+                      <img
+                        src={eyeIcon}
+                        alt=''
+                        onClick={togglePasswordVisibility}
+                      />
+                    ) : (
+                      <img
+                        src={eyeIcon}
+                        alt=''
+                        onClick={togglePasswordVisibility}
+                      />
+                    )
+                  }
+                />
               </Form.Item>
             </div>
           </div>
           <div className='row text-right'>
             <div className='col-12'>
-              <span>Forget password?</span>
+              <Link to='#'>
+                <span className='pr-20'>Forget password?</span>
+              </Link>
             </div>
           </div>
           <div className='row mt-20'>

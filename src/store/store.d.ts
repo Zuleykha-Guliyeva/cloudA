@@ -6,6 +6,7 @@ export interface IState {
   dateSearchBtn: boolean;
   languages: ILanguages[];
   locale: any;
+  user: IUser | null;
 }
 
 

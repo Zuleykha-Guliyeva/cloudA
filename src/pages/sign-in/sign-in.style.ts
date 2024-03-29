@@ -1,4 +1,5 @@
 import colors from 'assets/styles/abstracts/color';
+import fonts from 'assets/styles/abstracts/fonts';
 import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 
@@ -28,6 +29,26 @@ const styles = {
       borderRadius: rem(48),
       backgroundColor: colors.calcBtnBlue,
     },
+    '& Form img': {
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      right: '5%',
+      cursor: 'pointer',
+    },
+  },
+  passwordInput: {
+    borderRadius: rem(48),
+    padding: `${rem(16)} ${rem(0)} ${rem(16)} ${rem(24)}`,
+    color: `${colors.defaultTextColor}!important`,
+  },
+  messageBox: {
+    fontFamily: fonts.font,
+    fontSize: rem(16),
+    fontWeight: '400',
+    lineHeight: rem(24),
+    color: colors.errorMsg,
+    marginBottom: rem(16),
   },
   tabMenuSignIn: {
     borderBottom: `${rem(1)} solid ${colors.light}`,
@@ -43,8 +64,7 @@ const styles = {
     position: 'absolute',
     bottom: '-27%',
     right: '-9%',
-
-  }
+  },
 };
 
 export const useSignInStyles = createUseStyles(styles);
