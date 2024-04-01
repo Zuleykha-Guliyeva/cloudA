@@ -7,12 +7,21 @@ import { useSelector } from 'react-redux';
 import { IState } from 'store/store';
 const PersonalComponent = () => {
   const classes = usePersonalStyles();
-  const [showAddEmail,setShowAddEmail] = useState(false);
+  const [showAddEmail, setShowAddEmail] = useState(false);
 
   const handleAddEmail = () => {
-    setShowAddEmail(!showAddEmail)
+    setShowAddEmail(!showAddEmail);
   };
-  const user = useSelector((state:IState) => state.user)
+  const user = useSelector((state: IState) => state.user);
+  if (!user) {
+    return (
+      <div className={classes.personal}>
+        <div className='container'>
+          <p className={classes.personalTitle}>Bu məlumatları görmək üçün əvvəlcə giriş etməlisiniz!</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={classes.personal}>
       <div className='container'>
@@ -21,19 +30,17 @@ const PersonalComponent = () => {
           <div className='row'>
             <div className='col-md-3 mb-34'>
               <p className={classes.detailTitle}>Ad, Soyad</p>
-              <p className={classes.detailPersonal}>{`${user.name} ${user.surname}`}</p>
+              <p
+                className={classes.detailPersonal}
+              >{`${user.name} ${user.surname}`}</p>
             </div>
             <div className='col-md-3 mb-34'>
               <p className={classes.detailTitle}>Qeydiyyatda olduğu ünvan</p>
-              <p className={classes.detailPersonal}>
-                {user.address}
-              </p>
+              <p className={classes.detailPersonal}>{user.address}</p>
             </div>
             <div className='col-md-3 mb-34'>
               <p className={classes.detailTitle}>Ölkə </p>
-              <p className={classes.detailPersonal}>
-                {user.country}
-              </p>
+              <p className={classes.detailPersonal}>{user.country}</p>
             </div>
             <div className='col-md-3 mb-34'>
               <p className={classes.detailTitle}>Şəhər</p>
@@ -58,14 +65,23 @@ const PersonalComponent = () => {
             <p className={classes.emailTitle}>E-mail</p>
             <p className={classes.email}>{user.email}</p>
           </div>
-          {showAddEmail? <div className={classes.disableAdd}>
-            <div className={classes.disableAddEmail}>
-              <p>Email</p>
+          {showAddEmail ? (
+            <div className={classes.disableAdd}>
+              <div className={classes.disableAddEmail}>
+                <p>Email</p>
+              </div>
+              <img src={trash} alt='' />
             </div>
-            <img src={trash} alt='' />
-          </div> : <></>}
+          ) : (
+            <></>
+          )}
           <div className={classes.addEmail}>
-            <img src={addEmail} alt='' className={classes.emailIcon} onClick={handleAddEmail}/>
+            <img
+              src={addEmail}
+              alt=''
+              className={classes.emailIcon}
+              onClick={handleAddEmail}
+            />
             <span className={classes.email}>Add e-mail</span>
           </div>
         </div>

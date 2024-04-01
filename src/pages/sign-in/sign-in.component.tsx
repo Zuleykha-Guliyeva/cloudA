@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import signBack1 from 'assets/images/statics/sign-in/sign-back1.png';
 import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
 import eyeIcon from 'assets/images/statics/eye.svg';
+import invisibleEyeIcon from 'assets/images/statics/invisible-eye.svg';
 import { Routes } from 'router/routes';
 import { useSignIn } from './actions/sign-in.mutation';
 
@@ -69,8 +70,7 @@ const SignInComponent = () => {
           layout='vertical'
         >
           <div className='row'>
-            <div className='col-lg-12'>
-            </div>
+            <div className='col-lg-12'></div>
           </div>
           <div className='row'>
             <div className='col-lg-12'>
@@ -94,7 +94,7 @@ const SignInComponent = () => {
                       />
                     ) : (
                       <img
-                        src={eyeIcon}
+                        src={invisibleEyeIcon}
                         alt=''
                         onClick={togglePasswordVisibility}
                       />
