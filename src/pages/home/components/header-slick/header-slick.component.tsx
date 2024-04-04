@@ -2,8 +2,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useHeaderSlickComponent } from './header-slick.style';
+import useLocalization from 'assets/lang';
 const HeaderSlickComponent = () => {
     const classes = useHeaderSlickComponent();
+    const translate = useLocalization();
   const settings = {
     autoplay: false,
     dots: true,
@@ -17,13 +19,13 @@ const HeaderSlickComponent = () => {
   return (
     <Slider {...settings} className={classes.slider}>
       <div>
-        <p>AzinCloud is Global CSP of GCore now.</p>
+        <p>{translate('AzinCloud')}</p>
       </div>
       <div>
-        <p>AzinCloud is Global CSP of GCore now.</p>
+        <p>{translate('AzinCloud')}</p>
       </div>
       <div>
-        <p>AzinCloud is Global CSP of GCore now.</p>
+        <p>{translate('AzinCloud')}</p>
       </div>
     </Slider>
   );

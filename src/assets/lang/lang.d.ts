@@ -1,1 +1,1 @@
-export type ILang = 'az' ;
+export type ILang = 'az' | 'en' | 'ru';

@@ -5,6 +5,7 @@ import { usePartnersSlickComponent } from './partners-slick.style';
 import { SlideUp, SlideDown } from 'assets/images/icons/arrows';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { generateGuid } from 'core/helpers/generate-guid';
 const PartnersSlickComponent = ({ partners }) => {
   const classes = usePartnersSlickComponent();
   const settings = {
@@ -33,11 +34,15 @@ const PartnersSlickComponent = ({ partners }) => {
     return partners?.map((partner, index: number) => {
       if (partners.length - index > 3) {
         return (
-          <div className={classes.partnersSlideItem} key={index}>
+          <div className={classes.partnersSlideItem} key={generateGuid()}>
             <div className={classes.partnersLogoBackground}>
               <Link to='https://www.google.com/?hl=az'>
                 <img
-                  src={index === 0 ? partners[index]?.icon : partners[index + 1]?.icon}
+                  src={
+                    index === 0
+                      ? partners[index]?.icon
+                      : partners[index + 1]?.icon
+                  }
                   alt=''
                 />
               </Link>
@@ -45,7 +50,11 @@ const PartnersSlickComponent = ({ partners }) => {
             <div className={classes.partnersLogoBackground}>
               <Link to='https://www.google.com/?hl=az'>
                 <img
-                  src={index === 0 ? partners[index + 1]?.icon : partners[index + 3]?.icon }
+                  src={
+                    index === 0
+                      ? partners[index + 1]?.icon
+                      : partners[index + 3]?.icon
+                  }
                   alt=''
                 />
               </Link>

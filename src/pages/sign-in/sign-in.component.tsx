@@ -3,7 +3,7 @@ import { useSignInStyles } from './sign-in.style';
 import { useCallback, useMemo, useState } from 'react';
 import useLocalization from 'assets/lang';
 import { ISignInFormValues } from './sign-in';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import signBack1 from 'assets/images/statics/sign-in/sign-back1.png';
 import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
 import eyeIcon from 'assets/images/statics/eye.svg';
@@ -56,10 +56,10 @@ const SignInComponent = () => {
         <div className={classes.tabMenuSignIn}>
           <div className='row'>
             <div className='col-6 p-0 text-center'>
-              <Link to='#'>Sing In</Link>
+              <NavLink to={Routes.signin}>Sing In</NavLink>
             </div>
             <div className='col-6 p-0 text-center'>
-              <Link to={Routes.signup}>Sign Up</Link>
+              <NavLink to={Routes.signup}>Sign Up</NavLink>
             </div>
           </div>
         </div>
@@ -70,18 +70,23 @@ const SignInComponent = () => {
           layout='vertical'
         >
           <div className='row'>
-            <div className='col-lg-12'></div>
-          </div>
-          <div className='row'>
             <div className='col-lg-12'>
-              <Form.Item rules={rules.email} name='email'>
+              <Form.Item
+                rules={rules.email}
+                name='email'
+                className={classes.formItemEmail}
+              >
                 <Input placeholder={translate('email')} />
               </Form.Item>
             </div>
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <Form.Item rules={rules.password} name='password'>
+              <Form.Item
+                rules={rules.password}
+                name='password'
+                className={classes.formItemPassword}
+              >
                 <Input.Password
                   className={classes.passwordInput}
                   placeholder={translate('password')}
@@ -111,7 +116,7 @@ const SignInComponent = () => {
               </Link>
             </div>
           </div>
-          <div className='row mt-20'>
+          <div className='row mt-44'>
             <div className='col-lg-12'>
               <Button type='primary' htmlType='submit'>
                 {translate('signin')}

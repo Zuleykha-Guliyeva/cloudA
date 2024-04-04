@@ -7,11 +7,13 @@ import { IoMenu } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
-import { toggleNavMenu } from 'store/store.reducer';
+import { setLocale, toggleNavMenu } from 'store/store.reducer';
 import { IState } from 'store/store';
 import classNames from 'classnames';
 import { CiSearch } from 'react-icons/ci';
 import ButtonComponent from 'core/shared/button/button.component';
+import { Dropdown, MenuProps, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 const NavMenuComponent = () => {
   const classes = useNavMenuStyles();
@@ -32,7 +34,7 @@ const NavMenuComponent = () => {
     name: string;
     link: string;
   }
-  const items = [
+  const navMenuItems = [
     {
       id: 2,
       name: translate('about_title'),
@@ -54,10 +56,31 @@ const NavMenuComponent = () => {
       link: Routes.contact,
     },
   ];
+
+  const onClick: MenuProps['onClick'] = ({ key } : any) => {
+    dispatch(setLocale(key))
+  };
+
+  const items: { label: string; key: string }[] = [
+    {
+      label: 'az',
+      key: 'az',
+    },
+    {
+      label: 'en',
+      key: 'en',
+    },
+    {
+      label: 'ru',
+      key: 'ru',
+    },
+  ];
+  const currentLocale = useSelector((state: IState) => state.locale);
+
   return (
     <div className={classes.navMenu}>
       <ul className={navMenuClasses}>
-        {items.map((i: NavMenuItem) => (
+        {navMenuItems.map((i: NavMenuItem) => (
           <NavMenuItemComponent
             key={generateGuid()}
             name={i.name}
@@ -68,8 +91,26 @@ const NavMenuComponent = () => {
       <div className={classes.searchIcon}>
         <CiSearch />
       </div>
+
+      <Dropdown menu={{ items, onClick }}>
+        <a onClick={(e) => e.preventDefault()}>
+          <Space>
+            {items.map((item) => (
+              <span key={item.key}>
+                {currentLocale === item.key && item.label}
+              </span>
+            ))}
+            <DownOutlined style={{ color: '#fff' }} />
+          </Space>
+        </a>
+      </Dropdown>
+
       <div className='d-flex align-center'>
-        <ButtonComponent url={Routes.signin} text={translate('giris')} className='girisBtn'/>
+        <ButtonComponent
+          url={Routes.signin}
+          text={translate('giris')}
+          className='loginBtn'
+        />
       </div>
       <div className={classes.mobileMenuIcon} onClick={mobileMenuOpen}>
         {navMenu ? <IoClose /> : <IoMenu />}

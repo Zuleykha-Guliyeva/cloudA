@@ -1,12 +1,12 @@
-export const az = {
+export const ru = {
   // Nav men
-  about_title: 'Haqqımızda',
-  product_title: 'Məhsullar ve xidmət',
-  news_title: 'Xəbərlər',
-  contact_title: 'Əlaqə',
-  giris: 'Giriş',
+  about_title: 'О нас',
+  product_title: 'Продукты и услуги',
+  news_title: 'Новости и блог',
+  contact_title: 'Контакт',
+  giris: 'Логин',
   //Header slide
-  AzinCloud: 'AzinCloud indi GCore-un Qlobal CSP-dir.',
+  AzinCloud: 'AzinCloud теперь является глобальным CSP GCore.',
   //Form
   input_required: 'input_required',
   submit: 'Göndər',
@@ -15,8 +15,8 @@ export const az = {
   email: 'E-mail',
   phone: 'Mobil nömrə',
   content: 'Mətn',
-  password: 'Parol',
-  confirmpassword: 'Parolu təsdiqləyin',
+  password: 'Пароль',
+  confirmpassword: 'Подтвердите пароль',
   signin: 'Sign in',
   continue: 'continue',
   country: 'Ölkə',
@@ -30,7 +30,7 @@ export const az = {
   //SignUp
   loading: 'loading',
   error: 'error',
-  personal: 'Şəxsi',
-  student: 'Tələbə',
-  back: 'Geri',
+  personal: ' Персонал',
+  student: 'Студент',
+  back: 'назад',
 };

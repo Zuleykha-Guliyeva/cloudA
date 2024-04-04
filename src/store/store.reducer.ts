@@ -1,6 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {IState} from './store';
 import {az} from '../assets/lang/az';
+import { en } from '../assets/lang/en';
+import { ru } from '../assets/lang/ru';
 import {environment} from '../core/configs/app.config';
 import {ILang} from '../assets/lang/lang';
 import { getToken } from 'core/helpers/get-token';
@@ -15,6 +17,16 @@ const initialState: IState = {
       id: 1,
       key: 'az',
       value: 'Az',
+    },
+    {
+      id: 2,
+      key: 'en',
+      value: 'En',
+    },
+    {
+      id: 3,
+      key: 'ru',
+      value: 'Ru',
     },
   ],
   locale: az,
@@ -33,7 +45,7 @@ export const rootSlice = createSlice({
     },
     setLocale: (state: IState, action: PayloadAction<ILang>) => {
       const lang = {
-        az,
+        az,en,ru
       };
       state.locale = lang[action.payload];
       localStorage.setItem(

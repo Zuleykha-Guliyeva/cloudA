@@ -10,5 +10,6 @@ export enum Routes {
   search = '/search',
   signin = '/sign-in',
   signup = '/sign-up',
-  personal = '/personal'
+  personal = '/personal',
+  newpassword = '/newpassword',
 }

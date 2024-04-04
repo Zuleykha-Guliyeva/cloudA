@@ -24,6 +24,7 @@ import { useState } from 'react';
 import ProductsListComponent from 'core/shared/products-list/products-list.component';
 import { useCertificates, useClients, usePartners } from './actions/home.query';
 import { generateGuid } from 'core/helpers/generate-guid';
+import { getToken } from 'core/helpers/get-token';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -35,6 +36,9 @@ const HomeComponent = () => {
   const {data:clients} = useClients();
   const {data:partners} = usePartners();
   const {data:certificates} = useCertificates();
+  const token = getToken();
+  console.log(token);
+  
   return (
     <>
       <section className={classes.slide}>
@@ -339,7 +343,7 @@ const HomeComponent = () => {
           <div className='row align-center pl-100 pr-100'>
             {certificates &&
               certificates.map((certificate) => (
-                <div className='col-md-2 text-center'>
+                <div className='col-md-2 text-center' key={generateGuid()}>
                   <img src={certificate?.icon} alt='' />
                 </div>
               ))}

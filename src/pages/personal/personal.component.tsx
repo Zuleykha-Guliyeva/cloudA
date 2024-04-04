@@ -2,9 +2,13 @@ import { usePersonalStyles } from './personal.style';
 import addEmail from 'assets/images/statics/add-circle.svg';
 import edit from 'assets/images/statics/edit.svg';
 import trash from 'assets/images/statics/trash.svg';
+import { getToken } from 'core/helpers/get-token';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Routes } from 'router/routes';
 import { IState } from 'store/store';
+import { setUser } from 'store/store.reducer';
 const PersonalComponent = () => {
   const classes = usePersonalStyles();
   const [showAddEmail, setShowAddEmail] = useState(false);
@@ -12,6 +16,9 @@ const PersonalComponent = () => {
   const handleAddEmail = () => {
     setShowAddEmail(!showAddEmail);
   };
+  const token = getToken();
+  const dispatch = useDispatch();
+  dispatch(setUser(token));
   const user = useSelector((state: IState) => state.user);
   if (!user) {
     return (
@@ -85,10 +92,10 @@ const PersonalComponent = () => {
             <span className={classes.email}>Add e-mail</span>
           </div>
         </div>
-        <div className={classes.passwordChangeBox}>
+        <NavLink to={Routes.newpassword} className={classes.passwordChangeBox}>
           <span>Change your password</span>
           <img src={edit} alt='' />
-        </div>
+        </NavLink>
       </div>
     </div>
   );

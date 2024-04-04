@@ -35,6 +35,9 @@ const styles = {
         },
       },
     },
+    '& Dropdown .a svg': {
+      color: colors.light,
+    },
   },
   active: {
     display: 'flex',

@@ -12,6 +12,7 @@ import NewsSingleComponent from "pages/news-single/news-single.component";
 import SignInComponent from "pages/sign-in/sign-in.component";
 import SignUPComponent from "pages/sign-up/sign-up.component";
 import PersonalComponent from "pages/personal/personal.component";
+import NewPasswordComponent from "pages/new-password/new-password.component";
 const router = createBrowserRouter(
   [
     {
@@ -64,8 +65,12 @@ const router = createBrowserRouter(
         },
         {
           path: Routes.personal,
-          element: <PersonalComponent/>,
-        }
+          element: <PersonalComponent />,
+        },
+        {
+          path: Routes.newpassword,
+          element: <NewPasswordComponent />,
+        },
       ],
     },
   ],

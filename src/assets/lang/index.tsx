@@ -1,18 +1,20 @@
 import {renderToStaticMarkup} from 'react-dom/server';
 import {az} from './az';
 import { useStore } from "../../store/store.config";
+import { en } from './en';
+import { ru } from './ru';
 
 const useLocalization = () => {
     const languages = useStore('locale');
 
     return (
-      key: keyof typeof az,
-      dynamicValues: Record<string, string> = {}
+      key: keyof typeof az | keyof typeof en | keyof typeof ru,
+      dynamicValues: any = {}
     ) => {
-      let formattedText = languages[key] || "";
+      let formattedText = languages[key] || '';
       Object.keys(dynamicValues).forEach((dynamicKey: string) => {
         const dynamicValue = dynamicValues[dynamicKey];
-        if (typeof dynamicValue === "string") {
+        if (typeof dynamicValue === 'string') {
           formattedText = formattedText.replace(
             `{${dynamicKey}}`,
             dynamicValue

@@ -14,6 +14,8 @@ const ButtonComponent = ({ text, className, url }) => {
   const classes = useButtonStyles();
   const token = getToken();
   const user = useSelector((state: IState) => state.user);
+  console.log(user);
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -51,7 +53,7 @@ const ButtonComponent = ({ text, className, url }) => {
   ];
   return (
     <>
-      {token ? (
+      {token && user ? (
         <Dropdown
           menu={{
             items,

@@ -19,7 +19,7 @@ const styles = {
     padding: `${rem(16)}  ${rem(56)}`,
     marginTop: rem(48),
   },
-  girisBtn: {
+  loginBtn: {
     textDecoration: 'none',
     fontFamily: fonts.font,
     fontSize: rem(18),

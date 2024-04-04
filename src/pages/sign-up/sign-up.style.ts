@@ -32,10 +32,34 @@ const styles = {
   signUpPagePadding: {
     padding: `${rem(115)} ${rem(340)} ${rem(68)} ${rem(340)}`,
   },
+  activeTabs: {
+    border: '1px solid #fff',
+    borderRadius: rem(28),
+    padding: `${rem(17)} ${rem(0)}`,
+    backgroundColor: '#FFFFFF1A',
+    width: '100%',
+  },
   tabMenuSignUp: {
-    borderBottom: `${rem(1)} solid ${colors.light}`,
-    paddingBottom: rem(26),
-    marginBottom: rem(44),
+    '& span': {
+      width: rem(150),
+      display: 'inline-flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: colors.light,
+      fontFamily: fonts.font,
+      fontSize: rem(20),
+      fontWeight: '500',
+      lineHeight: rem(22),
+      marginLeft: rem(18),
+    },
+  },
+  singUpTabs: {
+    width: '100%',
+    display: 'flex!important',
+    justifyContent: 'center!important'
+  },
+  tabsItem: {
+    width: '50%'
   },
   signBackImg1: {
     position: 'absolute',
@@ -56,7 +80,7 @@ const styles = {
     paddingLeft: rem(44),
     zIndex: '999',
     '& span': { color: colors.light },
-    '& img': { width: rem(36)}
+    '& img': { width: rem(36) },
   },
   backSpan: {
     fontFamily: fonts.font,
