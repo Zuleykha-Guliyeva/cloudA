@@ -4,17 +4,16 @@ import { useCallback, useMemo, useState } from 'react';
 import useLocalization from 'assets/lang';
 import { ISignInFormValues } from './sign-in';
 import { Link, NavLink } from 'react-router-dom';
-import signBack1 from 'assets/images/statics/sign-in/sign-back1.png';
-import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
 import eyeIcon from 'assets/images/statics/eye.svg';
 import invisibleEyeIcon from 'assets/images/statics/invisible-eye.svg';
 import { Routes } from 'router/routes';
 import { useSignIn } from './actions/sign-in.mutation';
+import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
 
 const SignInComponent = () => {
   const classes = useSignInStyles();
   const translate = useLocalization();
-  const {mutate} = useSignIn();
+  const { mutate } = useSignIn();
   const initialValues: ISignInFormValues = {
     email: '',
     password: '',
@@ -36,23 +35,19 @@ const SignInComponent = () => {
     }),
     [translate]
   );
-  const onSubmit = useCallback((values:ISignInFormValues) => {
-    mutate(values);
-  }, [mutate]);
+  const onSubmit = useCallback(
+    (values: ISignInFormValues) => {
+      mutate(values);
+    },
+    [mutate]
+  );
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className='container pt-150'>
-      <div className={classes.signInPage}>
-        <div className={classes.signBackImg1}>
-          <img src={signBack1} alt='' />
-        </div>
-        <div className={classes.signBackImg2}>
-          <img src={signBack2} alt='' />
-        </div>
-
+    <BlueBoxComponent>
+      <div className={classes.signInSection}>
         <div className={classes.tabMenuSignIn}>
           <div className='row'>
             <div className='col-6 p-0 text-center'>
@@ -125,7 +120,7 @@ const SignInComponent = () => {
           </div>
         </Form>
       </div>
-    </div>
+    </BlueBoxComponent>
   );
 };
 

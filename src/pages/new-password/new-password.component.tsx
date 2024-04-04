@@ -1,19 +1,12 @@
-import { Button, Form, Input } from "antd";
-import useLocalization from "assets/lang";
-import { useNewPasswordStyles } from "./new-password.style";
-import signBack1 from 'assets/images/statics/sign-in/sign-back1.png';
-import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
-import { useMemo } from "react";
-import backIcon from 'assets/images/statics/back.png';
-import { useNavigate } from "react-router-dom";
+import { Button, Form, Input } from 'antd';
+import useLocalization from 'assets/lang';
+import { useNewPasswordStyles } from './new-password.style';
+import { useMemo } from 'react';
+import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
 
 const NewPasswordComponent = () => {
   const translate = useLocalization();
   const classes = useNewPasswordStyles();
-  const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
   const initialValues = {
     password: '',
   };
@@ -29,18 +22,8 @@ const NewPasswordComponent = () => {
     [translate]
   );
   return (
-    <div className='container pt-150'>
-      <div className={classes.signInPage}>
-        <div className={classes.backIcon} onClick={goBack}>
-          <img src={backIcon} alt='' />
-          <span className={classes.backSpan}>{translate('back')}</span>
-        </div>
-        <div className={classes.signBackImg1}>
-          <img src={signBack1} alt='' />
-        </div>
-        <div className={classes.signBackImg2}>
-          <img src={signBack2} alt='' />
-        </div>
+    <BlueBoxComponent>
+      <div className={classes.newPassSection}>
         <div className={classes.newPasswordTitle}>
           <div className='row'>
             <div className='col-12'>
@@ -81,7 +64,7 @@ const NewPasswordComponent = () => {
           </div>
         </Form>
       </div>
-    </div>
+    </BlueBoxComponent>
   );
 };
 

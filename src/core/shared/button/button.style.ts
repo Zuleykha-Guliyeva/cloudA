@@ -6,9 +6,8 @@ import { createUseStyles } from "react-jss"
 const styles = {
   aboutBtn: {
     textDecoration: 'none',
-    fontFamily: fonts.font,
+    fontFamily: fonts.fontBold,
     fontSize: rem(18),
-    fontWeight: '700',
     lineHeight: rem(22),
     color: colors.light,
     backgroundColor: colors.calcBtnBlue,
@@ -21,9 +20,8 @@ const styles = {
   },
   loginBtn: {
     textDecoration: 'none',
-    fontFamily: fonts.font,
+    fontFamily: fonts.fontBold,
     fontSize: rem(18),
-    fontWeight: '900',
     lineHeight: rem(22),
     backgroundColor: colors.light,
     color: colors.calcBtnBlue,
@@ -33,6 +31,6 @@ const styles = {
   },
   textStyle: {
     color: colors.light,
-  }
+  },
 };
 export const useButtonStyles = createUseStyles(styles);

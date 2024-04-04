@@ -13,9 +13,7 @@ import { Routes } from 'router/routes';
 const ButtonComponent = ({ text, className, url }) => {
   const classes = useButtonStyles();
   const token = getToken();
-  const user = useSelector((state: IState) => state.user);
-  console.log(user);
-  
+  const user = useSelector((state: IState) => state.user);  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);

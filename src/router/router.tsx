@@ -13,6 +13,7 @@ import SignInComponent from "pages/sign-in/sign-in.component";
 import SignUPComponent from "pages/sign-up/sign-up.component";
 import PersonalComponent from "pages/personal/personal.component";
 import NewPasswordComponent from "pages/new-password/new-password.component";
+import AddCardComponent from "pages/add-card/add-card.component";
 const router = createBrowserRouter(
   [
     {
@@ -71,6 +72,10 @@ const router = createBrowserRouter(
           path: Routes.newpassword,
           element: <NewPasswordComponent />,
         },
+        {
+          path: Routes.addcard,
+          element: <AddCardComponent />
+        }
       ],
     },
   ],

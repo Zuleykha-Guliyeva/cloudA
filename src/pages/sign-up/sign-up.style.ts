@@ -32,34 +32,28 @@ const styles = {
   signUpPagePadding: {
     padding: `${rem(115)} ${rem(340)} ${rem(68)} ${rem(340)}`,
   },
-  activeTabs: {
-    border: '1px solid #fff',
-    borderRadius: rem(28),
-    padding: `${rem(17)} ${rem(0)}`,
-    backgroundColor: '#FFFFFF1A',
-    width: '100%',
-  },
-  tabMenuSignUp: {
+  tabSignUp: {},
+  signUpTabs: {
+    paddingBottom: rem(22),
+    borderBottom: `${rem(1)} solid ${colors.light}`,
+    marginBottom: rem(44),
     '& span': {
-      width: rem(150),
+      width: rem(172),
       display: 'inline-flex',
       justifyContent: 'center',
       alignItems: 'center',
+      padding: `${rem(16)} ${rem(0)}`,
       color: colors.light,
       fontFamily: fonts.font,
       fontSize: rem(20),
       fontWeight: '500',
       lineHeight: rem(22),
-      marginLeft: rem(18),
+      '&:last-child': { marginLeft: rem(22) },
     },
   },
-  singUpTabs: {
-    width: '100%',
-    display: 'flex!important',
-    justifyContent: 'center!important'
-  },
-  tabsItem: {
-    width: '50%'
+  activeTabs: {
+    border: `${rem(1)} solid ${colors.light}`,
+    borderRadius: rem(28),
   },
   signBackImg1: {
     position: 'absolute',

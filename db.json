@@ -240,7 +240,7 @@
   "users": [
     {
       "id": 1,
-      "category": "pesonal",
+      "catUser": "pesonal",
       "name": "Sema",
       "surname": "Quliyeva",
       "country": "Azerbaycan",
@@ -255,7 +255,7 @@
     {
       "id": 2,
       "name": "Sevda",
-      "category": "pesonal",
+      "catUser": "pesonal",
       "surname": "Eliyeva",
       "country": "Azerbaycan",
       "city": "Baki",
@@ -268,7 +268,7 @@
     },
     {
       "name": "Zuleykha",
-      "category": "student",
+      "catUser": "student",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -282,7 +282,7 @@
     },
     {
       "name": "Gunel",
-      "category": "student",
+      "catUser": "student",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -296,7 +296,7 @@
     },
     {
       "name": "Gunel",
-      "category": "pesonal",
+      "catUser": "pesonal",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -310,7 +310,7 @@
     },
     {
       "name": "Zuleykha",
-      "category": "pesonal",
+      "catUser": "pesonal",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -324,7 +324,7 @@
     },
     {
       "name": "Gunel",
-      "category": "student",
+      "catUser": "student",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -338,7 +338,7 @@
     },
     {
       "name": "Zuleykha",
-      "category": "student",
+      "catUser": "student",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -352,7 +352,7 @@
     },
     {
       "name": "Zulya",
-      "category": "student",
+      "catUser": "student",
       "surname": "Guliyeva",
       "country": "Azerbaijan",
       "city": "qax",
@@ -366,7 +366,7 @@
     },
     {
       "name": "Bird",
-      "category": "student",
+      "catUser": "student",
       "surname": "Ramse",
       "country": "Azerbaijan",
       "city": "qax",
@@ -380,7 +380,7 @@
     },
     {
       "name": "Bird",
-      "category": "personal",
+      "catUser": "personal",
       "surname": "Ramse",
       "country": "Azerbaijan",
       "city": "qax",
@@ -391,6 +391,62 @@
       "email": "ghghgh@gmail.com",
       "password": "12345",
       "id": 11
+    },
+    {
+      "name": "Rauf",
+      "surname": "Salam",
+      "country": "Gurcustan",
+      "city": "Batumi",
+      "address": "ewwwe",
+      "liveAddress": "ewwewewwee",
+      "company": "ewewe",
+      "phone": "54564564564654",
+      "email": "rauf@gmail.com",
+      "password": "135",
+      "catUser": "personal",
+      "id": 12
+    },
+    {
+      "name": "Xeyale",
+      "surname": "Eliyeva",
+      "country": "tr",
+      "city": "gngn",
+      "address": "grttrrr",
+      "liveAddress": "wwrwr",
+      "company": "bcbcbc",
+      "phone": "87887787878",
+      "email": "xeyale@mail.ru",
+      "password": "123",
+      "catUser": "personal",
+      "id": 13
+    },
+    {
+      "name": "Xeyale",
+      "surname": "Eliyeva",
+      "country": "tr",
+      "city": "gngn",
+      "address": "grttrrr",
+      "liveAddress": "wwrwr",
+      "company": "bcbcbc",
+      "phone": "87887787878222",
+      "email": "xeyale2@mail.ru",
+      "password": "123",
+      "catUser": "personal",
+      "id": 14
+    },
+    {
+      "name": "Zuleykha",
+      "surname": "Guliyeva",
+      "country": "Azerbaijan",
+      "city": "qax",
+      "address": "qqqq",
+      "liveAddress": "w",
+      "company": "azin",
+      "phone": "7856562111111111",
+      "email": "j111@gmail.com",
+      "password": "111",
+      "catUser": "personal",
+      "id": 15
     }
   ]
 }

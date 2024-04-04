@@ -4,24 +4,20 @@ import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
-  signInPage: {
+  signUpPage: {
     position: 'relative',
     background: colors.blueCounterBackground,
     borderRadius: rem(28),
     marginTop: rem(100),
     marginBottom: rem(161),
-    padding: `${rem(115)} ${rem(342)} ${rem(384)} ${rem(338)}`,
     '& .row .col-6 a': {
       color: colors.light,
       textDecoration: 'none',
     },
-    '& Form Form-field': {
-      margin: rem(0),
-    },
     '& Form Input': {
       borderRadius: rem(48),
       padding: `${rem(16)} ${rem(0)} ${rem(16)} ${rem(24)}`,
-      color: colors.defaultTextColor,
+      color: `${colors.defaultTextColor}!important`,
     },
     '& Form span': {
       color: colors.light,
@@ -32,13 +28,32 @@ const styles = {
       borderRadius: rem(48),
       backgroundColor: colors.calcBtnBlue,
     },
-    '& Form img': {
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
-      right: '5%',
-      cursor: 'pointer',
+  },
+  signUpPagePadding: {
+    padding: `${rem(115)} ${rem(340)} ${rem(68)} ${rem(340)}`,
+  },
+  tabSignUp: {},
+  signUpTabs: {
+    paddingBottom: rem(22),
+    borderBottom: `${rem(1)} solid ${colors.light}`,
+    marginBottom: rem(44),
+    '& span': {
+      width: rem(172),
+      display: 'inline-flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: `${rem(16)} ${rem(0)}`,
+      color: colors.light,
+      fontFamily: fonts.font,
+      fontSize: rem(20),
+      fontWeight: '500',
+      lineHeight: rem(22),
+      '&:last-child': { marginLeft: rem(22) },
     },
+  },
+  activeTabs: {
+    border: `${rem(1)} solid ${colors.light}`,
+    borderRadius: rem(28),
   },
   signBackImg1: {
     position: 'absolute',
@@ -50,16 +65,13 @@ const styles = {
     bottom: '-27%',
     right: '-9%',
   },
-  formItemPassword: {
-    marginBottom: rem(16),
-  },
   backIcon: {
     display: 'inline-flex',
     position: 'absolute',
     alignItems: 'center',
-    left: rem(44),
-    top: rem(44),
     cursor: 'pointer',
+    paddingTop: rem(44),
+    paddingLeft: rem(44),
     zIndex: '999',
     '& span': { color: colors.light },
     '& img': { width: rem(36) },
@@ -72,22 +84,5 @@ const styles = {
     color: colors.defaultTextColor,
     marginLeft: rem(12),
   },
-  newPasswordTitle: {
-    borderBottom: `${rem(1)} solid ${colors.light}`,
-    paddingBottom: rem(26),
-    marginBottom: rem(44),
-    '& p': {
-      textAlign: 'center',
-      fontFamily: fonts.fontBold,
-      fontSize: rem(20),
-      lineHeight: rem(24),
-      color: colors.light,
-      marginLeft: rem(12),
-    },
-  },
-  newPassSection: {
-    marginBottom: rem(356)
-  }
 };
-
-export const useNewPasswordStyles = createUseStyles(styles);
+export const useBlueBoxStyles = createUseStyles(styles);

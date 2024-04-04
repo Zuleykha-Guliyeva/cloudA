@@ -33,4 +33,6 @@ export const az = {
   personal: 'Şəxsi',
   student: 'Tələbə',
   back: 'Geri',
+  //add Card
+  addcard: 'Kart əlavə et'
 };

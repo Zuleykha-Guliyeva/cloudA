@@ -33,4 +33,6 @@ export const ru = {
   personal: ' Персонал',
   student: 'Студент',
   back: 'назад',
+  //add Card
+  addcard: 'Добавить карту',
 };

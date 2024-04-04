@@ -75,7 +75,6 @@ const NavMenuComponent = () => {
       key: 'ru',
     },
   ];
-  const currentLocale = useSelector((state: IState) => state.locale);
 
   return (
     <div className={classes.navMenu}>
@@ -95,11 +94,7 @@ const NavMenuComponent = () => {
       <Dropdown menu={{ items, onClick }}>
         <a onClick={(e) => e.preventDefault()}>
           <Space>
-            {items.map((item) => (
-              <span key={item.key}>
-                {currentLocale === item.key && item.label}
-              </span>
-            ))}
+            <span>{}</span>
             <DownOutlined style={{ color: '#fff' }} />
           </Space>
         </a>

@@ -33,4 +33,6 @@ export const en = {
   personal: 'Personal',
   student: 'Student',
   back: 'Back',
+  //add Card
+  addcard: 'Add Card',
 };

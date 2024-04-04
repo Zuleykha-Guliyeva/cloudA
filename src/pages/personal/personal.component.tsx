@@ -3,7 +3,7 @@ import addEmail from 'assets/images/statics/add-circle.svg';
 import edit from 'assets/images/statics/edit.svg';
 import trash from 'assets/images/statics/trash.svg';
 import { getToken } from 'core/helpers/get-token';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Routes } from 'router/routes';
@@ -13,9 +13,9 @@ const PersonalComponent = () => {
   const classes = usePersonalStyles();
   const [showAddEmail, setShowAddEmail] = useState(false);
 
-  const handleAddEmail = () => {
+  const handleAddEmail = useCallback(() => {
     setShowAddEmail(!showAddEmail);
-  };
+  }, []);
   const token = getToken();
   const dispatch = useDispatch();
   dispatch(setUser(token));
@@ -28,7 +28,7 @@ const PersonalComponent = () => {
         </div>
       </div>
     );
-  }
+  } else {
   return (
     <div className={classes.personal}>
       <div className='container'>
@@ -46,7 +46,7 @@ const PersonalComponent = () => {
               <p className={classes.detailPersonal}>{user.address}</p>
             </div>
             <div className='col-md-3 mb-34'>
-              <p className={classes.detailTitle}>Ölkə </p>
+              <p className={classes.detailTitle}>Ölkə</p>
               <p className={classes.detailPersonal}>{user.country}</p>
             </div>
             <div className='col-md-3 mb-34'>
@@ -99,5 +99,6 @@ const PersonalComponent = () => {
       </div>
     </div>
   );
+          }
 };
 export default PersonalComponent;

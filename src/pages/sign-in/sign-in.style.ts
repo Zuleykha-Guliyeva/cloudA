@@ -4,6 +4,9 @@ import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
+  signInSection: {
+    marginBottom: rem(316),
+  },
   formItemEmail: {
     marginBottom: rem(22),
   },

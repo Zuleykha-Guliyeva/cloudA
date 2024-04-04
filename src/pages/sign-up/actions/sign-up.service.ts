@@ -1,10 +1,10 @@
 import { API } from 'core/configs/api.config';
 import axiosInstance from 'core/configs/axios.config';
-import { ISignUpFormValues } from '../sign-up';
+import { ISignUpMutateValues } from '../sign-up';
 
 export const signUpService = async (
-  user: ISignUpFormValues
-): Promise<{ user: ISignUpFormValues }> => {
+  user: ISignUpMutateValues
+): Promise<{ user: ISignUpMutateValues }> => {
   const { email, phone } = user;
   console.log(email, phone);
   const response = await axiosInstance.get(API.users);
