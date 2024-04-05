@@ -84,5 +84,16 @@ const styles = {
     color: colors.defaultTextColor,
     marginLeft: rem(12),
   },
+  blueBoxTitle: {
+    borderBottom: `${rem(1)} solid ${colors.light}`,
+    paddingBottom: rem(26),
+    '& p': {
+      textAlign: 'center',
+      color: colors.light,
+      fontFamily: fonts.fontBold,
+      fontSize: rem(20),
+      lineHeight: rem(24),
+    },
+  },
 };
 export const useBlueBoxStyles = createUseStyles(styles);

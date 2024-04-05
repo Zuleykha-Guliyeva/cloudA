@@ -34,5 +34,18 @@ export const az = {
   student: 'Tələbə',
   back: 'Geri',
   //add Card
-  addcard: 'Kart əlavə et'
+  addcard: 'Kart əlavə et',
+  craddetail: 'Kart məlumatları',
+  //password
+  newpassword: 'Yeni parol',
+  resetpassword: 'Parolu sıfırlayın',
+  yourcode: 'Kodunuzu əldə edin',
+  send: 'Göndər',
+  verify: 'Doğrulayın',
+  //cardDetail
+  confirm: 'Təsdiq edin',
+  cancel: 'Ləğv et',
+  cardname: 'Kart sahibinin adı',
+  cardnumber: 'Kartın 16 rəqəmi',
+  date: 'AA/İİ',
 };

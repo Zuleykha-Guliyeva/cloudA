@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ConfigProvider } from "antd";
 import { themeConfig } from "core/configs/theme.config";
 import useGlobalStyles from "assets/styles/style";
+import { ToastContainer } from "react-toastify";
 
 const queryClient = new QueryClient();
 function App() {
@@ -20,6 +21,23 @@ function App() {
             <RouterProvider router={router} />
             {loader ? <LoaderComponent /> : null}
           </div>
+          <ToastContainer
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            closeButton={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable={false}
+            pauseOnHover
+            theme='light'
+            style={{
+              minHeight: 'auto',
+              maxHeight: '80vh',
+            }}
+          />
         </ConfigProvider>
       </QueryClientProvider>
     </>

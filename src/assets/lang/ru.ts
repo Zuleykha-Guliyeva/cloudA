@@ -35,4 +35,14 @@ export const ru = {
   back: 'назад',
   //add Card
   addcard: 'Добавить карту',
+  craddetail: 'Детали карты',
+  //password
+  newpassword: 'Новый пароль',
+  resetpassword: 'Сброс пароля',
+  yourcode: 'Получите ваш код',
+  send: 'Отправлять',
+  verify: 'Проверять',
+  //cardDetail
+  confirm: 'Подтверждать',
+  cancel: 'Отмена',
 };

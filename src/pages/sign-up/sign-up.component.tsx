@@ -93,7 +93,7 @@ const SignUPComponent = () => {
   };
   const [categoryUser,setCategoryUser] = useState('personal');
   return (
-    <BlueBoxComponent>
+    <BlueBoxComponent text=''>
       <div className={classes.tabSignUp}>
         <div className={classes.signUpTabs}>
           <div className='row'>

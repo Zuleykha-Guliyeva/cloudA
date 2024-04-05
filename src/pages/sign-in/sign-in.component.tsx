@@ -46,7 +46,7 @@ const SignInComponent = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <BlueBoxComponent>
+    <BlueBoxComponent text = ''>
       <div className={classes.signInSection}>
         <div className={classes.tabMenuSignIn}>
           <div className='row'>

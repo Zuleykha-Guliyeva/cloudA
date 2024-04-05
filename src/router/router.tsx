@@ -14,6 +14,9 @@ import SignUPComponent from "pages/sign-up/sign-up.component";
 import PersonalComponent from "pages/personal/personal.component";
 import NewPasswordComponent from "pages/new-password/new-password.component";
 import AddCardComponent from "pages/add-card/add-card.component";
+import CardDetailComponent from "pages/card-detail/card-detail.component";
+import ResetPasswordComponent from "pages/reset-password/reset-password.component";
+import ResetCodeComponent from "pages/reset-code/reset-code.component";
 const router = createBrowserRouter(
   [
     {
@@ -74,8 +77,20 @@ const router = createBrowserRouter(
         },
         {
           path: Routes.addcard,
-          element: <AddCardComponent />
-        }
+          element: <AddCardComponent />,
+        },
+        {
+          path: Routes.carddetail,
+          element: <CardDetailComponent />,
+        },
+        {
+          path: Routes.resetpassword,
+          element: <ResetPasswordComponent />,
+        },
+        {
+          path: Routes.resetpasswordcode,
+          element: <ResetCodeComponent />,
+        },
       ],
     },
   ],

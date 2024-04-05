@@ -97,7 +97,7 @@ const styles = {
   },
   disableAdd: {
     display: 'flex',
-    alignItems: 'center!impotant',
+    alignItems: 'center',
     '& img': {
         marginLeft: rem(8),
     }

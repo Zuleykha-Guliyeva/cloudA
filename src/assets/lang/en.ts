@@ -35,4 +35,14 @@ export const en = {
   back: 'Back',
   //add Card
   addcard: 'Add Card',
+  craddetail: 'Card Detail',
+  //password
+  newpassword: 'New password',
+  resetpassword: 'Reset password',
+  yourcode: 'Get your code',
+  send: 'Send',
+  verify: 'Verify',
+  //cardDetail
+  confirm: 'Confirm',
+  cancel: 'Cancel',
 };

@@ -28,7 +28,7 @@ const AddCardComponent = () => {
           </div>
           <div>
               <ButtonComponent
-                url={Routes.signin}
+                url={Routes.carddetail}
                 text={translate('addcard')}
                 className='aboutBtn'
               ></ButtonComponent>{' '}

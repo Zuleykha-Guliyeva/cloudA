@@ -12,5 +12,8 @@ export enum Routes {
   signup = '/sign-up',
   personal = '/personal',
   newpassword = '/new-password',
-  addcard = '/add-card'
+  addcard = '/add-card',
+  carddetail = '/card-detail',
+  resetpassword = '/reset-password',
+  resetpasswordcode = '/reset-password-code',
 }

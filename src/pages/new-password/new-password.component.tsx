@@ -22,22 +22,15 @@ const NewPasswordComponent = () => {
     [translate]
   );
   return (
-    <BlueBoxComponent>
+    <BlueBoxComponent text={translate('newpassword')}>
       <div className={classes.newPassSection}>
-        <div className={classes.newPasswordTitle}>
-          <div className='row'>
-            <div className='col-12'>
-              <p>New password</p>
-            </div>
-          </div>
-        </div>
         <Form
           name='basic'
           initialValues={initialValues}
           // onFinish={onSubmit}
           layout='vertical'
         >
-          <div className='row'>
+          <div className='row mt-44'>
             <div className='col-lg-12'>
               <Form.Item
                 rules={rules.password}
@@ -58,7 +51,7 @@ const NewPasswordComponent = () => {
           <div className='row mt-28'>
             <div className='col-lg-12'>
               <Button type='primary' htmlType='submit'>
-                {translate('signin')}
+                {translate('verify')}
               </Button>
             </div>
           </div>
