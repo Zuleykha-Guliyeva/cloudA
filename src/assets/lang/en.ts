@@ -42,6 +42,7 @@ export const en = {
   yourcode: 'Get your code',
   send: 'Send',
   verify: 'Verify',
+  forgetPass: 'Forget password?',
   //cardDetail
   confirm: 'Confirm',
   cancel: 'Cancel',

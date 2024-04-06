@@ -4,6 +4,7 @@ import signBack2 from 'assets/images/statics/sign-in/sign-back2.png';
 import backIcon from 'assets/images/statics/back.png';
 import useLocalization from "assets/lang";
 import { useNavigate } from "react-router-dom";
+
 const BlueBoxComponent = ({children,text}) => {
     const classes = useBlueBoxStyles();
     const translate = useLocalization();
@@ -11,7 +12,6 @@ const BlueBoxComponent = ({children,text}) => {
     const goBack = () => {
       navigate(-1);
     };
-    console.log(text);
     
 return (
   <div className='container pt-150'>

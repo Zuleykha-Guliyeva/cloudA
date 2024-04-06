@@ -7,7 +7,6 @@ import { getToken } from 'core/helpers/get-token';
 import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { Routes } from 'router/routes';
 import { IState } from 'store/store';
 import { setUser } from 'store/store.reducer';
 const PersonalComponent = () => {
@@ -100,7 +99,7 @@ const PersonalComponent = () => {
             </div>
           </div>
           <NavLink
-            to={Routes.resetpassword}
+            to='#'
             className={classes.passwordChangeBox}
           >
             <span>Change your password</span>

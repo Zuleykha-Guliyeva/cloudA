@@ -42,6 +42,7 @@ export const az = {
   yourcode: 'Kodunuzu əldə edin',
   send: 'Göndər',
   verify: 'Doğrulayın',
+  forgetPass: 'Parolu unutmusunuz?',
   //cardDetail
   confirm: 'Təsdiq edin',
   cancel: 'Ləğv et',

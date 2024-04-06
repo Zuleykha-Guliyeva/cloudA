@@ -2,8 +2,8 @@ import useLocalization from 'assets/lang';
 import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
 import { useResetPasswordSyles } from './reset-password.style';
 import { Input } from 'antd';
-import ButtonComponent from 'core/shared/button/button.component';
 import { Routes } from 'router/routes';
+import { Link } from 'react-router-dom';
 
 const ResetPasswordComponent = () => {
   const translate = useLocalization();
@@ -20,11 +20,12 @@ const ResetPasswordComponent = () => {
         </div>
         <div className='row'>
           <div className='col-lg-12'>
-            <ButtonComponent
-              text={translate('send')}
-              className='verify'
-              url={Routes.resetpasswordcode}
-            />
+            <Link
+              className={classes.emailSendButton}
+              to={Routes.resetpasswordcode}
+            >
+              <span>{translate('send')}</span>
+            </Link>
           </div>
         </div>
       </div>

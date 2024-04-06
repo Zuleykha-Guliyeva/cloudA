@@ -23,5 +23,20 @@ const styles = {
       padding: ` ${rem(16)} ${rem(24)}`,
     },
   },
+  emailSendButton: {
+    fontFamily: fonts.fontBold,
+    fontSize: rem(18),
+    lineHeight: rem(22),
+    color: colors.light,
+    textDecoration: 'none',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: rem(44),
+    background: colors.calcBtnBlue,
+    borderRadius: rem(41),
+    width: '100%',
+    padding: `${rem(16)} ${rem(0)}`
+  },
 };
 export const useResetPasswordSyles = createUseStyles(styles);

@@ -46,7 +46,7 @@ const SignInComponent = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <BlueBoxComponent text = ''>
+    <BlueBoxComponent text=''>
       <div className={classes.signInSection}>
         <div className={classes.tabMenuSignIn}>
           <div className='row'>
@@ -106,8 +106,8 @@ const SignInComponent = () => {
           </div>
           <div className='row text-right'>
             <div className='col-12'>
-              <Link to='#'>
-                <span className='pr-20'>Forget password?</span>
+              <Link to={Routes.resetpassword}>
+                <span className='pr-20'>{translate('forgetPass')}</span>
               </Link>
             </div>
           </div>

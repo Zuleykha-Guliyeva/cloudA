@@ -42,6 +42,7 @@ export const ru = {
   yourcode: 'Получите ваш код',
   send: 'Отправлять',
   verify: 'Проверять',
+  forgetPass: 'Забыть пароль?',
   //cardDetail
   confirm: 'Подтверждать',
   cancel: 'Отмена',
