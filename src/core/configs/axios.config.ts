@@ -3,13 +3,13 @@ import {environment} from './app.config';
 import {store} from 'store/store.config';
 import {setLoader} from 'store/store.reducer';
 import {errorToast, successToast} from '../shared/toast/toast';
+import { getToken } from 'core/helpers/get-token';
 
 const axiosInstance = axios.create({
-    baseURL: environment.apiMain,
-    headers: {
-        "X-Master-Key":
-          "$2a$10$Y.P17daU7i/nhthPz5RgCeK/lwySiLS/0BCNstyRdT7QFwWv9DNAe",
-      },
+  baseURL: environment.apiMain,
+  headers: {
+    Authorization: 'Bearer ' + getToken(),
+  },
 });
 axiosInstance.interceptors.request.use(
     (config: InternalAxiosRequestConfig) => {

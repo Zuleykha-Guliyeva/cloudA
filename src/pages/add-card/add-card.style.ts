@@ -31,5 +31,19 @@ const styles = {
     lineHeight: rem(18),
     marginBottom: rem(68),
   },
+  aboutBtn: {
+    textDecoration: 'none',
+    fontFamily: fonts.fontBold,
+    fontSize: rem(18),
+    lineHeight: rem(22),
+    color: colors.light,
+    backgroundColor: colors.calcBtnBlue,
+    border: 'none',
+    borderRadius: rem(41),
+    display: 'inline-block',
+    textAlign: 'center',
+    padding: `${rem(16)}  ${rem(56)}`,
+    marginTop: rem(48),
+  },
 };
 export const useAddCardStyles = createUseStyles(styles);

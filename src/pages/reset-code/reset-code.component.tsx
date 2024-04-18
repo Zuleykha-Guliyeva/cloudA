@@ -2,11 +2,17 @@ import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
 import { useResetCodeStyles } from './reset-code.style';
 import useLocalization from 'assets/lang';
 import { Routes } from 'router/routes';
-import ButtonComponent from 'core/shared/button/button.component';
+import { Button } from 'antd';
+import { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ResetCodeComponent = () => {
   const classes = useResetCodeStyles();
   const translate = useLocalization();
+  const navigate = useNavigate();
+  const handleClick = useCallback(() => {
+    navigate(`${Routes.newpassword}`);
+  }, []);
   return (
     <BlueBoxComponent text={translate('yourcode')}>
       <div className={classes.resetYourCodeSection}>
@@ -50,11 +56,9 @@ const ResetCodeComponent = () => {
         </div>
         <div className='row'>
           <div className='col-12'>
-            <ButtonComponent
-              text={translate('verify')}
-              className='verify'
-              url={Routes.newpassword}
-            />
+            <Button onClick={handleClick} className={classes.verify}>
+              {translate('verify')}
+            </Button>
           </div>
         </div>
       </div>

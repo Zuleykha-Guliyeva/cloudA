@@ -1,70 +1,35 @@
-import { Button, Form, Input } from 'antd';
+import { Button, DatePicker, Form, Input } from 'antd';
 import useLocalization from 'assets/lang';
 import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
 import { useMemo } from 'react';
-import { ICarDetail } from './card-detail';
+import { ICardDetail } from './card-detail';
 import { useCardDetailStyles } from './card-detail.styles';
+import { useCardDetail } from './actions/card-detail.mutation';
 
 const CardDetailComponent = () => {
   const classes = useCardDetailStyles();
   const translate = useLocalization();
   const rules = useMemo(
     () => ({
-      name: [
+      fullName: [
         {
           required: true,
           message: translate('input_required'),
         },
       ],
-      surname: [
+      cardNumber: [
         {
           required: true,
           message: translate('input_required'),
         },
       ],
-      country: [
+      cardDate: [
         {
           required: true,
           message: translate('input_required'),
         },
       ],
-      city: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      address: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      liveAddress: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      company: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      phone: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      email: [
-        {
-          required: true,
-          message: translate('input_required'),
-        },
-      ],
-      password: [
+      cardCvv: [
         {
           required: true,
           message: translate('input_required'),
@@ -73,52 +38,50 @@ const CardDetailComponent = () => {
     }),
     [translate]
   );
-  const initialValues: ICarDetail = {
-    name: '',
-    surname: '',
-    country: '',
-    city: '',
-    address: '',
-    liveAddress: '',
-    company: '',
-    phone: '',
-    email: '',
-    password: '',
+  const initialValues: ICardDetail = {
+    fullName: '',
+    cardNo: '',
+    cardDate: '',
+    cvv: '',
   };
-  const onSubmit = (values: ICarDetail) => {
-    console.log(values);
+  const cardDetail = useCardDetail();
+  const onSubmit = (values: ICardDetail) => {
+    cardDetail.mutate(values);
   };
   return (
-    <BlueBoxComponent text='craddetail'>
+    <BlueBoxComponent text={translate('craddetail')}>
       <div className='mt-44'>
         <Form
-          name='basic'
+          name='basic' 
           initialValues={initialValues}
           onFinish={onSubmit}
           layout='vertical'
         >
           <div className='row'>
             <div className='col-lg-12'>
-              <Form.Item rules={rules.address} name='address'>
+              <Form.Item rules={rules.fullName} name='fullName'>
                 <Input placeholder={translate('cardname')} />
               </Form.Item>
             </div>
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <Form.Item rules={rules.liveAddress} name='liveAddress'>
+              <Form.Item rules={rules.cardNumber} name='cardNo'>
                 <Input placeholder={translate('cardnumber')} />
               </Form.Item>
             </div>
           </div>
           <div className='row'>
             <div className='col-lg-8 pr-0'>
-              <Form.Item rules={rules.password} name='password'>
-                <Input placeholder={translate('date')} />
+              <Form.Item rules={rules.cardDate} name='cardDate'>
+                <DatePicker
+                  placeholder={translate('date')}
+                  style={{ width: '100%' }}
+                />
               </Form.Item>
             </div>
             <div className='col-lg-4 pl-18'>
-              <Form.Item>
+              <Form.Item rules={rules.cardCvv} name='cvv'>
                 <Input placeholder='CVV' />
               </Form.Item>
             </div>

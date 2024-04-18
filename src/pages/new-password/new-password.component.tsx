@@ -1,19 +1,16 @@
 import { Button, Form, Input } from 'antd';
 import useLocalization from 'assets/lang';
 import { useNewPasswordStyles } from './new-password.style';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import BlueBoxComponent from 'core/shared/blue-box/blue-box.component';
-import { getToken } from 'core/helpers/get-token';
-import { useDispatch, useSelector } from 'react-redux';
-import { setUser } from 'store/store.reducer';
-import { IState } from 'store/store';
+import { INewPasswordValues } from './new-password';
 
 const NewPasswordComponent = () => {
   const translate = useLocalization();
   const classes = useNewPasswordStyles();
-  const dispatch = useDispatch();
   const initialValues = {
     password: '',
+    confirmPassword: '',
   };
   const rules = useMemo(
     () => ({
@@ -26,18 +23,19 @@ const NewPasswordComponent = () => {
     }),
     [translate]
   );
-  useEffect(() => {
-    const token = getToken();
 
-    dispatch(setUser(token));
-  }, []);
-  const user = useSelector((state:IState)=>state.user)
-  console.log(user);
-
+  const onSubmit = (values: INewPasswordValues) => {
+      console.log(values);
+    };
   return (
     <BlueBoxComponent text={translate('newpassword')}>
       <div className={classes.newPassSection}>
-        <Form name='basic' initialValues={initialValues} layout='vertical'>
+        <Form
+          name='basic'
+          onFinish={onSubmit}
+          initialValues={initialValues}
+          layout='vertical'
+        >
           <div className='row mt-44'>
             <div className='col-lg-12'>
               <Form.Item
@@ -51,7 +49,10 @@ const NewPasswordComponent = () => {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <Form.Item className={classes.formItemPassword}>
+              <Form.Item
+                name='confirmPassword'
+                className={classes.formItemPassword}
+              >
                 <Input placeholder={translate('confirmpassword')} />
               </Form.Item>
             </div>

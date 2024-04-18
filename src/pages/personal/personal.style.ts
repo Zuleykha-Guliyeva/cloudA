@@ -76,8 +76,6 @@ const styles = {
     padding: rem(24),
     borderRadius: rem(28),
     boxShadow: '0px 4px 16px 0px #12475F12',
-    display: 'flex',
-    alignItems: 'center',
     '& span': {
       fontFamily: fonts.font,
       fontSize: rem(18),
@@ -99,8 +97,57 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     '& img': {
-        marginLeft: rem(8),
-    }
-  }
+      marginLeft: rem(8),
+    },
+  },
+  changePassForm: {
+    padding: `${rem(24)} ${rem(0)} ${rem(44)} ${rem(0)}`,
+    '& Form Input': {
+      borderRadius: rem(48),
+      padding: `${rem(16)} ${rem(0)} ${rem(16)} ${rem(24)}`,
+      color: `${colors.defaultTextColor}!important`,
+    },
+    '& Form Button': {
+      backgroundColor: colors.calcBtnBlue,
+      borderRadius: rem(48),
+      height: rem(54),
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: rem(257),
+      marginLeft: rem(11),
+      marginRight: rem(11),
+      transition: '0.8s',
+      '&:first-child': {
+        backgroundColor: colors.light,
+        border: `${rem(1)} solid ${colors.defaultTextColor}`,
+        '& span': {
+          color: colors.defaultTextColor,
+        },
+        '&:hover': {
+          border: 'none',
+          backgroundColor: `${colors.errorMsg}!important`,
+          '& span': {
+            color: `${colors.light}!important`,
+          },
+        },
+      },
+      '& span': {
+        textAlign: 'center',
+        margin: 0,
+        fontFamily: fonts.fontBold,
+        size: rem(18),
+        lineHeight: rem(21),
+        color: colors.light,
+      },
+    },
+  },
+  BottomBorderForm: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: rem(62),
+    borderTop: `${rem(1)} solid ${colors.searchResultBorder}`,
+  },
 };
 export const usePersonalStyles = createUseStyles(styles);

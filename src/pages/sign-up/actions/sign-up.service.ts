@@ -6,10 +6,8 @@ export const signUpService = async (
   user: ISignUpMutateValues
 ): Promise<{ user: ISignUpMutateValues }> => {
   const { email, phone } = user;
-  console.log(email, phone);
   const response = await axiosInstance.get(API.users);
   const users: any = response.data;
-  console.log(users);
   const authUser = users.find(
     (user: any) => user.email === email || user.phone === phone
   );

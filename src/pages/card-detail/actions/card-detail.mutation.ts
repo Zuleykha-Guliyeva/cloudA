@@ -1,25 +1,24 @@
 import { useMutation, useQueryClient } from 'react-query';
-import { signUpService } from './sign-up.service';
-import { ISignUpMutateValues } from '../sign-up';
+import { cardDetailService } from './card-detail.service';
+import { ICardDetail } from '../card-detail';
 import { errorToast, successToast } from 'core/shared/toast/toast';
-import { Routes } from 'router/routes';
 import { useNavigate } from 'react-router-dom';
+import { Routes } from 'router/routes';
 
-export const useSignUp = () => {
+export const useCardDetail = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   return useMutation({
-    mutationFn: (user: ISignUpMutateValues) => {
-      return signUpService(user);
+    mutationFn: (cardDetails: ICardDetail) => {
+      return cardDetailService(cardDetails);
     },
     onSuccess: () => {
-      queryClient.invalidateQueries('users');
+      queryClient.invalidateQueries('cards');
       successToast;
       navigate(`${Routes.signin}`);
     },
     onError: (error: Error) => {
       errorToast(error.message);
-      navigate(`${Routes.signup}`);
     },
   });
 };

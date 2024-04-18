@@ -250,7 +250,7 @@
       "company": "azincloud",
       "mobile": "0504545668",
       "email": "example@gmail.com",
-      "password": "123"
+      "password": "000222"
     },
     {
       "id": 2,
@@ -489,6 +489,120 @@
       "password": "1234",
       "catUser": "personal",
       "id": 18
+    },
+    {
+      "name": "Rauf",
+      "surname": "Salam",
+      "country": "Azerbaijan",
+      "city": "Batumi",
+      "address": "grttrrr",
+      "liveAddress": "wqwweq",
+      "company": "ewewe",
+      "phone": "78565626363",
+      "email": "fuadd@gmail.com",
+      "password": "1234",
+      "catUser": "personal",
+      "id": 19
+    },
+    {
+      "name": "Birddd",
+      "surname": "Ramseyxxxxxxxxxxxx",
+      "country": "Azerbaijan",
+      "city": "Batumi",
+      "address": "grttrrr",
+      "liveAddress": "wqwweq",
+      "company": "ewewe",
+      "phone": "7856562636344",
+      "email": "necesen1@gmail.com",
+      "password": "123",
+      "catUser": "personal",
+      "id": 20
+    },
+    {
+      "name": "Birddd",
+      "surname": "Ramseyxxxxxxxxxxxx",
+      "country": "Azerbaijan",
+      "city": "Batumi",
+      "address": "grttrrr",
+      "liveAddress": "wqwweq",
+      "company": "ewewe",
+      "phone": "78511222",
+      "email": "neeecesen221@gmail.com",
+      "password": "123",
+      "catUser": "personal",
+      "id": 21
+    },
+    {
+      "name": "Rauf",
+      "surname": "Salam",
+      "country": "Azerbaijan",
+      "city": "Batumi",
+      "address": "baki",
+      "liveAddress": "wqwweq",
+      "company": "ewewe",
+      "phone": "78556",
+      "email": "rauf123@gmail.com",
+      "password": "123",
+      "catUser": "personal",
+      "id": 22
+    },
+    {
+      "name": "Sema",
+      "surname": "Nebiyeva",
+      "country": "Az",
+      "city": "baki",
+      "address": "ghgaaaalkjkl",
+      "liveAddress": "iopiweopeoip",
+      "company": "jlkjkjkjj",
+      "phone": "7879897977987",
+      "email": "semaNeb@gmail.com",
+      "password": "123",
+      "catUser": "personal",
+      "id": 23
+    },
+    {
+      "name": "juju",
+      "surname": "asa",
+      "country": "sss",
+      "city": "aaa",
+      "address": "sasaa",
+      "liveAddress": "sasasasasa",
+      "company": "sasasasasasasa",
+      "phone": "026+555989+8",
+      "email": "kiko@gmial.com",
+      "password": "123",
+      "catUser": "personal",
+      "id": 24
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "fullName": "Davud",
+      "cardNo": "1221454564644664",
+      "cvv": 320,
+      "date": "06.06.2026"
+    },
+    {
+      "fullName": "Sema Nebiyeva",
+      "cardNo": "7845698741258745",
+      "cardDate": "2024-04-30T06:40:38.190Z",
+      "cvv": "563",
+      "id": 2
+    },
+    {
+      "fullName": "Rauf Salam",
+      "cardNo": "234234234324242424",
+      "cardDate": "2024-04-24T06:50:11.960Z",
+      "cvv": "787",
+      "id": 3
+    },
+    {
+      "fullName": "juju asa",
+      "cardNo": "234234234324242424",
+      "cardDate": "2024-04-30T11:52:12.722Z",
+      "cvv": "787",
+      "id": 4
     }
   ]
 }

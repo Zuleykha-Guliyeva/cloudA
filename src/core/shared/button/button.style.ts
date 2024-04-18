@@ -4,20 +4,6 @@ import { rem } from "assets/styles/abstracts/functions";
 import { createUseStyles } from "react-jss"
 
 const styles = {
-  aboutBtn: {
-    textDecoration: 'none',
-    fontFamily: fonts.fontBold,
-    fontSize: rem(18),
-    lineHeight: rem(22),
-    color: colors.light,
-    backgroundColor: colors.calcBtnBlue,
-    border: 'none',
-    borderRadius: rem(41),
-    display: 'inline-block',
-    textAlign: 'center',
-    padding: `${rem(16)}  ${rem(56)}`,
-    marginTop: rem(48),
-  },
   loginBtn: {
     textDecoration: 'none',
     fontFamily: fonts.fontBold,

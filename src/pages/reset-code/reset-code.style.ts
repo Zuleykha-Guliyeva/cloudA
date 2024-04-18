@@ -5,12 +5,28 @@ import { createUseStyles } from 'react-jss';
 
 const styles = {
   resetYourCodeSection: {
-    paddingBottom: rem(322)
+    paddingBottom: rem(322),
   },
   yourcodes: {
     '& .row .col-2': {
       paddingRight: rem(0),
     },
+  },
+  verify: {
+    display: 'inline-flex',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textDecoration: 'none',
+    fontFamily: fonts.fontBold,
+    fontSize: rem(18),
+    lineHeight: rem(22),
+    backgroundColor: colors.calcBtnBlue,
+    color: colors.light,
+    borderRadius: rem(41),
+    border: 'none',
+    padding: `${rem(16)}  ${rem(77)}`,
+    marginTop: rem(44),
   },
   yourCodeSpan: {
     color: colors.defaultTextColor,

@@ -43,6 +43,8 @@ export const ru = {
   send: 'Отправлять',
   verify: 'Проверять',
   forgetPass: 'Забыть пароль?',
+  discard: 'Отказаться',
+  save: 'Cохранять',
   //cardDetail
   confirm: 'Подтверждать',
   cancel: 'Отмена',

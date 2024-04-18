@@ -19,6 +19,11 @@ const styles = {
       padding: `${rem(16)} ${rem(0)} ${rem(16)} ${rem(24)}`,
       color: `${colors.defaultTextColor}!important`,
     },
+    '& Form .ant-picker ': {
+      borderRadius: rem(48),
+      padding: `${rem(16)} ${rem(0)} ${rem(16)} ${rem(24)}`,
+      color: `${colors.defaultTextColor}!important`,
+    },
     '& Form span': {
       color: colors.light,
     },

@@ -19,6 +19,9 @@ const ButtonComponent = ({ text, className, url }) => {
   const [open, setOpen] = useState(false);
 
   const handleMenuClick: MenuProps['onClick'] = (e) => {
+    if (e.key === '1') {
+      navigate(Routes.addcard);
+    }
     if (e.key === '3') {
       navigate(Routes.home);
       setOpen(false);

@@ -43,6 +43,11 @@ export const az = {
   send: 'Göndər',
   verify: 'Doğrulayın',
   forgetPass: 'Parolu unutmusunuz?',
+  discard: 'Ləğv edin',
+  save: 'Yadda saxla',
+  currentPass: 'Current Password',
+  newPass: 'New Password',
+  repeatPass: 'Repeat Password',
   //cardDetail
   confirm: 'Təsdiq edin',
   cancel: 'Ləğv et',

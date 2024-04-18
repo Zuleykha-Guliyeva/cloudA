@@ -43,6 +43,8 @@ export const en = {
   send: 'Send',
   verify: 'Verify',
   forgetPass: 'Forget password?',
+  discard: 'Discard',
+  save: 'Save',
   //cardDetail
   confirm: 'Confirm',
   cancel: 'Cancel',

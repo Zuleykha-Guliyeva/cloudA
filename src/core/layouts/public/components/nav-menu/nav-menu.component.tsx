@@ -20,6 +20,10 @@ const NavMenuComponent = () => {
   const translate = useLocalization();
   const dispatch = useDispatch();
   const navMenu = useSelector((state: IState) => state.navMenu);
+const lang = useSelector((state:IState)=>{
+  state.locale
+}) ;
+console.log(lang);
 
   const mobileMenuOpen = useCallback(() => {
     dispatch(toggleNavMenu());
